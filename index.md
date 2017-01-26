@@ -1,6 +1,6 @@
 ---
 layout: post
-Will Pettengill
+title: Will Pettengill
 ---
 
 # Philosophy
