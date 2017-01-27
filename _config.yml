@@ -1,3 +1,4 @@
 theme: jekyll-theme-hacker
 title: "Will Pettengill"
 description: "A blog of philosophy and guitar"
+exclude: [vendor]

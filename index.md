@@ -1,6 +1,6 @@
 ---
-layout: post
-title: Will Pettengill
+layout: default
+title: "Will Pettengill"
 ---
 
 # Philosophy
