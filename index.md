@@ -13,3 +13,5 @@ title: "Will Pettengill"
 
 # Guitar
 [Playing Diagonally](http://www.jazzguitarlessons.net/jazz-guitar-scales.html)
+
+[Another Page](another-page)
