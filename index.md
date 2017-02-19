@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Will Pettengill"
+title: "Epitaphs, Unarranged"
 ---
 
-#There aren't any highways that lead to Taos, but there are traffic patterns. 
+### There aren't any highways that lead to Taos, but there are traffic patterns. 
 
 The Texan, when you tell him that your plans aren't demarcated in an itinerary and may last upwards of 6 weeks, will respond:
 -"My granddaughters are doing things like that, taking gap years and that sort of thing. *Things have changed.*" This response can also be phrased "There are a lot of people out here finding themselves; some of them get stuck out here too and end up staying". The same answer, with a nostalgic tone is phrased "Getting a good trip in before you get married and settle down?"
