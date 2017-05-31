@@ -2,7 +2,7 @@
 layout: default
 ---
 
-### Automated Web-Scraping for Real Estate Data with AWS, Git & Python
+## Automated Web-Scraping for Real Estate Data with AWS, Git & Python
 Craigslist offers a cornucupia of data on all sorts of markets, one of richest of which is real estate (of both the residential and commercial variety). That data, if tracked effectively over time, could provide valuable insights about market rate, average sale cycle, or rate of increase in valuation of commercial real estate in particular neighborhoods and cities. In this project, I extend an existing python library (craigslist_scraper) to capture the most relevant data in a given commercial real estate post, and write it to an AWS cloud database (RDS). Using a crontab on an AWS S3 server, I can automate the scraper to run every day on new posts.
 
 ### Extending Python's craigslist_scraper library
