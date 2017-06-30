@@ -1,3 +1,5 @@
+# On The Rothko Chapel
+
 ## Compare the following images:
 
 ### Image 1
