@@ -4,10 +4,16 @@
 
 [[https://www.dropbox.com/pri/get/blackfence2.png?_subject_uid=10897762&w=AADx_aejaDSli74wjBbX55oYtZNXjw0vmYGGLNSPuGdmBQ]]
 
+<img src="https://www.dropbox.com/pri/get/blackfence2.png?_subject_uid=10897762&w=AADx_aejaDSli74wjBbX55oYtZNXjw0vmYGGLNSPuGdmBQ" alt="fence1" class="inline"/>
+
 ### Image 2
 
 [[https://www.dropbox.com/pri/get/blackfence2.png?_subject_uid=10897762&w=AADx_aejaDSli74wjBbX55oYtZNXjw0vmYGGLNSPuGdmBQ]]
 
+<img src="https://www.dropbox.com/pri/get/blackfence2.png?_subject_uid=10897762&w=AADx_aejaDSli74wjBbX55oYtZNXjw0vmYGGLNSPuGdmBQ" alt="fence1" class="inline"/>
+
+
+https://www.dropbox.com/pri/get/blackfence2.png?_subject_uid=10897762&w=AADx_aejaDSli74wjBbX55oYtZNXjw0vmYGGLNSPuGdmBQ
 These are two sections of the same image. Sitting on the porch today, I allowed my vision to change its depth of focus looking at the fence. The result was that when my vision's depth went deeper (focusing on something further away), the way that the fenceposts overlapped with the wall behind them looked basically as if I were looking at a single wall with black stripes on it.
 
 #### That is to say that there were two possible visual experiences that would look indistinguishable to me:
