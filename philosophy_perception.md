@@ -2,18 +2,12 @@
 
 ### Image 1
 
-[[https://www.dropbox.com/pri/get/blackfence2.png?_subject_uid=10897762&w=AADx_aejaDSli74wjBbX55oYtZNXjw0vmYGGLNSPuGdmBQ]]
-
 <img src="https://www.dropbox.com/pri/get/blackfence2.png?_subject_uid=10897762&w=AADx_aejaDSli74wjBbX55oYtZNXjw0vmYGGLNSPuGdmBQ" alt="fence1" class="inline"/>
 
 ### Image 2
 
-[[https://www.dropbox.com/pri/get/blackfence2.png?_subject_uid=10897762&w=AADx_aejaDSli74wjBbX55oYtZNXjw0vmYGGLNSPuGdmBQ]]
+<img src="https://www.dropbox.com/pri/get/blackfence.JPG?_subject_uid=10897762&w=AADI8rWAvm6tEtksj4_4m8SSSuIjPpARRjeTrKskCOPx7A" alt="fence1" class="inline"/>
 
-<img src="https://www.dropbox.com/pri/get/blackfence2.png?_subject_uid=10897762&w=AADx_aejaDSli74wjBbX55oYtZNXjw0vmYGGLNSPuGdmBQ" alt="fence1" class="inline"/>
-
-
-https://www.dropbox.com/pri/get/blackfence2.png?_subject_uid=10897762&w=AADx_aejaDSli74wjBbX55oYtZNXjw0vmYGGLNSPuGdmBQ
 These are two sections of the same image. Sitting on the porch today, I allowed my vision to change its depth of focus looking at the fence. The result was that when my vision's depth went deeper (focusing on something further away), the way that the fenceposts overlapped with the wall behind them looked basically as if I were looking at a single wall with black stripes on it.
 
 #### That is to say that there were two possible visual experiences that would look indistinguishable to me:
@@ -27,5 +21,7 @@ Obviously (1) is the correct description. My point is that in that moment, where
 Here is a picture of the inside of the Rothko Chapel: 
 
 [[https://s-media-cache-ak0.pinimg.com/originals/50/93/0d/50930db1af61e9fbb0bcbfbcd836f98b.jpg]]
+
+<img src="https://s-media-cache-ak0.pinimg.com/originals/50/93/0d/50930db1af61e9fbb0bcbfbcd836f98b.jpg" alt="fence1" class="inline"/>
 
 You'll notice that the art on the walls of the chapel look in the image like purple squares. If you go to visit the chapel and spend time with each of them, you'll notice that these incredible pieces have contours of depth that reveal themselves only once a viewer relaxes into the viewing each piece. One can access those contours by allowing the depth of focus of their vision fall past the image.
