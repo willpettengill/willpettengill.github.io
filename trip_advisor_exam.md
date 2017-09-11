@@ -2,23 +2,11 @@ Question 3-2: Create Table 3-9, the Customer Master augmented with the best-gues
 
 
 | Customer Site ID | Parent Customer | City | State | Country | DUNS |
-|1 |GE| Boston| MA| USA
-|123123123 |2 |GE |Boston |MA |USA
+|1 |GE| Boston| MA| USA |123123123 |
+|2 |GE |Boston |MA |USA|'null'|
+|3| GE |Worcester| MA| USA
+|4 ||GE ||Syracuse ||NY ||USA ||456456456 |
 
-
-3
-GE
-Worcester
-MA
-USA
-
-
-4
-GE
-Syracuse
-NY
-USA
-456456456
 5
 GE
 Syracuse
