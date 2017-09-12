@@ -1,9 +1,10 @@
-## Question 3-2: 
+### Question 3-2: 
 Create Table 3-9, the Customer Master augmented with the best-guess DUNS number, from Table 3-8 Customer Master with Sparse Data.  Select the DUNS number based on the closest match by city, state, and country in that order.
 
-### Table 3-8: Customer Master with Sparse Data
+#### Table 3-8: Customer Master with Sparse Data
 
 |Customer Site ID | Parent Customer | City | State | Country | DUNS|
+|---------|:--------:|:--------:|:--------:|:--------:|--------|
 |1|GE| Boston| MA| USA |123123123 |
 |2|GE |Boston |MA |USA| (null)|
 |3| GE |Worcester| MA| USA| (null)|
@@ -12,9 +13,10 @@ Create Table 3-9, the Customer Master augmented with the best-guess DUNS number,
 |6 |HSBC |London | (null)|  UK |789789789 |
 |7 |HSBC |(null) |(null) |UK |(null)|
 
-### Table 3-9:  Customer Master w/Best Guess DUNS Numbers
+#### Table 3-9:  Customer Master w/Best Guess DUNS Numbers
 
 |Customer Site ID |Parent Customer |City |State |Country |DUNS|
+|---------|:--------:|:--------:|:--------:|:--------:|--------|
 |1|GE|Boston|MA|USA|123123123|
 |2|GE|Boston|MA|USA|123123123|
 |3|GE|Worcester|MA|USA|123123123|
@@ -24,7 +26,7 @@ Create Table 3-9, the Customer Master augmented with the best-guess DUNS number,
 |7|HSBC|(null)|(null)|UK|789789789|
 
 
-# Answer:
+#### Answer:
 
 ``` SQL
 with t2 as (select parent_customer, city, state, country, max(duns) duns
@@ -55,7 +57,7 @@ Calculate the employee attrition Table 3-11 from the Employee master, Table 3-10
 
 
 |Employee ID|Start Date|Termination Date|Performance Level|
-
+|---------|:--------:|:--------:|--------|
 |1|1/1/2007|3/1/2007|Low|
 |2|6/5/2004|(null)|Medium|
 |3|4/3/2003|(null)|High|
@@ -65,7 +67,7 @@ Calculate the employee attrition Table 3-11 from the Employee master, Table 3-10
 |7|3/2/2005|8/1/2007|Low|
 
 
-### Table 3-11
+#### Table 3-11
 
 |Period|Total Employees at end of quarter|High Performers|Medium Performers|Low Performers|Total Attrition|Low Performer Attrition|Medium Performer Attrition|High Performer Attrition |
 |-------|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
@@ -74,7 +76,7 @@ Calculate the employee attrition Table 3-11 from the Employee master, Table 3-10
 |Q3 2007 |4 |2 |1 |1 |1 |1 |0 |0 |
 |Q4 2007 |3 |2 |1 |0 |1 |1 |0 |0 |
 
-### Answer:
+#### Answer:
 ``` SQL
 with t2 as (
 select 
@@ -125,6 +127,7 @@ Convert a sales hierarchy.  Table 3-12 lists the data structure for the sales hi
 #### Table 3-12: 
 
 |Role|Parent Role|Person|Geo|Region|District|
+|---------|:--------:|:--------:|:--------:|:--------:|--------|
 |Rep-1|DM-1|Lou Gertsner|AME|West|CA|
 |Rep-2|DM-1|Steve Ballmer|AME|West|CA|
 |DM-1|RVP-1|Marc Benioff|AME|West|CA|
@@ -144,6 +147,7 @@ Convert a sales hierarchy.  Table 3-12 lists the data structure for the sales hi
 #### Table 3-13
 
 |WW Person|Geo Person|Region Person|District Person|Role|Person|Geo|Region|District|Unique District|
+|---------|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|--------|
 |Larry Ellison|Bill Gates|Ray Ozzie|Marc Benioff|Rep-1|Lou Gertsner|AME|West|CA|CA|
 |Larry Ellison|Bill Gates|Ray Ozzie|Marc Benioff|Rep-2|Steve Ballmer|AME|West|CA|CA|
 |Larry Ellison|Bill Gates|Ray Ozzie|Marc Benioff|DM-1|Marc Benioff|AME|West|CA|CA|
@@ -161,7 +165,7 @@ Convert a sales hierarchy.  Table 3-12 lists the data structure for the sales hi
 |Larry Ellison|Bill Gates|Mike Ruttgers|Larry Page|Rep-8|Joe Tucci|AME|East|NY|NY -2|
 
 
-### Answer
+#### Answer
 ```SQL
 Answer:
 WITH RECURSIVE ww AS (
@@ -248,6 +252,7 @@ Provide the SQL code for the query(ies) to calculate the total number of tests r
 #### Table 3-14
 
 |id|test_name|start_date|end_date|
+|--------|:--------:|:--------:|--------|
 |1|Test 1|1/1/16|1/10/16|
 |2|Test 2|1/1/16|1/25/16|
 |3|Test 3|1/6/16|1/10/16|
@@ -265,6 +270,7 @@ Provide the SQL code for the query(ies) to calculate the total number of tests r
 #### Table 3-15
 
 |date|number_of_active_test|
+|--------|--------|
 |1/5/16|2|
 |1/12/16|6|
 |1/19/16|7|
@@ -282,12 +288,13 @@ group by t2.date
 order by 1 asc
 ```
 
-Question 3-6: Provide the SQL code for the query(ies) to calculate for each location how far away in km the nearest neighbor is. 
+### Question 3-6: 
+Provide the SQL code for the query(ies) to calculate for each location how far away in km the nearest neighbor is. 
 
 #### Table 3-1
 
 |location_id|location_name|lattitude|longitude|
-
+|--------|:--------|:--------:|--------|
 |321678|Chinatown Cafe|42.347479|-71.062537|
 |321983|City Table|42.349034|-71.07955|
 |482305|An Tain|42.35836|-71.053032|6
