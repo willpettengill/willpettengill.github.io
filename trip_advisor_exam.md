@@ -48,12 +48,14 @@ left join t4 on t38.parent_customer=t4.parent_customer and t38.country=t4.countr
 order by site_id asc
 ```
 
-## Question 3-3: Calculate the employee attrition Table 3-11 from the Employee master, Table 3-10
+## Question 3-3: 
+Calculate the employee attrition Table 3-11 from the Employee master, Table 3-10
 
 ### Table 3-10: Employee Master
 
 
 |Employee ID|Start Date|Termination Date|Performance Level|
+
 |1|1/1/2007|3/1/2007|Low|
 |2|6/5/2004|null|Medium|
 |3|4/3/2003|null|High|
@@ -66,7 +68,7 @@ order by site_id asc
 ### Table 3-11
 
 |Period|Total Employees at end of quarter|High Performers|Medium Performers|Low Performers|Total Attrition|Low Performer Attrition|Medium Performer Attrition|High Performer Attrition |
-
+|---|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
 |Q1 2007 |4 |1 |2 |1 |1 |1 |0 |0 |
 |Q2 2007 |4 |1 |1 |2 |1 |0 |1 |0 |
 |Q3 2007 |4 |2 |1 |1 |1 |1 |0 |0 |
