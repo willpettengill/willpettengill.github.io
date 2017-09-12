@@ -245,7 +245,7 @@ LEFT join uniq_dist d on d.district = t1.district and d.person=dm.person
 ### Question 3-5: 
 Provide the SQL code for the query(ies) to calculate the total number of tests running each Tuesday from 1/1/2016-2/1/2016. The inputs can be found in table 4-3. Desired result can be found in Table 4-4.
 
-####Table 3-14
+#### Table 3-14
 |id|test_name|start_date|end_date|
 |1|Test 1|1/1/16|1/10/16|
 |2|Test 2|1/1/16|1/25/16|
@@ -303,7 +303,7 @@ Question 3-6: Provide the SQL code for the query(ies) to calculate for each loca
 #### Table 3-17
 
 |location_id| location_name |distance_in_km_to_nearest_neighbor_location|
-
+|----|:---------:|----------------------------------|
 |321678|Chinatown Cafe|0.9331|
 |321983|City Table|0.2814|
 |482305|An Tain|0.5796|
