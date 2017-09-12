@@ -14,7 +14,7 @@ Create Table 3-9, the Customer Master augmented with the best-guess DUNS number,
 
 ### Table 3-9:  Customer Master w/Best Guess DUNS Numbers
 
-|Customer| Site ID |Parent |Customer |City |State |Country |DUNS|
+|Customer Site ID |Parent Customer |City |State |Country |DUNS|
 |1|GE|Boston|MA|USA|123123123|
 |2|GE|Boston|MA|USA|123123123|
 |3|GE|Worcester|MA|USA|123123123|
@@ -48,7 +48,7 @@ left join t4 on t38.parent_customer=t4.parent_customer and t38.country=t4.countr
 order by site_id asc
 ```
 
-##Question 3-3: Calculate the employee attrition Table 3-11 from the Employee master, Table 3-10
+## Question 3-3: Calculate the employee attrition Table 3-11 from the Employee master, Table 3-10
 
 ### Table 3-10: Employee Master
 
