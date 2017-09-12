@@ -241,3 +241,42 @@ LEFT join rvp using(role)
 LEFT join dm using(role)
 LEFT join uniq_dist d on d.district = t1.district and d.person=dm.person
 ```
+
+### Question 3-5: 
+Provide the SQL code for the query(ies) to calculate the total number of tests running each Tuesday from 1/1/2016-2/1/2016. The inputs can be found in table 4-3. Desired result can be found in Table 4-4.
+
+####Table 3-14
+|id|test_name|start_date|end_date|
+|1|Test 1|1/1/16|1/10/16|
+|2|Test 2|1/1/16|1/25/16|
+|3|Test 3|1/6/16|1/10/16|
+|4|Test 4|1/6/16|1/31/16|
+|5|Test 5|1/11/16|1/25/16|
+|6|Test 6|1/11/16|2/1/16|
+|7|Test 7|1/15/16|1/21/16|
+|8|Test 8|1/19/16|1/20/16|
+|9|Test 9|1/19/16|1/22/16|
+|10|Test 10|1/22/16|1/25/16|
+|11|Test 11|1/22/16|1/28/16|
+|12|Test 12|1/25/16|2/1/16|
+|13|Test 13|1/28/16|2/1/16|
+
+#### Table 3-15
+
+|date|number_of_active_test|
+|1/5/16|2|
+|1/12/16|6|
+|1/19/16|7|
+|1/26/16|7|
+
+#### Answer:
+``` SQL
+with t2 as (select date_trunc('day',dd)::date as date
+from generate_series('2016-01-01'::date, '2016-02-01'::date, '1 day'::interval) dd
+where extract(dow from dd) =2)
+select t2.date, sum(case when t2.date >= start_date and t2.date <= end_date then 1 else 0 end) as number_of_active_tests
+from t2
+cross join Table 3-14 as t1
+group by t2.date
+order by 1 asc
+```
