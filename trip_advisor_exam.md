@@ -5,7 +5,7 @@ Table 3-8: Customer Master with Sparse Data
 |Customer Site ID | Parent Customer | City | State | Country | DUNS |
 |1|GE| Boston| MA| USA |123123123 |
 |2|GE |Boston |MA |USA| null|
-|3| GE |Worcester| MA| USA || null|
+|3| GE |Worcester| MA| USA| null|
 |4|GE|Syracuse |NY |USA |456456456 |
 |5 |GE |Syracuse |NY |USA |null|
 |6 |HSBC |London | null|  UK |789789789 |
@@ -14,13 +14,13 @@ Table 3-8: Customer Master with Sparse Data
 Table 3-9:  Customer Master w/Best Guess DUNS Numbers
 Customer Site ID Parent Customer City State Country DUNS
 
-|1|GE|Boston|MA|USA|123123123
-|2|GE|Boston|MA|USA|123123123
-|3|GE|Worcester|MA|USA|123123123
-|4|GE|Syracuse|NY|USA|456456456
+|1|GE|Boston|MA|USA|123123123|
+|2|GE|Boston|MA|USA|123123123|
+|3|GE|Worcester|MA|USA|123123123|
+|4|GE|Syracuse|NY|USA|456456456|
 |5|GE|Syracuse|NY|USA|456456456|
 |6|HSBC|London|null|UK|789789789|
-|7|HSBC|null|null|UK|789789789
+|7|HSBC|null|null|UK|789789789|
 
 
 #Answer:
