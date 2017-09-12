@@ -50,10 +50,10 @@ left join t4 on t38.parent_customer=t4.parent_customer and t38.country=t4.countr
 order by site_id asc
 ```
 
-## Question 3-3: 
+### Question 3-3: 
 Calculate the employee attrition Table 3-11 from the Employee master, Table 3-10
 
-### Table 3-10: Employee Master
+#### Table 3-10: Employee Master
 
 
 |Employee ID|Start Date|Termination Date|Performance Level|
