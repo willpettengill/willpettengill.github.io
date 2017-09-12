@@ -280,3 +280,49 @@ cross join Table 3-14 as t1
 group by t2.date
 order by 1 asc
 ```
+
+Question 3-6: Provide the SQL code for the query(ies) to calculate for each location how far away in km the nearest neighbor is. 
+
+#### Table 3-1
+
+|location_id|location_name|lattitude|longitude|
+
+|321678|Chinatown Cafe|42.347479|-71.062537|
+|321983|City Table|42.349034|-71.07955|
+|482305|An Tain|42.35836|-71.053032|6
+|46829|Adams Bed & Breakfast|42.346059|-71.087909|
+|777353|Aisling Bed and Breakfast|42.337396|-71.074549|
+|1954989|Italian Express Pizzeria|42.367298|-71.035713|
+|1993528|MET Back Bay|42.351107|-71.077586|
+|6765701|Bonapita|42.355417|-71.058854|
+|7906434|Boston Food Tours |42.363171|-71.05632|
+|10027342|Caffe Bene|42.342252|-71.084461|
+
+
+
+#### Table 3-17
+
+|location_id| location_name |distance_in_km_to_nearest_neighbor_location|
+
+|321678|Chinatown Cafe|0.9331|
+|321983|City Table|0.2814|
+|482305|An Tain|0.5796|
+|646829|Adams Bed & Breakfast|0.5094|
+|777353|Aisling Bed and Breakfast|0.9774|
+|1954989|Italian Express Pizzeria|1.7357|
+|1993528|MET Back Bay|0.2814|
+|6765701|Bonapita|0.5796|
+|7906434|Boston Food Tours |0.5993|
+|10027342|Caffe Bene|0.5094|
+
+#### Answer:
+``` SQL
+select t1.location_id, t1.location_name,
+min(111.045*DEGREES(ACOS(COS(RADIANS(t1.lattitude)) * COS(RADIANS(t2.lattitude)) *
+             COS(RADIANS(t1.longitude) - RADIANS(t2.longitude)) +
+             SIN(RADIANS(t1.lattitude)) * SIN(RADIANS(t2.lattitude))))) as distance
+from t1
+cross join t1 as t2 
+where t1.location_name != t2.location_name
+group by 1,2
+```
