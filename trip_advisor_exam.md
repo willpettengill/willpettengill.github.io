@@ -3,7 +3,7 @@ Create Table 3-9, the Customer Master augmented with the best-guess DUNS number,
 
 ### Table 3-8: Customer Master with Sparse Data
 
-|Customer Site ID | Parent Customer | City | State | Country | DUNS |
+|Customer Site ID | Parent Customer | City | State | Country | DUNS|
 |1|GE| Boston| MA| USA |123123123 |
 |2|GE |Boston |MA |USA| null|
 |3| GE |Worcester| MA| USA| null|
@@ -12,10 +12,9 @@ Create Table 3-9, the Customer Master augmented with the best-guess DUNS number,
 |6 |HSBC |London | null|  UK |789789789 |
 |7 |HSBC |null |null |UK |null|
 
-###Table 3-9:  Customer Master w/Best Guess DUNS Numbers
+### Table 3-9:  Customer Master w/Best Guess DUNS Numbers
 
 |Customer| Site ID |Parent |Customer |City |State |Country |DUNS|
-
 |1|GE|Boston|MA|USA|123123123|
 |2|GE|Boston|MA|USA|123123123|
 |3|GE|Worcester|MA|USA|123123123|
