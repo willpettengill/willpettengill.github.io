@@ -1,7 +1,8 @@
 ## Question 3-2: 
 Create Table 3-9, the Customer Master augmented with the best-guess DUNS number, from Table 3-8 Customer Master with Sparse Data.  Select the DUNS number based on the closest match by city, state, and country in that order.
 
-Table 3-8: Customer Master with Sparse Data
+### Table 3-8: Customer Master with Sparse Data
+
 |Customer Site ID | Parent Customer | City | State | Country | DUNS |
 |1|GE| Boston| MA| USA |123123123 |
 |2|GE |Boston |MA |USA| null|
@@ -11,8 +12,9 @@ Table 3-8: Customer Master with Sparse Data
 |6 |HSBC |London | null|  UK |789789789 |
 |7 |HSBC |null |null |UK |null|
 
-Table 3-9:  Customer Master w/Best Guess DUNS Numbers
-Customer Site ID Parent Customer City State Country DUNS
+###Table 3-9:  Customer Master w/Best Guess DUNS Numbers
+
+|Customer| Site ID |Parent |Customer |City |State |Country |DUNS|
 
 |1|GE|Boston|MA|USA|123123123|
 |2|GE|Boston|MA|USA|123123123|
