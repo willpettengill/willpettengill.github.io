@@ -68,7 +68,7 @@ Calculate the employee attrition Table 3-11 from the Employee master, Table 3-10
 ### Table 3-11
 
 |Period|Total Employees at end of quarter|High Performers|Medium Performers|Low Performers|Total Attrition|Low Performer Attrition|Medium Performer Attrition|High Performer Attrition |
-|---|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+|-------|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
 |Q1 2007 |4 |1 |2 |1 |1 |1 |0 |0 |
 |Q2 2007 |4 |1 |1 |2 |1 |0 |1 |0 |
 |Q3 2007 |4 |2 |1 |1 |1 |1 |0 |0 |
@@ -117,4 +117,127 @@ sum(CASE WHEN quarter = end_q and medium_performer then 1 else 0 end) as medium_
 sum(CASE WHEN quarter = end_q and high_performer then 1 else 0 end) as high_performer_attrition
 from t4
 group by 1
+```
+
+### Question 3-4: 
+Convert a sales hierarchy.  Table 3-12 lists the data structure for the sales hierarchy.  The table is organized so that the Role is a unique key.  Each role is assigned to one person.  If the role covers more than one District (or Region or Geo), then those columns are left blank.  The parent role defines the hierarchy.  The objective is to convert this structure into Table 3-13.  In Table 3-13, the Role is again a key, but this time it is augmented with the people who populate the Geo/Region/District for that individual.  Note that there may be districts with the same name that are managed by different people (e.g., NY).  In this case we would like to distinguish these two districts by adding a count to the district as in the Unique District column of Table 3-13.  Also note that one individual may have two different roles (as in the case for Marc Benioff).
+
+#### Table 3-12: 
+
+|Role|Parent Role|Person|Geo|Region|District|
+|Rep-1|DM-1|Lou Gertsner|AME|West|CA|
+|Rep-2|DM-1|Steve Ballmer|AME|West|CA|
+|DM-1|RVP-1|Marc Benioff|AME|West|CA|
+|RVP-1|GEO-1|Ray Ozzie|AME|West|null|
+|WW|null|Larry Ellison|AME|null|null|
+|GEO-1|WW|Bill Gates|AME|null|null|
+|Rep-3|DM-1|Vinod Khosla|AME|West|CA|
+|Rep-4|DM-1|Marc Benioff|AME|West|CA|
+|DM-2|RVP-2|Mark Hurd|AME|East|NY|
+|RVP-2|GEO-1|Mike Ruttgers|AME|East|null|
+|Rep-5|DM-2|Sergey Brin|AME|East|NY|
+|DM-3|RVP-2|Larry Page|AME|East|NY|
+|Rep-6|DM-3|Scott McNealy|AME|East|NY|
+|Rep-7|DM-3|Sam Palmisano|AME|East|NY|
+|Rep-8|DM-3|Joe Tucci|AME|East|NY|
+
+#### Table 3-13
+
+|WW Person|Geo Person|Region Person|District Person|Role|Person|Geo|Region|District|Unique District|
+|Larry Ellison|Bill Gates|Ray Ozzie|Marc Benioff|Rep-1|Lou Gertsner|AME|West|CA|CA|
+|Larry Ellison|Bill Gates|Ray Ozzie|Marc Benioff|Rep-2|Steve Ballmer|AME|West|CA|CA|
+|Larry Ellison|Bill Gates|Ray Ozzie|Marc Benioff|DM-1|Marc Benioff|AME|West|CA|CA|
+|Larry Ellison|Bill Gates|Ray Ozzie|null|RVP-1|Ray Ozzie|AME|West|null|null|
+|Larry Ellison|null|null|null| WW |Larry Ellison|null|null|null|null|
+|Larry Ellison|Bill Gates|null|null|GEO-1|Bill Gates|AME|null|null|null|
+|Larry Ellison|Bill Gates|Ray Ozzie|Marc Benioff|Rep-3|Vinod Khosla|AME|West|CA|CA|
+|Larry Ellison|Bill Gates|Ray Ozzie|Marc Benioff|Rep-4|Marc Benioff|AME|West|CA|CA|
+|Larry Ellison|Bill Gates|Mike Ruttgers|Mark Hurd|DM-2|Mark Hurd|AME|East|NY|NY - 1|
+|Larry Ellison|Bill Gates|Mike Ruttgers|null|RVP-2|Mike Ruttgers|AME|East|null|null|
+|Larry Ellison|Bill Gates|Mike Ruttgers|Mark Hurd|Rep-5|Sergey Brin|AME|East|NY|NY -1|
+|Larry Ellison|Bill Gates|Mike Ruttgers|Larry Page|DM-3|Larry Page|AME|East|NY|NY -2|
+|Larry Ellison|Bill Gates|Mike Ruttgers|Larry Page|Rep-6|Scott McNealy|AME|East|NY|NY -2|
+|Larry Ellison|Bill Gates|Mike Ruttgers|Larry Page|Rep-7|Sam Palmisano|AME|East|NY|NY -2|
+|Larry Ellison|Bill Gates|Mike Ruttgers|Larry Page|Rep-8|Joe Tucci|AME|East|NY|NY -2|
+
+
+### Answer
+```SQL
+Answer:
+WITH RECURSIVE ww AS (
+ SELECT role, parent_role, person,'' as sub, 1 as level
+ FROM t1
+ WHERE
+ role = 'WW'
+ UNION all
+ SELECT
+ e.role,
+ e.parent_role, s.person as sub,
+ e.person, s.level +1 as level
+ FROM
+ww s
+ INNER JOIN t1 e ON s.role = e.parent_role
+),
+
+geo AS (
+ SELECT role, parent_role, person,'' as sub, 1 as level
+ FROM t1
+ WHERE
+ role = 'GEO-1'
+ UNION all
+ SELECT
+ e.role,
+ e.parent_role, s.person as sub,
+ e.person, s.level +1 as level
+ FROM
+geo s
+ INNER JOIN t1 e ON s.role = e.parent_role
+),
+
+rvp AS (
+ SELECT role, parent_role, person,'' as sub, 1 as level
+ FROM t1
+ WHERE
+ role like '%RVP%'
+ UNION all
+ SELECT
+ e.role,
+ e.parent_role, s.person as sub,
+ e.person, s.level +1 as level
+ FROM
+rvp s
+ INNER JOIN t1 e ON s.role = e.parent_role
+),
+dm AS (
+ SELECT role, parent_role, person,'' as sub, 1 as level
+ FROM t1
+ WHERE
+ role like '%DM%'
+ UNION all
+ SELECT
+ e.role,
+ e.parent_role, s.person as sub,
+ e.person, s.level +1 as level
+ FROM
+dm s
+ INNER JOIN t1 e ON s.role = e.parent_role
+),
+uniq_dist as (
+select person, district, concat(district,'-', row_number() over (partition by district)) as unique_district
+from
+(select person, district
+from t1
+where role like '%DM%'
+group by person, district) d)
+
+SELECT ww.person as worldwide_person, geo.person as geo_person, rvp.person as region_person, dm.person as district_person,
+ww.role as role, 
+t1.person as person, 
+t1.geo, t1.region, t1.district, d.unique_district
+FROM ww
+LEFT join t1 using(role)
+LEFT JOIN geo using(role)
+LEFT join rvp using(role)
+LEFT join dm using(role)
+LEFT join uniq_dist d on d.district = t1.district and d.person=dm.person
 ```
