@@ -1,4 +1,4 @@
-##Question 3-2: 
+## Question 3-2: 
 Create Table 3-9, the Customer Master augmented with the best-guess DUNS number, from Table 3-8 Customer Master with Sparse Data.  Select the DUNS number based on the closest match by city, state, and country in that order.
 
 Table 3-8: Customer Master with Sparse Data
@@ -23,7 +23,7 @@ Customer Site ID Parent Customer City State Country DUNS
 |7|HSBC|null|null|UK|789789789|
 
 
-#Answer:
+# Answer:
 
 ```with t2 as (select parent_customer, city, state, country, max(duns) duns
 from t38
