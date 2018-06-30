@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# User
+ML Horoscope-0cb375c927e5.json
+ML Horoscope-57bf7abc958a.json
 # C extensions
 *.so
 
