@@ -4,8 +4,8 @@ __pycache__/
 *$py.class
 
 # User
-ML Horoscope-0cb375c927e5.json
-ML Horoscope-57bf7abc958a.json
+ai_astrology/ML Horoscope-0cb375c927e5.json
+ai_astrology/ML Horoscope-57bf7abc958a.json
 # C extensions
 *.so
 
