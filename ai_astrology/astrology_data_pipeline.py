@@ -4,6 +4,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 import json
 import re
+import hashlib
 
 answerMapping={
 'agree':1, 'disagree':0,
@@ -24,7 +25,7 @@ SPREADSHEET = "Machine Learning Horoscope (Responses)"
 
 json_key = json.load(open(SECRETS_FILE))
 
-credentials = ServiceAccountCredentials.from_json_keyfile_name('/Users/wpettengill/Desktop/willpettengill.github.io/ai_astrology/ML Horoscope-57bf7abc958a.json', SCOPE)
+credentials = ServiceAccountCredentials.from_json_keyfile_name('/Users/wpettengill/Documents/ML Horoscope-57bf7abc958a.json', SCOPE)
 
 gc = gspread.authorize(credentials)
 
@@ -40,7 +41,7 @@ sheet = workbook.sheet1
 data = pd.DataFrame.from_records(sheet.get_all_records())
 column_map = {k:re.sub(r'[^\w\s]','',k.lower().replace(' ','')) for k in data.columns.tolist()}
 data = data.rename(columns=column_map)
-
+data['emailaddress'] = data['emailaddress'].map(lambda x: hashlib.md5(x.encode('utf-8')).hexdigest())
 
 data = data.set_index('emailaddress')
 user_data = ['birthdate', 'birthtime', 'birthplacezipcode', 'timestamp']
