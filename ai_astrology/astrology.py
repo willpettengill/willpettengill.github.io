@@ -4,70 +4,117 @@ from flatlib.geopos import GeoPos
 from flatlib.chart import Chart
 from flatlib import const
 from datetime import datetime 
-
-user='willpettengill@gmail.com'
-date = Datetime('1988/06/20', '4:20', '+00:00')
-pos = GeoPos(42.3370, 71.2092)
-chart = Chart(date, pos, IDs=const.LIST_OBJECTS)
-
-house_qualities = json.load(open('house_qualities.json'))
-sign_qualities = json.load(open('sign_qualities.json'))
-planet_qualities = json.load(open('planet_qualities.json'))
+from uszipcode import ZipcodeSearchEngine
+#from pyzipcode import ZipCodeDatabase
 
 
-sun = chart.getObject(const.SUN)
-moon = chart.getObject(const.MOON)
-mercury = chart.getObject(const.MERCURY)
-venus = chart.getObject(const.VENUS)
-mars = chart.getObject(const.MARS)
-jupiter = chart.getObject(const.JUPITER)
-saturn = chart.getObject(const.SATURN)
-#uranus = chart.getObject(const.URANUS)
-neptune = chart.getObject(const.NEPTUNE)
-pluto = chart.getObject(const.PLUTO)
-chiron = chart.getObject(const.CHIRON)
-north_node = chart.getObject(const.NORTH_NODE)
-south_node = chart.getObject(const.SOUTH_NODE)
-syzygy = chart.getObject(const.SYZYGY)
-pars_fortuna = chart.getObject(const.PARS_FORTUNA)
-asc=chart.get(const.ASC).sign 
-house1 = chart.get(const.HOUSE1).sign
-house2 = chart.get(const.HOUSE2).sign
-house3 = chart.get(const.HOUSE3).sign
-house4 = chart.get(const.HOUSE4).sign
-house5 = chart.get(const.HOUSE5).sign
-house6 = chart.get(const.HOUSE6).sign
-house7 = chart.get(const.HOUSE7).sign
-house8 = chart.get(const.HOUSE8).sign
-house9 = chart.get(const.HOUSE9).sign
-house10 = chart.get(const.HOUSE10).sign
-house11 = chart.get(const.HOUSE11).sign
-house12 = chart.get(const.HOUSE12).sign
+class Dog:
+
+	def __init__(self, bdate, btime, bplacezip):
+		self.planet_fields={}
+		self.bdate=bdate
+		self.btime=btime
+		self.bplacezip=bplacezip
+		self.date_obj = pd.to_datetime(self.bdate + ' ' + self.btime)
+		self.date = Datetime(str(self.date_obj.date()).replace('-','/'), str(self.date_obj.time()),'+05:00')
+		self.date='6/20/1988'
+		self.get_birthplace(bplacezip)
+		self.pull_chart(self.date,self.btime)
+		self.pull_chart(bdate,btime) # removed str(self.date)) # dates_list = [dt.datetime.strptime(date, '"%Y-%m-%d"').date() for date in dates]
+		self.house_qualities = json.load(open('house_qualities.json'))
+		self.sign_qualities = json.load(open('sign_qualities.json'))
+		self.planet_qualities = json.load(open('planet_qualities.json'))
+		self.sun = {'data':self.generate_planet_data(self.chart.getObject(const.SUN)),'qualities':self.planet_qualities.get('sun')}
+		self.moon = {'data':self.generate_planet_data(self.chart.getObject(const.MOON)),'qualities':self.planet_qualities.get('moon')}
+		self.mercury = {'data':self.generate_planet_data(self.chart.getObject(const.MERCURY)),'qualities':self.planet_qualities.get('mercury')}
+		self.venus = {'data':self.generate_planet_data(self.chart.getObject(const.VENUS)),'qualities':self.planet_qualities.get('venus')}
+		self.mars = {'data':self.generate_planet_data(self.chart.getObject(const.MARS)),'qualities':self.planet_qualities.get('mars')}
+		self.jupiter = {'data':self.generate_planet_data(self.chart.getObject(const.JUPITER)),'qualities':self.planet_qualities.get('jupiter')}
+		self.saturn = {'data':self.generate_planet_data(self.chart.getObject(const.SATURN)),'qualities':self.planet_qualities.get('saturn')}
+		self.neptune = {'data':self.generate_planet_data(self.chart.getObject(const.NEPTUNE)),'qualities':self.planet_qualities.get('neptune')}
+		self.pluto = {'data':self.generate_planet_data(self.chart.getObject(const.PLUTO)),'qualities':self.planet_qualities.get('pluto')}
+		self.chiron = {'data':self.generate_planet_data(self.chart.getObject(const.CHIRON)),'qualities':self.planet_qualities.get('chiron')}
+		self.north_node = {'data':self.generate_planet_data(self.chart.getObject(const.NORTH_NODE)),'qualities':self.planet_qualities.get('north_node')}
+		self.south_node = {'data':self.generate_planet_data(self.chart.getObject(const.SOUTH_NODE)),'qualities':self.planet_qualities.get('south_node')}
+		self.syzygy = {'data':self.generate_planet_data(self.chart.getObject(const.SYZYGY)),'qualities':self.planet_qualities.get('syzygy')}
+		self.pars_fortuna = {'data':self.generate_planet_data(self.chart.getObject(const.PARS_FORTUNA)),'qualities':self.planet_qualities.get('pars_fortuna')}
+		self.asc = {'data':self.generate_planet_data(self.chart.get(const.ASC) ),'qualities':self.planet_qualities.get('asc')}
+		self.house1 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE1)),'qualities':self.house_qualities.get('house1')}
+		self.house2 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE2)),'qualities':self.house_qualities.get('house2')}
+		self.house3 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE3)),'qualities':self.house_qualities.get('house3')}
+		self.house4 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE4)),'qualities':self.house_qualities.get('house4')}
+		self.house5 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE5)),'qualities':self.house_qualities.get('house5')}
+		self.house6 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE6)),'qualities':self.house_qualities.get('house6')}
+		self.house7 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE7)),'qualities':self.house_qualities.get('house7')}
+		self.house8 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE8)),'qualities':self.house_qualities.get('house8')}
+		self.house9 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE9)),'qualities':self.house_qualities.get('house9')}
+		self.house10 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE10)),'qualities':self.house_qualities.get('house10')}
+		self.house11 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE11)),'qualities':self.house_qualities.get('house11')}
+		self.house12 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE12)),'qualities':self.house_qualities.get('house12')}
+		
+    # creates a new empty list for each dog
+    	
+
+	def pull_chart(self, date, btime):
+		print(date)
+		b=btime[:-3]
+		c=[int(i) for i in udf.birthdate[0].split('/')[::-1]]
+		c[1], c[2] = c[2],c[1]
+		self.pos = GeoPos(self.zipcode_dict["SWBoundLatitude"], self.zipcode_dict["NEBoundLongitude"])
+		print(self.pos.lat)
+		print(self.pos.lon)
+		self.new_date_obj = Datetime(c)
+		print(self.new_date_obj.date)
+		print(self.new_date_obj.time)
+		print(self.new_date_obj.utcoffset)
+		self.chart = Chart(self.new_date_obj, self.pos, IDs=const.LIST_OBJECTS)
+
+	def get_birthplace(self, bplacezip):
+		search = ZipcodeSearchEngine()
+		zipcode = search.by_zipcode(bplacezip)
+		self.zipcode_dict=zipcode
+	
+#	def get_offset(self, zip):
+#		zcdb = ZipCodeDatabase()
+#		zipcode = zcdb[zip]
+
+	def generate_planet_data(self, planet):
+		fields = {}
+		try:
+			fields['name']=planet.name=planet.__str__()[1:planet.__str__().find(' ')]
+		except:
+			pass
+		try:
+			fields['sign']= planet.sign
+		except:
+			pass
+		try:
+			fields['isRetrograde']= planet.isRetrograde()
+		except:
+			pass
+		try:
+			fields['isFast']= planet.isFast()
+		except:
+			pass
+		try:
+			fields['isDirect']= planet.isDirect()
+		except:
+			pass
+		try:
+			fields['element']= planet.element()
+		except:
+			pass
+		try:
+			fields['gender']= planet.gender()
+		except:
+			pass
+		try:
+			fields['movement']= planet.movement()
+		except:
+			pass
+		print(fields)
+		return fields
+	
 
 
-
-
-
-
-def generate_planet_data(planet, fields):
-	planet.name=planet.__str__()[1:planet.__str__().find(' ')]
-
-	planet_fields = {
-	planet.name+'_sign': planet.sign,
-	planet.name+'_retrograde': planet.isRetrograde(),
-	planet.name+'_isFast': planet.isFast(),
-	planet.name+'_direct': planet.isDirect(),
-	planet.name+'_element': planet.element(),
-	planet.name+'_gender': planet.gender(),
-	planet.name+'_movement': planet.movement()
-	}
-	fields.update(planet_fields)
-
-
-if __name__ == "__main__":
-
-	planets = [sun, moon, mercury, venus, mars, jupiter, saturn, neptune, pluto]
-	fields = {}
-
-	for planet in planets:
-		generate_planet_data(planet, fields)
+#if __name__ == "__main__":
