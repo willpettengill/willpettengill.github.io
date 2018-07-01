@@ -1,3 +1,5 @@
+## cd '/Users/wpettengill/Desktop/willpettengill.github.io/ai_astrology'
+
 from __future__ import print_function
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -25,7 +27,7 @@ SPREADSHEET = "Machine Learning Horoscope (Responses)"
 
 json_key = json.load(open(SECRETS_FILE))
 
-credentials = ServiceAccountCredentials.from_json_keyfile_name('/Users/wpettengill/Documents/ML Horoscope-57bf7abc958a.json', SCOPE)
+credentials = ServiceAccountCredentials.from_json_keyfile_name('ML Horoscope-57bf7abc958a.json', SCOPE)
 
 gc = gspread.authorize(credentials)
 
