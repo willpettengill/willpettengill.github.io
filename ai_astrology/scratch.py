@@ -12,7 +12,7 @@ def get_mae(X, y):
                                 X, y, 
                                 scoring = 'neg_mean_absolute_error').mean()
 
-users = pd.io.parsers.read_csv('/Users/wpettengill/Desktop/willpettengill.github.io/ai_astrology/users.csv', dtype={'birthplacezipcode':'str'}).dropna().drop_duplicates(subset=['emailaddress'],keep='last')
+users = pd.io.parsers.read_csv('/Users/wpettengill/Desktop/willpettengill.github.io/ai_astrology/users.csv').dropna().drop_duplicates(subset=['emailaddress'],keep='last')
 users['birthplacezipcode'] = users['birthplacezipcode'].astype(str).str.zfill(5)
 
 survey = pd.read_csv('/Users/wpettengill/Desktop/willpettengill.github.io/ai_astrology/survey.csv').dropna().drop_duplicates(subset=['emailaddress'],keep='last')
