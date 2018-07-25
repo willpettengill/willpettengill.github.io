@@ -17,9 +17,9 @@ class Dog:
 		self.bplacezip=bplacezip
 		self.date_obj = pd.to_datetime(self.bdate + ' ' + self.btime)
 		self.date = Datetime(str(self.date_obj.date()).replace('-','/'), str(self.date_obj.time()),'+05:00')
-		self.date='6/20/1988'
+		
 		self.get_birthplace(bplacezip)
-		self.pull_chart(self.date,self.btime)
+		#self.pull_chart(bdate,self.btime)
 		self.pull_chart(bdate,btime) # removed str(self.date)) # dates_list = [dt.datetime.strptime(date, '"%Y-%m-%d"').date() for date in dates]
 		self.house_qualities = json.load(open('house_qualities.json'))
 		self.sign_qualities = json.load(open('sign_qualities.json'))
@@ -53,20 +53,22 @@ class Dog:
 		self.house12 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE12)),'qualities':self.house_qualities.get('house12')}
 		
     # creates a new empty list for each dog
-    	
+	def normalize_btime(self, t):
+		tl = t.split(' ')
+		time = [int(i) for i in tl[0].split(':')]
+		if tl[-1].find('PM') >= 0:
+			time[0] = time[0]+12
+		return ['+']+time
 
 	def pull_chart(self, date, btime):
 		print(date)
-		b=btime[:-3]
-		c=[int(i) for i in udf.birthdate[0].split('/')[::-1]]
+		b=self.normalize_btime(btime)
+		c=[int(i) for i in date.split('/')[::-1]]
+		offset= ['-',5,0,0] ## modify this for non eastern time zones
 		c[1], c[2] = c[2],c[1]
 		self.pos = GeoPos(self.zipcode_dict["SWBoundLatitude"], self.zipcode_dict["NEBoundLongitude"])
-		print(self.pos.lat)
-		print(self.pos.lon)
-		self.new_date_obj = Datetime(c)
-		print(self.new_date_obj.date)
-		print(self.new_date_obj.time)
-		print(self.new_date_obj.utcoffset)
+		self.new_date_obj = Datetime(c, b, offset)
+		print(self.new_date_obj)
 		self.chart = Chart(self.new_date_obj, self.pos, IDs=const.LIST_OBJECTS)
 
 	def get_birthplace(self, bplacezip):
@@ -112,8 +114,12 @@ class Dog:
 			fields['movement']= planet.movement()
 		except:
 			pass
-		print(fields)
+		
 		return fields
+
+
+#	def generate_dataframe(data):
+
 	
 
 
