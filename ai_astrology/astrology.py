@@ -1,3 +1,4 @@
+import pandas as pd
 import random
 from flatlib.datetime import Datetime
 from flatlib.geopos import GeoPos
@@ -5,17 +6,19 @@ from flatlib.chart import Chart
 from flatlib import const
 from datetime import datetime 
 from uszipcode import ZipcodeSearchEngine
+
 #from pyzipcode import ZipCodeDatabase
 
 
 class Dog:
 
 	def __init__(self, bdate, btime, bplacezip):
+		
 		self.planet_fields={}
 		self.bdate=bdate
-		self.btime=btime
+		#self.btime=btime
 		self.bplacezip=bplacezip
-		self.date_obj = pd.to_datetime(self.bdate + ' ' + self.btime)
+		#self.date_obj = pd.to_datetime(self.bdate + ' ' + self.btime)
 		self.date = Datetime(str(self.date_obj.date()).replace('-','/'), str(self.date_obj.time()),'+05:00')
 		
 		self.get_birthplace(bplacezip)
@@ -118,7 +121,11 @@ class Dog:
 		return fields
 
 
-#	def generate_dataframe(data):
+class Email1:
+
+	def __init__(h):
+		self.bdate=bdate
+	
 
 	
 
