@@ -25,7 +25,7 @@ class Stars:
 		self.date = Datetime(str(self.date_obj.date()).replace('-','/'), str(self.date_obj.time()),'+05:00')		
 		self.get_birthplace(bplacezip)
 		self.pull_chart(bdate, self.btime)
-
+		self.sun_qualities = pd.read_csv('sun_qualities.csv')
 		self.house_qualities = json.load(open('house_qualities.json'))
 		self.sign_qualities = json.load(open('sign_qualities.json'))
 		self.planet_qualities = json.load(open('planet_qualities.json'))
@@ -184,7 +184,7 @@ def msg_horoscope_1(star, user, ds, DS, today, expressed):
 	
 	for i in range(len(body_h)):
 		body.append('\n'.join([body_h[i],body_p[i],body_s[i]]))
-	endline = ['\n\n --Stella']
+	endline = ['\n\n' + random.choice(['*---Stella signing off---*','We need your feedback! Reply to this email - we read everything :)'])]
 	text = '\n'.join(headline+body+endline)
 	return text, subject
 
@@ -209,7 +209,7 @@ if __name__ == "__main__":
 		stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
 		today = Stars(DS, udf.birthtime[i], udf.birthplacezipcode[i])
 		username = udf.emailaddress[i].split('@')[0]
-
+		msg_type = ''
 		if udf.emd5[i] not in recd_birthchart:
 			msg, subject = msg_birthchart(stars, username)
 			msg_type = 'birthchart_1'
@@ -219,7 +219,7 @@ if __name__ == "__main__":
 				msg, subject = msg_horoscope_1(stars, username, ds, DS, today, expressed)
 				msg_type = 'horoscope_1'
 				#email(udf.emailaddress[i], msg, subject)
-				email('wwpettengill@gmail.com', msg, subject)
+				#email('wwpettengill@gmail.com', msg, subject)
 				break
 		json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
 		sends.append(json_data)
