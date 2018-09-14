@@ -4,58 +4,61 @@ from flatlib.datetime import Datetime
 from flatlib.geopos import GeoPos
 from flatlib.chart import Chart
 from flatlib import const
-from datetime import datetime 
+from datetime import datetime
+from datetime import date as dt 
 from uszipcode import ZipcodeSearchEngine
-
+import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
+import time
+import json
 #from pyzipcode import ZipCodeDatabase
 
+class Stars:
 
-class Dog:
-
-	def __init__(self, bdate, btime, bplacezip):
-		
+	def __init__(self, bdate, btime, bplacezip):		
 		self.planet_fields={}
 		self.bdate=bdate
-		#self.btime=btime
+		self.btime=btime
 		self.bplacezip=bplacezip
-		#self.date_obj = pd.to_datetime(self.bdate + ' ' + self.btime)
-		self.date = Datetime(str(self.date_obj.date()).replace('-','/'), str(self.date_obj.time()),'+05:00')
-		
+		self.date_obj = pd.to_datetime(self.bdate + ' ' + self.btime)
+		self.date = Datetime(str(self.date_obj.date()).replace('-','/'), str(self.date_obj.time()),'+05:00')		
 		self.get_birthplace(bplacezip)
-		#self.pull_chart(bdate,self.btime)
-		self.pull_chart(bdate,btime) # removed str(self.date)) # dates_list = [dt.datetime.strptime(date, '"%Y-%m-%d"').date() for date in dates]
+		self.pull_chart(bdate, self.btime)
+
 		self.house_qualities = json.load(open('house_qualities.json'))
 		self.sign_qualities = json.load(open('sign_qualities.json'))
 		self.planet_qualities = json.load(open('planet_qualities.json'))
-		self.sun = {'data':self.generate_planet_data(self.chart.getObject(const.SUN)),'qualities':self.planet_qualities.get('sun')}
-		self.moon = {'data':self.generate_planet_data(self.chart.getObject(const.MOON)),'qualities':self.planet_qualities.get('moon')}
-		self.mercury = {'data':self.generate_planet_data(self.chart.getObject(const.MERCURY)),'qualities':self.planet_qualities.get('mercury')}
-		self.venus = {'data':self.generate_planet_data(self.chart.getObject(const.VENUS)),'qualities':self.planet_qualities.get('venus')}
-		self.mars = {'data':self.generate_planet_data(self.chart.getObject(const.MARS)),'qualities':self.planet_qualities.get('mars')}
-		self.jupiter = {'data':self.generate_planet_data(self.chart.getObject(const.JUPITER)),'qualities':self.planet_qualities.get('jupiter')}
-		self.saturn = {'data':self.generate_planet_data(self.chart.getObject(const.SATURN)),'qualities':self.planet_qualities.get('saturn')}
-		self.neptune = {'data':self.generate_planet_data(self.chart.getObject(const.NEPTUNE)),'qualities':self.planet_qualities.get('neptune')}
-		self.pluto = {'data':self.generate_planet_data(self.chart.getObject(const.PLUTO)),'qualities':self.planet_qualities.get('pluto')}
-		self.chiron = {'data':self.generate_planet_data(self.chart.getObject(const.CHIRON)),'qualities':self.planet_qualities.get('chiron')}
-		self.north_node = {'data':self.generate_planet_data(self.chart.getObject(const.NORTH_NODE)),'qualities':self.planet_qualities.get('north_node')}
-		self.south_node = {'data':self.generate_planet_data(self.chart.getObject(const.SOUTH_NODE)),'qualities':self.planet_qualities.get('south_node')}
-		self.syzygy = {'data':self.generate_planet_data(self.chart.getObject(const.SYZYGY)),'qualities':self.planet_qualities.get('syzygy')}
-		self.pars_fortuna = {'data':self.generate_planet_data(self.chart.getObject(const.PARS_FORTUNA)),'qualities':self.planet_qualities.get('pars_fortuna')}
-		self.asc = {'data':self.generate_planet_data(self.chart.get(const.ASC) ),'qualities':self.planet_qualities.get('asc')}
-		self.house1 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE1)),'qualities':self.house_qualities.get('house1')}
-		self.house2 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE2)),'qualities':self.house_qualities.get('house2')}
-		self.house3 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE3)),'qualities':self.house_qualities.get('house3')}
-		self.house4 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE4)),'qualities':self.house_qualities.get('house4')}
-		self.house5 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE5)),'qualities':self.house_qualities.get('house5')}
-		self.house6 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE6)),'qualities':self.house_qualities.get('house6')}
-		self.house7 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE7)),'qualities':self.house_qualities.get('house7')}
-		self.house8 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE8)),'qualities':self.house_qualities.get('house8')}
-		self.house9 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE9)),'qualities':self.house_qualities.get('house9')}
-		self.house10 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE10)),'qualities':self.house_qualities.get('house10')}
-		self.house11 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE11)),'qualities':self.house_qualities.get('house11')}
-		self.house12 = {'data':self.generate_planet_data(self.chart.get(const.HOUSE12)),'qualities':self.house_qualities.get('house12')}
+		self.p = {
+		'sun' : {**self.generate_planet_data(self.chart.getObject(const.SUN)), 'qualities': self.planet_qualities.get('sun')},
+		'moon' : {**self.generate_planet_data(self.chart.getObject(const.MOON)), 'qualities':self.planet_qualities.get('moon')},
+		'mercury' : {**self.generate_planet_data(self.chart.getObject(const.MERCURY)), 'qualities':self.planet_qualities.get('mercury')},
+		'venus' : {**self.generate_planet_data(self.chart.getObject(const.VENUS)), 'qualities':self.planet_qualities.get('venus')},
+		'mars' : {**self.generate_planet_data(self.chart.getObject(const.MARS)), 'qualities':self.planet_qualities.get('mars')},
+		'jupiter' : {**self.generate_planet_data(self.chart.getObject(const.JUPITER)), 'qualities':self.planet_qualities.get('jupiter')},
+		'saturn' : {**self.generate_planet_data(self.chart.getObject(const.SATURN)), 'qualities':self.planet_qualities.get('saturn')},
+		'neptune' : {**self.generate_planet_data(self.chart.getObject(const.NEPTUNE)), 'qualities':self.planet_qualities.get('neptune')},
+		'pluto' : {**self.generate_planet_data(self.chart.getObject(const.PLUTO)), 'qualities':self.planet_qualities.get('pluto')},
+		'chiron' : {**self.generate_planet_data(self.chart.getObject(const.CHIRON)), 'qualities':self.planet_qualities.get('chiron')},
+		'north_node' : {**self.generate_planet_data(self.chart.getObject(const.NORTH_NODE)), 'qualities':self.planet_qualities.get('north_node')},
+		'south_node' : {**self.generate_planet_data(self.chart.getObject(const.SOUTH_NODE)), 'qualities':self.planet_qualities.get('south_node')},
+		'syzygy' : {**self.generate_planet_data(self.chart.getObject(const.SYZYGY)), 'qualities':self.planet_qualities.get('syzygy')},
+		'pars_fortuna' : {**self.generate_planet_data(self.chart.getObject(const.PARS_FORTUNA)), 'qualities':self.planet_qualities.get('pars_fortuna')},
+		'asc' : {**self.generate_planet_data(self.chart.get(const.ASC)), 'qualities':self.planet_qualities.get('asc')},
+		'house1' : {**self.generate_planet_data(self.chart.get(const.HOUSE1)), 'qualities':self.house_qualities.get('house1')},
+		'house2' : {**self.generate_planet_data(self.chart.get(const.HOUSE2)), 'qualities':self.house_qualities.get('house2')},
+		'house3' : {**self.generate_planet_data(self.chart.get(const.HOUSE3)), 'qualities':self.house_qualities.get('house3')},
+		'house4' : {**self.generate_planet_data(self.chart.get(const.HOUSE4)), 'qualities':self.house_qualities.get('house4')},
+		'house5' : {**self.generate_planet_data(self.chart.get(const.HOUSE5)), 'qualities':self.house_qualities.get('house5')},
+		'house6' : {**self.generate_planet_data(self.chart.get(const.HOUSE6)), 'qualities':self.house_qualities.get('house6')},
+		'house7' : {**self.generate_planet_data(self.chart.get(const.HOUSE7)), 'qualities':self.house_qualities.get('house7')},
+		'house8' : {**self.generate_planet_data(self.chart.get(const.HOUSE8)), 'qualities':self.house_qualities.get('house8')},
+		'house9' : {**self.generate_planet_data(self.chart.get(const.HOUSE9)), 'qualities':self.house_qualities.get('house9')},
+		'house10' : {**self.generate_planet_data(self.chart.get(const.HOUSE10)), 'qualities':self.house_qualities.get('house10')},
+		'house11' : {**self.generate_planet_data(self.chart.get(const.HOUSE11)), 'qualities':self.house_qualities.get('house11')},
+		'house12' : {**self.generate_planet_data(self.chart.get(const.HOUSE12)), 'qualities':self.house_qualities.get('house12')}
+		}
 		
-    # creates a new empty list for each dog
 	def normalize_btime(self, t):
 		tl = t.split(' ')
 		time = [int(i) for i in tl[0].split(':')]
@@ -77,14 +80,21 @@ class Dog:
 	def get_birthplace(self, bplacezip):
 		search = ZipcodeSearchEngine()
 		zipcode = search.by_zipcode(bplacezip)
-		self.zipcode_dict=zipcode
+		if zipcode['City']:
+			self.zipcode_dict=zipcode
+		else:
+			n=1
+			while zipcode['City'] is None:
+				bplacezip = str(int(bplacezip)+n)
+				zipcode = search.by_zipcode(bplacezip)
+				if zipcode['City']:
+					self.zipcode_dict=zipcode
+				n+=1
 	
-#	def get_offset(self, zip):
-#		zcdb = ZipCodeDatabase()
-#		zipcode = zcdb[zip]
-
 	def generate_planet_data(self, planet):
+		
 		fields = {}
+
 		try:
 			fields['name']=planet.name=planet.__str__()[1:planet.__str__().find(' ')]
 		except:
@@ -120,14 +130,99 @@ class Dog:
 		
 		return fields
 
+def email(toaddrs, msg, subj):
+	fromaddr = 'starlightstellab@gmail.com'
+	sender = 'starlightstellab@gmail.com'
+	passwd = 'Gemini69'
+	message = MIMEText(msg,"plain","utf-8")
+	message['From'] = 'Stella Astrology'
+	message['Subject'] = Header(subj,"utf-8").encode()
+	smtpObj = smtplib.SMTP("smtp.gmail.com", 587)
+	smtpObj.ehlo()                 
+	smtpObj.starttls()
+	smtpObj.set_debuglevel(1)
+	smtpObj.login(sender, passwd)
+	smtpObj.sendmail(sender,[toaddrs],message.as_string())
+	smtpObj.close()
+	time.sleep(10)
 
-class Email1:
+def msg_birthchart(star, user):
+	body = '''
+	Sun Sign: {}
+	Moon Sign: {}
+	Ascendant Sign: {}
+	Mercury Sign: {}
+	Venus Sign: {}
+	Mars Sign: {}
+	Jupiter Sign: {}
+	Saturn Sign: {}
+	Neptune Sign: {}
+	Pluto Sign: {}
+	'''.format(star.p.get('sun').get('sign'), star.p.get('moon').get('sign'), star.p.get('asc').get('sign'), star.p.get('mercury').get('sign'), star.p.get('venus').get('sign'), star.p.get('mars').get('sign'), star.p.get('jupiter').get('sign'), star.p.get('saturn').get('sign'), star.p.get('neptune').get('sign'), star.p.get('pluto').get('sign'))
+	headline = "Full Birthchart For {}: ".format(user)
+	endline = 'Horoscopes Coming Soon!'
+	text = '\n'.join([headline, body, endline])
+	print(body)
+	subject = "YOUR BIRTHCHART"
+	return text, subject
 
-	def __init__(h):
-		self.bdate=bdate
+def msg_horoscope_1(star, user, ds, DS, today, expressed):
+	subject = '*** HOROSCOPE FOR {}: {} ***'.format(user.upper(), ds)
+	body_h = []
+	body_p = []
+	body_s = [] #list of strings
+	body = [] #list of strings
+	headline = ['Expressed today ({}) from your birth chart (birthday: {}): \n'.format(DS, stars.bdate)]
+	for i in range(len(expressed)):
+		sign = expressed[i].get('sign').lower()
+		planet = expressed[i].get('name').lower()
+		body_h.append('{} in {}'.format(planet.upper(), sign.upper()))
+		sign_assoc ='{} is associated with the {}, {}, {} & {}'.format(sign.upper(), star.sign_qualities.get(sign)[0],star.sign_qualities.get(sign)[1], star.sign_qualities.get(sign)[2],star.sign_qualities.get(sign)[3])
+		body_s.append(sign_assoc)
+		planet_assoc = '{} governs {}, {}, and {}'.format(planet.upper(), star.planet_qualities.get(planet)[0], star.planet_qualities.get(planet)[1], star.planet_qualities.get(planet)[2])
+		body_p.append(planet_assoc)
+	
+	for i in range(len(body_h)):
+		body.append('\n'.join([body_h[i],body_p[i],body_s[i]]))
+	endline = ['\n\n --Stella']
+	text = '\n'.join(headline+body+endline)
+	return text, subject
+
+def expressions(star, today):
+	planets = star.planet_qualities.keys()
+	exp = [star.p.get(i) for i in planets if star.p.get(i)==today.p.get(i) and star.p.get(i) is not None]
+	return exp
+
+if __name__ == "__main__":
+
+	df=pd.read_csv('survey.csv')
+	udf=pd.read_csv('users.csv', dtype = {'birthplacezipcode':str}).dropna().reset_index()
+	ds = dt.today().strftime("%B %d, %Y") # full string
+	DS = dt.today().strftime("%m/%d/%Y")
+	sends = json.load(open('sends.json'))
+	recd_birthchart = [i.get('emd5') for i in sends if i.get('msg_type') == 'birthchart_1']
 	
 
-	
+	# Sends
+	for i in range(len(udf)):
 
+		stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
+		today = Stars(DS, udf.birthtime[i], udf.birthplacezipcode[i])
+		username = udf.emailaddress[i].split('@')[0]
 
-#if __name__ == "__main__":
+		if udf.emd5[i] not in recd_birthchart:
+			msg, subject = msg_birthchart(stars, username)
+			msg_type = 'birthchart_1'
+		else:
+			expressed = expressions(stars, today)
+			if len(expressed) > 0:
+				msg, subject = msg_horoscope_1(stars, username, ds, DS, today, expressed)
+				msg_type = 'horoscope_1'
+				#email(udf.emailaddress[i], msg, subject)
+				email('wwpettengill@gmail.com', msg, subject)
+				break
+		json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+		sends.append(json_data)
+		
+#	with open('sends.json', 'w') as fp:
+#		    json.dump(sends, fp)
