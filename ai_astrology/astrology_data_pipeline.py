@@ -70,7 +70,8 @@ def main():
 
 
 	w = workbook.get_worksheet(2) #occult
-	ww = pd.DataFrame.from_records(w.get_all_records())
+	ww = pd.DataFrame.from_records(w.get_all_records(), index='Quality').reset_index()
+	
 
 	
 
@@ -78,14 +79,14 @@ def main():
 	    json.dump(categoricals, fp)
 	df.to_csv('survey.csv')
 	udf.to_csv('users.csv')
-
-	return df, udf, sheet, data, w
+	ww.to_csv('sun_qualities.csv')
+	return df, udf, sheet, data, w, ww
 	
 
 
 
 if __name__ == '__main__':
-	df, udf, sheet, data, w = main()
+	df, udf, sheet, data, w, ww = main()
 
 
 
