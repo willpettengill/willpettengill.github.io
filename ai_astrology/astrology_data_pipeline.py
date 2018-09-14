@@ -24,6 +24,13 @@ def answer_map(x):
 	else:
 		return x.lower()
 
+def zip_normalize(x):
+	if len(x) == 4:
+		x = '0'+ x
+	else:
+		pass	
+	return x
+
 def main():
 
 	SCOPE = ['https://spreadsheets.google.com/feeds',
@@ -47,27 +54,42 @@ def main():
 	#all_keys = set().union(*(d.keys() for d in sheet.get_all_records()))
 	#del column_map['Email Address']
 	data = pd.DataFrame.from_records(sheet.get_all_records())
-	print(sheet.get_all_records())
+	#print(sheet.get_all_records())
 	column_map = {k:re.sub(r'[^\w\s]','',k.lower().replace(' ','')) for k in data.columns.tolist()}
 	data = data.rename(columns=column_map)
-	data['emailaddress'] = data['emailaddress'].map(lambda x: hashlib.md5(x.encode('utf-8')).hexdigest())
-
-	data = data.set_index('emailaddress')
-	user_data = ['birthdate', 'birthtime', 'birthplacezipcode', 'timestamp']
+	data['emd5'] = data['emailaddress'].map(lambda x: hashlib.md5(x.encode('utf-8')).hexdigest())
+	data['birthplacezipcode'] = data['birthplacezipcode'].astype(str)
+	data['birthplacezipcode'] = data['birthplacezipcode'].map(lambda x: zip_normalize(x))
+	data = data.set_index('emd5')
+	user_data = ['birthdate', 'birthtime', 'birthplacezipcode', 'timestamp', 'emailaddress']
 	udf = data[user_data]
 	df = data[[i for i in data.columns.tolist() if i not in user_data]]
 	df = df.applymap(lambda x: answer_map(x))
 
 	categoricals = {k.name: list(v) for k, v in df.columns.to_series().groupby(df.dtypes).groups.items()}
 
+
+	w = workbook.get_worksheet(2) #occult
+	ww = pd.DataFrame.from_records(w.get_all_records())
+
+	
+
 	with open('categoricals.json', 'w') as fp:
 	    json.dump(categoricals, fp)
 	df.to_csv('survey.csv')
 	udf.to_csv('users.csv')
+
+	return df, udf, sheet, data, w
 	
 
 
 
 if __name__ == '__main__':
-	main()
+	df, udf, sheet, data, w = main()
+
+
+
+
+
+
 	
