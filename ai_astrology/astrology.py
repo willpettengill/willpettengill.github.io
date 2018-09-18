@@ -25,7 +25,7 @@ class Stars:
 		self.date = Datetime(str(self.date_obj.date()).replace('-','/'), str(self.date_obj.time()),'+05:00')		
 		self.get_birthplace(bplacezip)
 		self.pull_chart(bdate, self.btime)
-		self.sun_qualities = pd.read_csv('sun_qualities.csv')
+		self.sun_qualities = pd.read_csv('sun_qualities.csv').drop(['Unnamed: 0'], axis=1)
 		self.house_qualities = json.load(open('house_qualities.json'))
 		self.sign_qualities = json.load(open('sign_qualities.json'))
 		self.planet_qualities = json.load(open('planet_qualities.json'))
@@ -160,7 +160,7 @@ def msg_birthchart(star, user):
 	Pluto Sign: {}
 	'''.format(star.p.get('sun').get('sign'), star.p.get('moon').get('sign'), star.p.get('asc').get('sign'), star.p.get('mercury').get('sign'), star.p.get('venus').get('sign'), star.p.get('mars').get('sign'), star.p.get('jupiter').get('sign'), star.p.get('saturn').get('sign'), star.p.get('neptune').get('sign'), star.p.get('pluto').get('sign'))
 	headline = "Full Birthchart For {}: ".format(user)
-	endline = 'Horoscopes Coming Soon!'
+	endline = 'Pay special attention to your Sun sign, which is your primary sign, your ascendant, which describes the face you show the world, and your moon sign, which descibes your inner life. Explanations of these coming soon.'
 	text = '\n'.join([headline, body, endline])
 	print(body)
 	subject = "YOUR BIRTHCHART"
@@ -188,6 +188,28 @@ def msg_horoscope_1(star, user, ds, DS, today, expressed):
 	text = '\n'.join(headline+body+endline)
 	return text, subject
 
+def msg_sun_explainer(stars, user):
+	subject = '*** SUN SIGN EXPLAINER FOR {} ***'.format(user.upper())
+	headline = 'UNDERSTANDING SUN IN {}: \n'.format(stars.p.get('sun').get('sign').upper())
+	body = stars.sun_qualities[stars.sun_qualities.Quality=='Sun Sign Description'][stars.p.get('sun').get('sign')].values[0]
+	endline = ''
+	text = '\n'.join([headline, body])
+	return text, subject
+
+def msg_moon_explainer(stars, user):
+	subject = '*** MOON SIGN EXPLAINER FOR {} ***'.format(user.upper())
+	headline = 'UNDERSTANDING MOON IN {}: \n'.format(stars.p.get('moon').get('sign').upper())
+	body = stars.sun_qualities[stars.sun_qualities.Quality=='Moon Sign Description'][stars.p.get('moon').get('sign')].values[0]
+	text = '\n'.join([headline, body])
+	return text, subject
+
+def msg_asc_explainer(stars, user):
+	headline = 'UNDERSTANDING RISING SIGN IN {}: \n'.format(stars.p.get('asc').get('sign').upper())
+	subject = '*** RISING SIGN EXPLAINER FOR {} ***'.format(user.upper())
+	body = stars.sun_qualities[stars.sun_qualities.Quality=='Rising Sign Description'][stars.p.get('asc').get('sign')].values[0]
+	text = '\n'.join([headline, body])
+	return text, subject
+
 def expressions(star, today):
 	planets = star.planet_qualities.keys()
 	exp = [star.p.get(i) for i in planets if star.p.get(i)==today.p.get(i) and star.p.get(i) is not None]
@@ -201,7 +223,9 @@ if __name__ == "__main__":
 	DS = dt.today().strftime("%m/%d/%Y")
 	sends = json.load(open('sends.json'))
 	recd_birthchart = [i.get('emd5') for i in sends if i.get('msg_type') == 'birthchart_1']
-	
+	recd_sun_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'sun_explainer']
+	recd_moon_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'moon_explainer']
+	recd_asc_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'asc_explainer']
 
 	# Sends
 	for i in range(len(udf)):
@@ -213,16 +237,27 @@ if __name__ == "__main__":
 		if udf.emd5[i] not in recd_birthchart:
 			msg, subject = msg_birthchart(stars, username)
 			msg_type = 'birthchart_1'
+		elif udf.emd5[i] not in recd_sun_explainer:
+			msg, subject = msg_sun_explainer(stars, username)
+			msg_type='sun_explainer'
+		elif udf.emd5[i] not in recd_moon_explainer:
+			msg, subject = msg_moon_explainer(stars, username)
+			msg_type = 'moon_explainer'
+		elif udf.emd5[i] not in recd_asc_explainer:	
+			msg, subject = msg_asc_explainer(stars, username)
+			msg_type = 'asc_explainer'
 		else:
 			expressed = expressions(stars, today)
 			if len(expressed) > 0:
 				msg, subject = msg_horoscope_1(stars, username, ds, DS, today, expressed)
 				msg_type = 'horoscope_1'
-				#email(udf.emailaddress[i], msg, subject)
-				#email('wwpettengill@gmail.com', msg, subject)
-				break
-		json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-		sends.append(json_data)
 		
-#	with open('sends.json', 'w') as fp:
-#		    json.dump(sends, fp)
+		#msg, subject = msg_moon_explainer(stars, username)
+		email(udf.emailaddress[i], msg, subject)
+		#email('wwpettengill@gmail.com', msg, subject)
+		#break
+		json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+		#sends.append(json_data)
+		
+	with open('sends.json', 'w') as fp:
+		    json.dump(sends, fp)
