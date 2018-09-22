@@ -252,12 +252,13 @@ if __name__ == "__main__":
 				msg, subject = msg_horoscope_1(stars, username, ds, DS, today, expressed)
 				msg_type = 'horoscope_1'
 		
-		#msg, subject = msg_moon_explainer(stars, username)
-		email(udf.emailaddress[i], msg, subject)
-		#email('wwpettengill@gmail.com', msg, subject)
-		#break
-		json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-		#sends.append(json_data)
+		if msg:
+			#msg, subject = msg_moon_explainer(stars, username)
+			email(udf.emailaddress[i], msg, subject)
+			#email('wwpettengill@gmail.com', msg, subject)
+			#break
+			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+			sends.append(json_data)
 		
 	with open('sends.json', 'w') as fp:
 		    json.dump(sends, fp)
