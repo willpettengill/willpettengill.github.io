@@ -85,7 +85,7 @@ class Stars:
 		else:
 			n=1
 			while zipcode['City'] is None:
-				bplacezip = str(int(bplacezip)+n)
+				bplacezip = str(int(bplacezip)+n) if len(str(bplacezip))==5 else '02114'
 				zipcode = search.by_zipcode(bplacezip)
 				if zipcode['City']:
 					self.zipcode_dict=zipcode
@@ -228,7 +228,8 @@ if __name__ == "__main__":
 	recd_asc_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'asc_explainer']
 
 	# Sends
-	for i in range(len(udf)):
+	for i in range(3):
+	#for i in range(len(udf)):
 
 		stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
 		today = Stars(DS, udf.birthtime[i], udf.birthplacezipcode[i])
@@ -254,11 +255,12 @@ if __name__ == "__main__":
 		
 		if msg:
 			#msg, subject = msg_moon_explainer(stars, username)
-			email(udf.emailaddress[i], msg, subject)
-			#email('wwpettengill@gmail.com', msg, subject)
-			#break
+			#email(udf.emailaddress[i], msg, subject)
+			email('wwpettengill@gmail.com', msg, subject)
+			
 			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
 			sends.append(json_data)
-		
+			
 	with open('sends.json', 'w') as fp:
 		    json.dump(sends, fp)
+	print(sends)
