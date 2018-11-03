@@ -1,0 +1,42 @@
+/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+6/20/1988
+<1988/06/20 09:19:00 -05:00:00>
+11/02/2018
+<2018/11/02 09:19:00 -05:00:00>
+8/16/1988
+<1988/08/16 11:56:00 -05:00:00>
+11/02/2018
+<2018/11/02 11:56:00 -05:00:00>
+10/17/1962
+<1962/10/17 16:27:00 -05:00:00>
+11/02/2018
+<2018/11/02 16:27:00 -05:00:00>
+3/3/1988
+<1988/03/03 19:47:00 -05:00:00>
+11/02/2018
+<2018/11/02 19:47:00 -05:00:00>
+10/6/1987
+<1987/10/06 03:00:00 -05:00:00>
+11/02/2018
+<2018/11/02 03:00:00 -05:00:00>
+
+	Sun Sign: Libra
+	Moon Sign: Aries
+	Ascendant Sign: Virgo
+	Mercury Sign: Scorpio
+	Venus Sign: Libra
+	Mars Sign: Virgo
+	Jupiter Sign: Aries
+	Saturn Sign: Sagittarius
+	Neptune Sign: Capricorn
+	Pluto Sign: Scorpio
+	
+Traceback (most recent call last):
+  File "astrology.py", line 233, in <module>
+    stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
+  File "astrology.py", line 26, in __init__
+    self.get_birthplace(bplacezip)
+  File "astrology.py", line 88, in get_birthplace
+    bplacezip = str(int(bplacezip)+n)
+ValueError: invalid literal for int() with base 10: '2765-452'
