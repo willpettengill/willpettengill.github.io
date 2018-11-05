@@ -12,6 +12,7 @@ from email.mime.text import MIMEText
 from email.header import Header
 import time
 import json
+import argparse
 #from pyzipcode import ZipCodeDatabase
 
 class Stars:
@@ -216,6 +217,10 @@ def expressions(star, today):
 	return exp
 
 if __name__ == "__main__":
+	parser = argparse.ArgumentParser()
+	parser.add_argument('--type', type=str, description='scan or daily')
+	args = parser.parse_args()
+
 
 	df=pd.read_csv('survey.csv')
 	udf=pd.read_csv('users.csv', dtype = {'birthplacezipcode':str}).dropna().reset_index()
@@ -227,40 +232,44 @@ if __name__ == "__main__":
 	recd_moon_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'moon_explainer']
 	recd_asc_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'asc_explainer']
 
+
+	
+
+
 	# Sends
-	for i in range(3):
+	for i in range(1):
 	#for i in range(len(udf)):
 
 		stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
 		today = Stars(DS, udf.birthtime[i], udf.birthplacezipcode[i])
 		username = udf.emailaddress[i].split('@')[0]
 		msg_type = ''
-		if udf.emd5[i] not in recd_birthchart:
+		if udf.emd5[i] not in recd_birthchart and args['type']=='scan':
 			msg, subject = msg_birthchart(stars, username)
 			msg_type = 'birthchart_1'
-		elif udf.emd5[i] not in recd_sun_explainer:
-			msg, subject = msg_sun_explainer(stars, username)
-			msg_type='sun_explainer'
-		elif udf.emd5[i] not in recd_moon_explainer:
-			msg, subject = msg_moon_explainer(stars, username)
-			msg_type = 'moon_explainer'
-		elif udf.emd5[i] not in recd_asc_explainer:	
-			msg, subject = msg_asc_explainer(stars, username)
-			msg_type = 'asc_explainer'
-		else:
-			expressed = expressions(stars, today)
-			if len(expressed) > 0:
-				msg, subject = msg_horoscope_1(stars, username, ds, DS, today, expressed)
-				msg_type = 'horoscope_1'
+		
+		if args['type']=='daily':
+			if udf.emd5[i] not in recd_sun_explainer:
+				msg, subject = msg_sun_explainer(stars, username)
+				msg_type='sun_explainer'
+			elif udf.emd5[i] not in recd_moon_explainer:
+				msg, subject = msg_moon_explainer(stars, username)
+				msg_type = 'moon_explainer'
+			elif udf.emd5[i] not in recd_asc_explainer:	
+				msg, subject = msg_asc_explainer(stars, username)
+				msg_type = 'asc_explainer'
+			else:
+				expressed = expressions(stars, today)
+				if len(expressed) > 0:
+					msg, subject = msg_horoscope_1(stars, username, ds, DS, today, expressed)
+					msg_type = 'horoscope_1'
 		
 		if msg:
 			#msg, subject = msg_moon_explainer(stars, username)
-			#email(udf.emailaddress[i], msg, subject)
-			email('wwpettengill@gmail.com', msg, subject)
-			
+#			email(udf.emailaddress[i], msg, subject)
+			email('wwpettengill@gmail.com', msg, subject)		
 			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
 			sends.append(json_data)
 			
 	with open('sends.json', 'w') as fp:
 		    json.dump(sends, fp)
-	print(sends)
