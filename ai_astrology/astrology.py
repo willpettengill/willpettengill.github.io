@@ -239,19 +239,21 @@ if __name__ == "__main__":
 	# Sends
 	for i in range(1):
 	#for i in range(len(udf)):
-
+		print(args.type)
 		stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
 		today = Stars(DS, udf.birthtime[i], udf.birthplacezipcode[i])
 		username = udf.emailaddress[i].split('@')[0]
 		msg_type = ''
-		if udf.emd5[i] not in recd_birthchart and args['type']=='scan':
+		msg = None
+
+		if udf.emd5[i] not in recd_birthchart and args.type=='scan':
 			msg, subject = msg_birthchart(stars, username)
 			msg_type = 'birthchart_1'
-		
-		if args['type']=='daily':
+			print('in scan mode')
+		if args.type=='daily':
 			if udf.emd5[i] not in recd_sun_explainer:
 				msg, subject = msg_sun_explainer(stars, username)
-				msg_type='sun_explainer'
+				msg_type = 'sun_explainer'
 			elif udf.emd5[i] not in recd_moon_explainer:
 				msg, subject = msg_moon_explainer(stars, username)
 				msg_type = 'moon_explainer'
@@ -270,6 +272,7 @@ if __name__ == "__main__":
 			email('wwpettengill@gmail.com', msg, subject)		
 			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
 			sends.append(json_data)
-			
+		else:
+			print('no message')	
 	with open('sends.json', 'w') as fp:
 		    json.dump(sends, fp)
