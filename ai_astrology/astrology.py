@@ -218,7 +218,7 @@ def expressions(star, today):
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--type', type=str, description='scan or daily')
+	parser.add_argument('--type', type=str, help='scan or daily')
 	args = parser.parse_args()
 
 
