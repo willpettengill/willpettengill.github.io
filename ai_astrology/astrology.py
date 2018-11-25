@@ -6,6 +6,7 @@ from flatlib.chart import Chart
 from flatlib import const
 from datetime import datetime
 from datetime import date as dt 
+import uszipcode
 from uszipcode import ZipcodeSearchEngine
 import smtplib
 from email.mime.text import MIMEText
