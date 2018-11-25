@@ -6,7 +6,7 @@ from flatlib.chart import Chart
 from flatlib import const
 from datetime import datetime
 from datetime import date as dt 
-from uszipcode import ZipcodeSearchEngine
+from uszipcode import SearchEngine
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
@@ -68,27 +68,26 @@ class Stars:
 		return ['+']+time
 
 	def pull_chart(self, date, btime):
-		print(date)
+		
 		b=self.normalize_btime(btime)
 		c=[int(i) for i in date.split('/')[::-1]]
 		offset= ['-',5,0,0] ## modify this for non eastern time zones
 		c[1], c[2] = c[2],c[1]
-		self.pos = GeoPos(self.zipcode_dict["SWBoundLatitude"], self.zipcode_dict["NEBoundLongitude"])
+		self.pos = GeoPos(self.zipcode_dict["lat"], self.zipcode_dict["lng"])
 		self.new_date_obj = Datetime(c, b, offset)
-		print(self.new_date_obj)
 		self.chart = Chart(self.new_date_obj, self.pos, IDs=const.LIST_OBJECTS)
 
 	def get_birthplace(self, bplacezip):
-		search = ZipcodeSearchEngine()
-		zipcode = search.by_zipcode(bplacezip)
-		if zipcode['City']:
+		search = SearchEngine(simple_zipcode=True)
+		zipcode = search.by_zipcode(bplacezip).to_dict()
+		if zipcode['lat'] is not None and zipcode['lng'] is not None:
 			self.zipcode_dict=zipcode
 		else:
 			n=1
-			while zipcode['City'] is None:
+			while zipcode['lat'] is None and zipcode['lng'] is None:
 				bplacezip = str(int(bplacezip)+n) if len(str(bplacezip))==5 else '02114'
-				zipcode = search.by_zipcode(bplacezip)
-				if zipcode['City']:
+				zipcode = search.by_zipcode(bplacezip).to_dict()
+				if zipcode['lat'] is not None and zipcode['lng'] is not None:
 					self.zipcode_dict=zipcode
 				n+=1
 	
@@ -218,7 +217,8 @@ def expressions(star, today):
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--type', type=str, help='scan or daily')
+	parser.add_argument('--type', type=str, help='scan or daily or test & acct')
+	parser.add_argument('--acct', type=str)
 	args = parser.parse_args()
 
 
@@ -232,14 +232,11 @@ if __name__ == "__main__":
 	recd_moon_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'moon_explainer']
 	recd_asc_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'asc_explainer']
 
-
-	
-
-
 	# Sends
 	for i in range(1):
 	#for i in range(len(udf)):
-		print(args.type)
+		if args.type =='test':
+			i = udf.index.get_indexer_for(udf[udf.emailaddress.apply(lambda x: x.find(args.acct)>=0)].index)[0]
 		stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
 		today = Stars(DS, udf.birthtime[i], udf.birthplacezipcode[i])
 		username = udf.emailaddress[i].split('@')[0]
@@ -250,7 +247,7 @@ if __name__ == "__main__":
 			msg, subject = msg_birthchart(stars, username)
 			msg_type = 'birthchart_1'
 			print('in scan mode')
-		if args.type=='daily':
+		if args.type in ('daily', 'test'):
 			if udf.emd5[i] not in recd_sun_explainer:
 				msg, subject = msg_sun_explainer(stars, username)
 				msg_type = 'sun_explainer'
@@ -267,11 +264,11 @@ if __name__ == "__main__":
 					msg_type = 'horoscope_1'
 		
 		if msg:
-			#msg, subject = msg_moon_explainer(stars, username)
-#			email(udf.emailaddress[i], msg, subject)
+			
+			#email(udf.emailaddress[i], msg, subject)
 			email('wwpettengill@gmail.com', msg, subject)		
-			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-			sends.append(json_data)
+			#json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+			#sends.append(json_data)
 		else:
 			print('no message')	
 	with open('sends.json', 'w') as fp:
