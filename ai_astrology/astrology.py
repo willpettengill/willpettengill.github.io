@@ -215,13 +215,14 @@ def expressions(star, today):
 	exp = [star.p.get(i) for i in planets if star.p.get(i)==today.p.get(i) and star.p.get(i) is not None]
 	return exp
 
-if __name__ == "__main__":
+
+
+def main():
+
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--type', type=str, help='scan or daily or test & acct')
 	parser.add_argument('--acct', type=str)
 	args = parser.parse_args()
-
-
 	df=pd.read_csv('survey.csv')
 	udf=pd.read_csv('users.csv', dtype = {'birthplacezipcode':str}).dropna().reset_index()
 	ds = dt.today().strftime("%B %d, %Y") # full string
@@ -273,3 +274,7 @@ if __name__ == "__main__":
 			print('no message')	
 	with open('sends.json', 'w') as fp:
 		    json.dump(sends, fp)
+
+
+if __name__ == "__main__":
+	main()
