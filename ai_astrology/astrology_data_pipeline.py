@@ -39,7 +39,7 @@ def zip_normalize(x):
 
 
 def ping():
-	
+	print('running ping')
 	ldf = pd.read_csv('users.csv')
 	ldf['timestamp']=pd.to_datetime(ldf['timestamp'])
 	df, udf, ww, categoricals = transform(SCOPE, SECRETS_FILE, SPREADSHEET)
@@ -49,7 +49,7 @@ def ping():
 		return True 
 
 def transform(SCOPE, SECRETS_FILE, SPREADSHEET):
-	
+	print('running transform')
 	json_key = json.load(open(SECRETS_FILE))
 	credentials = ServiceAccountCredentials.from_json_keyfile_name('ML Horoscope-57bf7abc958a.json', SCOPE)
 	gc = gspread.authorize(credentials)
@@ -73,6 +73,7 @@ def transform(SCOPE, SECRETS_FILE, SPREADSHEET):
 	return df, udf, ww, categoricals
 
 def write(df, udf, ww, categoricals):
+	print('running write')
 	with open('categoricals.json', 'w') as fp:
 	    json.dump(categoricals, fp)
 	df.to_csv('survey.csv')
@@ -80,6 +81,7 @@ def write(df, udf, ww, categoricals):
 	ww.to_csv('sun_qualities.csv')
 	
 def main():
+	print('running main')
 	df, udf, ww, categoricals = transform(SCOPE, SECRETS_FILE, SPREADSHEET)
 	write(df, udf, ww, categoricals)
 
