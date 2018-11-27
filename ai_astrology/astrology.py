@@ -234,8 +234,8 @@ def main():
 	recd_asc_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'asc_explainer']
 
 	# Sends
-	for i in range(1):
-	#for i in range(len(udf)):
+	#for i in range(1):
+	for i in reversed(range(len(udf))):
 		if args.type =='test':
 			i = udf.index.get_indexer_for(udf[udf.emailaddress.apply(lambda x: x.find(args.acct)>=0)].index)[0]
 		stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
