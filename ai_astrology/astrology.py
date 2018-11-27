@@ -218,7 +218,7 @@ def expressions(star, today):
 
 
 def main():
-
+	print('running main')
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--type', type=str, help='scan or daily or test & acct')
 	parser.add_argument('--acct', type=str)
@@ -266,10 +266,10 @@ def main():
 		
 		if msg:
 			
-			#email(udf.emailaddress[i], msg, subject)
-			email('wwpettengill@gmail.com', msg, subject)		
-			#json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-			#sends.append(json_data)
+			email(udf.emailaddress[i], msg, subject)
+			#email('wwpettengill@gmail.com', msg, subject)		
+			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+			sends.append(json_data)
 		else:
 			print('no message')	
 	with open('sends.json', 'w') as fp:
