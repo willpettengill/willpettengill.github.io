@@ -73,7 +73,7 @@ def transform(SCOPE, SECRETS_FILE, SPREADSHEET):
 	return df, udf, ww, categoricals
 
 def write(df, udf, ww, categoricals):
-	print('running write')
+	print('running adp write')
 	with open('categoricals.json', 'w') as fp:
 	    json.dump(categoricals, fp)
 	df.to_csv('survey.csv')
