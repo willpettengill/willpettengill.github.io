@@ -7,6 +7,7 @@ __pycache__/
 ai_astrology/users.csv
 ai_astrology/survey.csv
 ai_astrology/ML Horoscope-0cb375c927e5.json
+ai_astrology/sends.json
 ai_astrology/ML Horoscope-57bf7abc958a.json
 # C extensions
 *.so
