@@ -1,8 +1,8 @@
 /usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
   return f(*args, **kwds)
-None
-6/20/1988
-<1988/06/20 09:19:00 -05:00:00>
-11/21/2018
-<2018/11/21 09:19:00 -05:00:00>
-no message
+Traceback (most recent call last):
+  File "astrology.py", line 221, in <module>
+    parser.add_argument('--type', type=str, description='scan or daily')
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/argparse.py", line 1334, in add_argument
+    action = action_class(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'description'
