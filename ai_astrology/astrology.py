@@ -238,6 +238,8 @@ def main():
 	for i in reversed(range(len(udf))):
 		if args.type =='test':
 			i = udf.index.get_indexer_for(udf[udf.emailaddress.apply(lambda x: x.find(args.acct)>=0)].index)[0]
+		if udf.emd5[i] in recd_birthchart and udf.emd5[i] in recd_sun_explainer and udf.emd5[i] in recd_moon_explainer and udf.emd5[i] in recd_asc_explainer:
+			continue
 		stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
 		today = Stars(DS, udf.birthtime[i], udf.birthplacezipcode[i])
 		username = udf.emailaddress[i].split('@')[0]
