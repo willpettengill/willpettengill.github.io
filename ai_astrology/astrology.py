@@ -218,7 +218,7 @@ def expressions(star, today):
 
 
 def main():
-	print('running main')
+	print('running ast main')
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--type', type=str, help='scan or daily or test & acct')
 	parser.add_argument('--acct', type=str)
@@ -243,35 +243,44 @@ def main():
 		username = udf.emailaddress[i].split('@')[0]
 		msg_type = ''
 		msg = None
+		emailaddr=udf.emailaddress[i]
+#		emailaddr='wwpettengill@gmail.com'
 
-		if udf.emd5[i] not in recd_birthchart and args.type=='scan':
-			msg, subject = msg_birthchart(stars, username)
-			msg_type = 'birthchart_1'
-			print('in scan mode')
-		if args.type in ('daily', 'test'):
+		if args.type=='all':
+			if udf.emd5[i] not in recd_birthchart:
+				msg, subject = msg_birthchart(stars, username)
+				msg_type = 'birthchart_1'
+				email(emailaddr, msg, subject)
+				json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+				sends.append(json_data)
+		
 			if udf.emd5[i] not in recd_sun_explainer:
 				msg, subject = msg_sun_explainer(stars, username)
 				msg_type = 'sun_explainer'
-			elif udf.emd5[i] not in recd_moon_explainer:
+				email(emailaddr, msg, subject)
+				json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+				sends.append(json_data)
+
+			if udf.emd5[i] not in recd_moon_explainer:
 				msg, subject = msg_moon_explainer(stars, username)
 				msg_type = 'moon_explainer'
-			elif udf.emd5[i] not in recd_asc_explainer:	
+				email(emailaddr, msg, subject)
+				json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+				sends.append(json_data)
+
+			if udf.emd5[i] not in recd_asc_explainer:	
 				msg, subject = msg_asc_explainer(stars, username)
 				msg_type = 'asc_explainer'
-			else:
-				expressed = expressions(stars, today)
-				if len(expressed) > 0:
-					msg, subject = msg_horoscope_1(stars, username, ds, DS, today, expressed)
-					msg_type = 'horoscope_1'
-		
-		if msg:
-			
-			email(udf.emailaddress[i], msg, subject)
-			#email('wwpettengill@gmail.com', msg, subject)		
-			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-			sends.append(json_data)
-		else:
-			print('no message')	
+				email(emailaddr, msg, subject)
+				json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+				sends.append(json_data)
+
+#		else:
+#			expressed = expressions(stars, today)
+#			if len(expressed) > 0:
+#				msg, subject = msg_horoscope_1(stars, username, ds, DS, today, expressed)
+#				msg_type = 'horoscope_1'
+	
 	with open('sends.json', 'w') as fp:
 		    json.dump(sends, fp)
 
