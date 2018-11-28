@@ -246,34 +246,34 @@ def main():
 		emailaddr=udf.emailaddress[i]
 #		emailaddr='wwpettengill@gmail.com'
 
-		if args.type=='all':
-			if udf.emd5[i] not in recd_birthchart:
-				msg, subject = msg_birthchart(stars, username)
-				msg_type = 'birthchart_1'
-				email(emailaddr, msg, subject)
-				json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-				sends.append(json_data)
 		
-			if udf.emd5[i] not in recd_sun_explainer:
-				msg, subject = msg_sun_explainer(stars, username)
-				msg_type = 'sun_explainer'
-				email(emailaddr, msg, subject)
-				json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-				sends.append(json_data)
+		if udf.emd5[i] not in recd_birthchart:
+			msg, subject = msg_birthchart(stars, username)
+			msg_type = 'birthchart_1'
+			email(emailaddr, msg, subject)
+			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+			sends.append(json_data)
+	
+		if udf.emd5[i] not in recd_sun_explainer:
+			msg, subject = msg_sun_explainer(stars, username)
+			msg_type = 'sun_explainer'
+			email(emailaddr, msg, subject)
+			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+			sends.append(json_data)
 
-			if udf.emd5[i] not in recd_moon_explainer:
-				msg, subject = msg_moon_explainer(stars, username)
-				msg_type = 'moon_explainer'
-				email(emailaddr, msg, subject)
-				json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-				sends.append(json_data)
+		if udf.emd5[i] not in recd_moon_explainer:
+			msg, subject = msg_moon_explainer(stars, username)
+			msg_type = 'moon_explainer'
+			email(emailaddr, msg, subject)
+			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+			sends.append(json_data)
 
-			if udf.emd5[i] not in recd_asc_explainer:	
-				msg, subject = msg_asc_explainer(stars, username)
-				msg_type = 'asc_explainer'
-				email(emailaddr, msg, subject)
-				json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-				sends.append(json_data)
+		if udf.emd5[i] not in recd_asc_explainer:	
+			msg, subject = msg_asc_explainer(stars, username)
+			msg_type = 'asc_explainer'
+			email(emailaddr, msg, subject)
+			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+			sends.append(json_data)
 
 #		else:
 #			expressed = expressions(stars, today)
