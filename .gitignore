@@ -94,3 +94,4 @@ ENV/
 # Rope project settings
 .ropeproject
 ai_astrology/users.csv
+ai_astrology/ML\ Horoscope-57bf7abc958a.json
