@@ -226,7 +226,8 @@ def main():
 	df=pd.read_csv('survey.csv')
 	udf=pd.read_csv('users.csv', dtype = {'birthplacezipcode':str}).dropna().reset_index()
 	ds = dt.today().strftime("%B %d, %Y") # full string
-	DS = dt.today().strftime("%m/%d/%Y")
+	DS = dt.today().strftime("%Y-%m-%d")
+	_ds=DS = dt.today().strftime("%d/%m/%Y")
 	sends = json.load(open('sends.json'))
 	recd_birthchart = [i.get('emd5') for i in sends if i.get('msg_type') == 'birthchart_1']
 	recd_sun_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'sun_explainer']
@@ -241,7 +242,7 @@ def main():
 		if udf.emd5[i] in recd_birthchart and udf.emd5[i] in recd_sun_explainer and udf.emd5[i] in recd_moon_explainer and udf.emd5[i] in recd_asc_explainer:
 			continue
 		stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
-		today = Stars(DS, udf.birthtime[i], udf.birthplacezipcode[i])
+		today = Stars(_ds, udf.birthtime[i], udf.birthplacezipcode[i])
 		username = udf.emailaddress[i].split('@')[0]
 		msg_type = ''
 		msg = None
