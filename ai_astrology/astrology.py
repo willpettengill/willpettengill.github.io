@@ -210,12 +210,37 @@ def msg_asc_explainer(stars, user):
 	text = '\n'.join([headline, body])
 	return text, subject
 
-def expressions(star, today):
-	planets = star.planet_qualities.keys()
-	exp = [star.p.get(i) for i in planets if star.p.get(i)==today.p.get(i) and star.p.get(i) is not None]
-	return exp
+def msg_horoscope(stars, today, username, T):
+	N = {k:v.get('sign') for k,v in today.p.items()}
+	L =  {k:v.get('sign') for k,v in stars.p.items()}
+	X =  {k:v for k,v in L.items() for t,y in N.items() if k==t and v==y }
+	horoscope = {}
+	if X != {}:
+		for x,y in X.items():	# k is username - v is dict # x is planet - y is sign
+			print(x,y)
+			try:
+				result = parse_horoscope(T.loc[x+'_sign_description', y.capitalize()])
+				scope = {'{} in {}'.format(x.capitalize(), y): result}
+				horoscope.update(scope)
+			except:
+				pass
+	if horoscope != {}:
+		headline = 'Expressed today in your sign: {}'.format(' - '.join(horoscope.keys()))
+		body = ''
+		for k,v in horoscope.items():
+			body +=k+':'+'\n'+v+'\n' 
+		subject = 'Horoscope for {}'.format(username)
+		text = '\n\n'.join([headline]+[body])
+		return text, subject
+	else:
+		return None, None
 
-
+def parse_horoscope(s):
+	k = s.split('. ')
+	k = [i for i in k if i.find("If your Sun is in") == -1]
+	num = random.choice(range(len(k)-2))
+	sentences = k[num:num+3]
+	return ". ".join(sentences)
 
 def main():
 	print('running ast main')
@@ -227,12 +252,17 @@ def main():
 	udf=pd.read_csv('users.csv', dtype = {'birthplacezipcode':str}).dropna().reset_index()
 	ds = dt.today().strftime("%B %d, %Y") # full string
 	DS = dt.today().strftime("%Y-%m-%d")
-	_ds=DS = dt.today().strftime("%d/%m/%Y")
+	_ds = dt.today().strftime("%d/%m/%Y")
 	sends = json.load(open('sends.json'))
 	recd_birthchart = [i.get('emd5') for i in sends if i.get('msg_type') == 'birthchart_1']
 	recd_sun_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'sun_explainer']
 	recd_moon_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'moon_explainer']
 	recd_asc_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'asc_explainer']
+	T=pd.read_csv('sun_qualities.csv').drop(['Unnamed: 0'], axis=1)
+	T['Quality']=T['Quality'].apply(lambda x: x.lower().replace(' ','_'))
+	T=T.set_index('Quality')
+	L = []
+	X= []
 
 	# Sends
 	#for i in range(1):
@@ -247,45 +277,49 @@ def main():
 		msg_type = ''
 		msg = None
 		emailaddr=udf.emailaddress[i]
-#		emailaddr='wwpettengill@gmail.com'
-
+		emailaddr='wwpettengill@gmail.com'
+		N =  {k:v.get('sign') for k,v in stars.p.items()}
+		N['username']=username
+		L.append(N)
 		
 		if udf.emd5[i] not in recd_birthchart:
 			msg, subject = msg_birthchart(stars, username)
 			msg_type = 'birthchart_1'
-			email(emailaddr, msg, subject)
+#			email(emailaddr, msg, subject)
 			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
 			sends.append(json_data)
 	
 		if udf.emd5[i] not in recd_sun_explainer:
 			msg, subject = msg_sun_explainer(stars, username)
 			msg_type = 'sun_explainer'
-			email(emailaddr, msg, subject)
+#			email(emailaddr, msg, subject)
 			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
 			sends.append(json_data)
 
 		if udf.emd5[i] not in recd_moon_explainer:
 			msg, subject = msg_moon_explainer(stars, username)
 			msg_type = 'moon_explainer'
-			email(emailaddr, msg, subject)
+#			email(emailaddr, msg, subject)
 			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
 			sends.append(json_data)
 
 		if udf.emd5[i] not in recd_asc_explainer:	
 			msg, subject = msg_asc_explainer(stars, username)
 			msg_type = 'asc_explainer'
-			email(emailaddr, msg, subject)
+#			email(emailaddr, msg, subject)
 			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
 			sends.append(json_data)
 
-#		else:
-#			expressed = expressions(stars, today)
-#			if len(expressed) > 0:
-#				msg, subject = msg_horoscope_1(stars, username, ds, DS, today, expressed)
-#				msg_type = 'horoscope_1'
-	
-	with open('sends.json', 'w') as fp:
-		    json.dump(sends, fp)
+		else:
+			msg, subject = msg_horoscope(stars, today, username, T)
+			if msg:
+				msg_type = 'horoscope_1'
+				email(emailaddr, msg, subject)
+				json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+				sends.append(json_data)
+				print(msg)
+	#	with open('sends.json', 'w') as fp:
+	#		    json.dump(sends, fp)
 
 
 if __name__ == "__main__":
