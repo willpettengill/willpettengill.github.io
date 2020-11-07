@@ -7,6 +7,7 @@ import jwt	# pip install pyjwt
 from datetime import datetime as date
 import utils
 import json
+import random
 # Admin API key goes here
 def generate_post_content(cnt_vars, template_file):
 	b=open(template_file,'r').read()
