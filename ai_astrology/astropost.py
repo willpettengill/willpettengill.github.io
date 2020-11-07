@@ -4,7 +4,7 @@ from collections import Counter
 from markdown import markdown # pip install markdown==2.6.11
 import requests # pip install requests
 import jwt	# pip install pyjwt
-from datetime import datetime as date
+from datetime import datetime as dt
 import utils
 import json
 import random
