@@ -242,82 +242,90 @@ def parse_horoscope(s):
 	sentences = k[num:num+3]
 	return ". ".join(sentences)
 
-def main():
+def ops_get_basic_info():
+	df=pd.read_csv('survey.csv')
+	udf=pd.read_csv('users.csv', dtype = {'birthplacezipcode':str}).dropna().reset_index()	
+	DS = dt.today().strftime("%Y-%m-%d")
+	_ds = dt.today().strftime("%m/%d/%Y")
+	sends = json.load(open('sends.json'))
+	ds = dt.today().strftime("%B %d, %Y") # full string
+	return df, udf, DS, _ds, sends, ds 
+
+def ops_email():
+	#if args.type =='test':
+		#i = udf.index.get_indexer_for(udf[udf.emailaddress.apply(lambda x: x.find(args.acct)>=0)].index)[0]
+	#if udf.emd5[i] in recd_birthchart and udf.emd5[i] in recd_sun_explainer and udf.emd5[i] in recd_moon_explainer and udf.emd5[i] in recd_asc_explainer:
+		#continue
+
+	if udf.emd5[i] not in recd_birthchart:
+		msg, subject = msg_birthchart(stars, username)
+		msg_type = 'birthchart_1'
+	#			email(emailaddr, msg, subject)
+		json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+		sends.append(json_data)
+
+	if udf.emd5[i] not in recd_sun_explainer:
+		msg, subject = msg_sun_explainer(stars, username)
+		msg_type = 'sun_explainer'
+	#			email(emailaddr, msg, subject)
+		json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+		sends.append(json_data)
+
+	if udf.emd5[i] not in recd_moon_explainer:
+		msg, subject = msg_moon_explainer(stars, username)
+		msg_type = 'moon_explainer'
+	#			email(emailaddr, msg, subject)
+		json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+		sends.append(json_data)
+
+	if udf.emd5[i] not in recd_asc_explainer:	
+		msg, subject = msg_asc_explainer(stars, username)
+		msg_type = 'asc_explainer'
+	#			email(emailaddr, msg, subject)
+		json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+		sends.append(json_data)
+
+	else:
+		msg, subject = msg_horoscope(stars, today, username, T)
+		if msg:
+			msg_type = 'horoscope_1'
+			email(emailaddr, msg, subject)
+			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
+			sends.append(json_data)
+			print(msg)
+
+def ops_loop_item(i, udf):
+	stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
+	username = udf.emailaddress[i].split('@')[0]
+	msg_type = ''
+	msg = None
+	emailaddr=udf.emailaddress[i]
+	L = []
+	X= []
+	N =  {k:v.get('sign') for k,v in stars.p.items()}
+	N['username']=username
+	L.append(N)
+	return stars, today, username, emailaddr
+	
+
+def main(test=True):
 	print('running ast main')
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--type', type=str, help='scan or daily or test & acct')
 	parser.add_argument('--acct', type=str)
 	args = parser.parse_args()
-	df=pd.read_csv('survey.csv')
-	udf=pd.read_csv('users.csv', dtype = {'birthplacezipcode':str}).dropna().reset_index()
-	ds = dt.today().strftime("%B %d, %Y") # full string
-	DS = dt.today().strftime("%Y-%m-%d")
-	_ds = dt.today().strftime("%d/%m/%Y")
-	sends = json.load(open('sends.json'))
-	recd_birthchart = [i.get('emd5') for i in sends if i.get('msg_type') == 'birthchart_1']
-	recd_sun_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'sun_explainer']
-	recd_moon_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'moon_explainer']
-	recd_asc_explainer = [i.get('emd5') for i in sends if i.get('msg_type') == 'asc_explainer']
-	T=pd.read_csv('sun_qualities.csv').drop(['Unnamed: 0'], axis=1)
-	T['Quality']=T['Quality'].apply(lambda x: x.lower().replace(' ','_'))
-	T=T.set_index('Quality')
-	L = []
-	X= []
-
-	# Sends
-	#for i in range(1):
-	for i in reversed(range(len(udf))):
-		if args.type =='test':
-			i = udf.index.get_indexer_for(udf[udf.emailaddress.apply(lambda x: x.find(args.acct)>=0)].index)[0]
-		if udf.emd5[i] in recd_birthchart and udf.emd5[i] in recd_sun_explainer and udf.emd5[i] in recd_moon_explainer and udf.emd5[i] in recd_asc_explainer:
-			continue
-		stars = Stars(udf.birthdate[i], udf.birthtime[i], udf.birthplacezipcode[i])		
-		today = Stars(_ds, udf.birthtime[i], udf.birthplacezipcode[i])
-		username = udf.emailaddress[i].split('@')[0]
-		msg_type = ''
-		msg = None
-		emailaddr=udf.emailaddress[i]
-		emailaddr='wwpettengill@gmail.com'
-		N =  {k:v.get('sign') for k,v in stars.p.items()}
-		N['username']=username
-		L.append(N)
-		
-		if udf.emd5[i] not in recd_birthchart:
-			msg, subject = msg_birthchart(stars, username)
-			msg_type = 'birthchart_1'
-#			email(emailaddr, msg, subject)
-			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-			sends.append(json_data)
+	#get data from csv files
+	df, udf, DS, _ds, sends, ds = ops_get_basic_info()
 	
-		if udf.emd5[i] not in recd_sun_explainer:
-			msg, subject = msg_sun_explainer(stars, username)
-			msg_type = 'sun_explainer'
-#			email(emailaddr, msg, subject)
-			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-			sends.append(json_data)
-
-		if udf.emd5[i] not in recd_moon_explainer:
-			msg, subject = msg_moon_explainer(stars, username)
-			msg_type = 'moon_explainer'
-#			email(emailaddr, msg, subject)
-			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-			sends.append(json_data)
-
-		if udf.emd5[i] not in recd_asc_explainer:	
-			msg, subject = msg_asc_explainer(stars, username)
-			msg_type = 'asc_explainer'
-#			email(emailaddr, msg, subject)
-			json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-			sends.append(json_data)
-
-		else:
-			msg, subject = msg_horoscope(stars, today, username, T)
-			if msg:
-				msg_type = 'horoscope_1'
-				email(emailaddr, msg, subject)
-				json_data = {'emd5': udf.emd5[i], 'msg_type': msg_type, 'ds': ds}
-				sends.append(json_data)
-				print(msg)
+	i=0
+	global today
+	print(_ds, udf.birthtime[i], udf.birthplacezipcode[i])
+	today = Stars(_ds, udf.birthtime[i], udf.birthplacezipcode[i])
+	with open('today_data.txt', 'w') as file:
+		file.write(json.dumps(today.p))
+	#for i in reversed(range(len(udf))):
+	#	stars, today, username, emailaddr = ops_loop_item(i, udf)
+		#ops_email()
 	#	with open('sends.json', 'w') as fp:
 	#		    json.dump(sends, fp)
 
