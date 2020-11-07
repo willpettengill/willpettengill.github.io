@@ -134,7 +134,7 @@ r = requests.post(url, json={'posts': [post]}, headers=headers)
 print(r)	
 si_list=list(set(df2.sign.unique().tolist()+df1.sign.unique().tolist()))
 # assemble sign-specific post content 
-for sign in si_list[:1]:
+for sign in si_list[]:
 	houses_ = df1.loc[df1.sign==sign].to_html(index=False)
 	planets_ = df2.loc[df2.sign==sign].to_html(index=False)
 	cnt_vars = [sign, today, planets_, houses_]
