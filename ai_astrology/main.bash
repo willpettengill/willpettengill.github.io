@@ -1,3 +1,4 @@
 #!/bin/bash
-source activate py36
-python3 /home/willpettengill.github.io/ai_astrology/scheduler.py
+conda activate brain
+python3 ai_astrology/astrology.py 
+python3 ai_astrology/astropost.py 
