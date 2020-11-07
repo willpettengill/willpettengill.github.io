@@ -42,7 +42,7 @@ api_url='https://williampettengill-2.ghost.io'+'/ghost/api/v3/admin/posts'
 post_id= '/5fa351793f8e710039569573'
 html_parameter='?source=html'
 id, secret = key.split(':')
-iat = int(date.now().timestamp())
+iat = int(dt.now().timestamp())
 header = {'alg': 'HS256', 'typ': 'JWT', 'kid': id}
 payload = {
     'iat': iat,
@@ -140,7 +140,7 @@ for sign in si_list[:1]:
 	cnt_vars = [sign, today, planets_, houses_]
 	md_text = generate_post_content(cnt_vars, 'post_example.md')
 	html = markdown(md_text, extensions=['tables'])
-	title = 'Today in {1}: {0}'.format(ds, sign_1)
+	title = 'Today in {1}: {0}'.format(ds, sign)
 	slug = 'today-in-{0}-{1}'.format(sign.lower(), today)
 	tags = [sign.lower()]
 	updated_ts = str(pd.Timestamp.now()).replace(' ','T')+'Z'
