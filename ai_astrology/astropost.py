@@ -34,6 +34,10 @@ def write_post(html_str, slug, title, tags, updated_ts):
         }
 	return a
 
+def get_giphy(sign):
+	request = requests.get('https://api.giphy.com/v1/gifs/search?api_key=oochBXg6B78oXPL74EwP8kRDEVUaXxHe&q='+sign+'&limit=25&offset=0&rating=g&lang=en')
+	return request.json().get('data')[random.randint(1,24)].get('url')
+
 #def main():
 
 # Connect to Ghost
@@ -54,7 +58,7 @@ url = api_url+post_id+html_parameter
 url = api_url+html_parameter
 headers = {'Authorization': 'Ghost {}'.format(token.decode())}
 
-# Import astrological data (daily & evergree)
+# Import astrological data (daily & evergreen)
 quals = pd.read_csv('sun_qualities.csv').drop(['Unnamed: 0'], axis=1).set_index('Quality')
 
 with open('today_data.txt') as file:
@@ -135,9 +139,10 @@ print(r)
 si_list=list(set(df2.sign.unique().tolist()+df1.sign.unique().tolist()))
 # assemble sign-specific post content 
 for sign in si_list:
-	houses_ = df1.loc[df1.sign==sign].to_html(index=False)
-	planets_ = df2.loc[df2.sign==sign].to_html(index=False)
-	cnt_vars = [sign, today, planets_, houses_]
+	houses_ = df1.loc[df1.sign==sign].to_html(index=False) if len(df1.loc[df1.sign==sign]) > 0 else ''
+	planets_ = df2.loc[df2.sign==sign].to_html(index=False) if len(df2.loc[df2.sign==sign]) > 0 else ''
+	gif = get_giphy(sign)
+	cnt_vars = [sign, today, planets_, houses_, gif]
 	md_text = generate_post_content(cnt_vars, 'post_example.md')
 	html = markdown(md_text, extensions=['tables'])
 	title = 'Today in {1}: {0}'.format(ds, sign)
@@ -148,8 +153,8 @@ for sign in si_list:
 
 	# Ghost API Endpoint: Posts
 	body = {'posts': [post]}
-	r = requests.post(url, json=body, headers=headers)
-	print(r)	
+	#r = requests.post(url, json=body, headers=headers)
+	#print(r)	
 
 
 

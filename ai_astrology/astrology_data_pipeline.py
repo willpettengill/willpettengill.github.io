@@ -1,11 +1,13 @@
 ## cd '/Users/wpettengill/Desktop/willpettengill.github.io/ai_astrology'
 from __future__ import print_function
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+#from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 import json
 import re
 import hashlib
+from google.oauth2.service_account import Credentials
+from googleapiclient.discovery import build
 
 answerMapping={
 'agree':1, 'disagree':0,
@@ -50,8 +52,9 @@ def ping():
 
 def transform(SCOPE, SECRETS_FILE, SPREADSHEET):
 	print('running transform')
-	json_key = json.load(open(SECRETS_FILE))
-	credentials = ServiceAccountCredentials.from_json_keyfile_name('ML Horoscope-57bf7abc958a.json', SCOPE)
+	json_key_filename='ml-horoscope-0b2e20e90e59.json'
+	credentials = Credentials.from_service_account_file(json_key_filename, scopes=SCOPE)
+	service = build('sheets', 'v4', credentials=credentials)
 	gc = gspread.authorize(credentials)
 	workbook = gc.open(SPREADSHEET)
 	sheet = workbook.sheet1
