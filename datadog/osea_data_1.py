@@ -68,11 +68,9 @@ if __name__ == '__main__':
 	if args.endpoint == 'token':
 		for collection in collections:
 			print(collection)
-			#collection='budverse-cans-heritage-edition'
-			#df, assets = dfFromCollection(collection, True)
 			df, assets = dfFromCollection(collection, args.test)
 			file_to_write = (args.outfolder or 'data') + '/' + (args.outfile_prefix or '') + collection + '.csv'
-			df.to_csv(args.outfile, index=False, header=list(df.columns))
+			df.to_csv(file_to_write, index=False, header=list(df.columns))
 
 	if args.endpoint == 'stats':
 		for collection in collections:
