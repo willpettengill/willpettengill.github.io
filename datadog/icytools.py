@@ -18,6 +18,7 @@ def transactionQuery(after):
         toAddress
         estimatedConfirmedAt
         type
+        token {tokenId}
        
         ... on OrderLog {
           marketplace
