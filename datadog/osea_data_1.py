@@ -7,13 +7,31 @@ pd.set_option('display.max_columns', 500)
 pd.set_option('display.max_colwidth', 20)
 
 def fieldsFromAPI(c):
-	token_id = c.get('token_id') # e.g. 527 - specifies token
-	permalink = c.get('permalink')
-	last_sale_usd=c.get('last_sale').get('payment_token').get('usd_price') if c.get('last_sale') is not None else None
-	last_sale_eth=c.get('last_sale').get('payment_token').get('eth_price') if c.get('last_sale') is not None else None
-	top_bid=c.get('top_bid')
-	num_sales=c.get('num_sales')
-	asset_data = {'token_id': token_id, 'permalink': permalink, 'last_sale_usd': last_sale_usd, 'last_sale_eth': last_sale_eth, 'top_bid': top_bid, 'num_sales': num_sales}
+	token_id = c.get('token_id', {}) # e.g. 527 - specifies token
+	permalink = c.get('permalink', {})
+	top_bid=c.get('top_bid', {})
+	num_sales=c.get('num_sales', {})
+	owner = c.get('owner', {}).get('address', {})
+	collection_slug = c.get('collection', {}).get('slug', {})
+	try:
+		last_sale_usd= c.get('last_sale').get('payment_token').get('usd_price') if (c.get('last_sale') or None) is not None else None
+		last_sale_eth= c.get('last_sale').get('payment_token').get('eth_price') if (c.get('last_sale') or None) is not None else None
+		last_sale_from_address = c.get('last_sale').get('transaction').get('from_account').get('address')
+		last_sale_from_user = c.get('last_sale').get('transaction').get('from_account').get('user').get('username')
+		last_sale_to_address = c.get('last_sale').get('transaction').get('to_account').get('address')
+		last_sale_to_user = c.get('last_sale').get('transaction').get('to_account').get('user').get('username')
+	except:
+		last_sale_usd = None
+		last_sale_eth = None
+		last_sale_from_address = None
+		last_sale_from_user = None
+		last_sale_to_address = None
+		last_sale_to_user = None
+	traits = c.get('traits', {})
+	last_sale_ds = c.get('created_date', {})
+	contract_address = c.get('asset_contract', {}).get('address', {})
+	datapull_ds = dt.date.today().strftime('%Y-%m-%d')
+	asset_data = {'token_id': token_id, 'owner':owner, 'collection': collection_slug, 'contract_address':contract_address, 'datapull_ds': datapull_ds,  'permalink': permalink, 'last_sale_usd': last_sale_usd, 'last_sale_eth': last_sale_eth, 'top_bid': top_bid, 'num_sales': num_sales, 'last_sale_from_address': last_sale_from_address, 'last_sale_from_user': last_sale_from_user, 'last_sale_to_address': last_sale_to_address, 'last_sale_to_user': last_sale_to_user, 'traits': traits, 'last_sale_ds': last_sale_ds}
 	return asset_data
 
 def dfFromCollection(collection, test):
@@ -25,7 +43,7 @@ def dfFromCollection(collection, test):
 		url = "https://api.opensea.io/api/v1/assets?order_direction=desc&offset={1}&collection={0}&limit=50".format(collection, offset)
 		response = requests.request("GET", url)
 		print(response.text)
-		assets = dict(response.json()).get('assets')
+		assets = dict(response.json()).get('assets', {})
 		print(len(assets))
 		for c in assets:
 			asset_data = fieldsFromAPI(c)
@@ -37,7 +55,7 @@ def dfFromCollection(collection, test):
 			pagination_flag=False
 		if test:
 			break
-	df = pd.DataFrame.from_records(asset_list, columns=['token_id', 'permalink', 'last_sale_usd', 'last_sale_eth', 'top_bid', 'num_sales']).sort_values(by='token_id', ascending=True)
+	df = pd.DataFrame.from_records(asset_list, columns=asset_list[0].keys()).sort_values(by='token_id', ascending=True) # ['token_id', 'permalink', 'last_sale_usd', 'last_sale_eth', 'top_bid', 'num_sales']
 	df = df.fillna(value=0)
 	print(df)
 	return df, assets
@@ -45,7 +63,7 @@ def dfFromCollection(collection, test):
 def StatsByCollection(collection, addToday=True, addCollection=True):
 	url='https://api.opensea.io/api/v1/collection/{}/stats'.format(collection)
 	response = requests.request("GET", url)
-	stats = dict(response.json()).get("stats")
+	stats = dict(response.json()).get("stats", {})
 	if addToday:
 		stats['ds'] = dt.date.today().strftime("%Y-%m-%d")
 	if addCollection:

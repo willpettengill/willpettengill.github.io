@@ -14,6 +14,7 @@ from datetime import datetime, timedelta
 import yaml
 import os
 
+
 def parse_dates(data): 
 	dateparse = lambda x: pd.datetime.strptime(x, '%b %d, %Y')
 	data['ds']=data['Date'].map(dateparse)
@@ -29,7 +30,7 @@ def pull_google_sheet(SPREADSHEET_ID, RANGE_NAME, path):
 	        creds.refresh(Request())
 	    else:
 	        flow = InstalledAppFlow.from_client_secrets_file(
-	            path+'config/client_secret_486295390024-4t330pd7rpnsfv33nir2taosrv8cl1d1.apps.googleusercontent.com.json', SCOPES)
+	            path+'config/{}'.format(secret_file), SCOPES)
 	        creds = flow.run_local_server(port=8000)
 	    with open(path+'config/token.pickle', 'wb') as token:
 	        pickle.dump(creds, token)
@@ -50,7 +51,7 @@ def push_google_sheet(SPREADSHEET_ID, RANGE_NAME, VALUES, path, APPEND=False):
 	        creds.refresh(Request())
 	    else:
 	        flow = InstalledAppFlow.from_client_secrets_file(
-	            path+'config/client_secret_486295390024-4t330pd7rpnsfv33nir2taosrv8cl1d1.apps.googleusercontent.com.json', SCOPES)
+	            path+'config/{}'.format(secret_file), SCOPES)
 	        creds = flow.run_local_server(port=8000)
 	    with open(path+'config/token.pickle', 'wb') as token:
 	        pickle.dump(creds, token)
@@ -80,6 +81,7 @@ if __name__ == '__main__':
 	args = parser.parse_args()
 	yesterday = (pd.datetime.today() - timedelta(1)).strftime('%Y-%m-%d')
 	threedaysago = (pd.datetime.today() - timedelta(3)).strftime('%Y-%m-%d')
+	secret_file = 'client_secret_486295390024-4t330pd7rpnsfv33nir2taosrv8cl1d1.apps.googleusercontent.com.json'
 	SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 	SPREADSHEET_ID = args.sheetid or '1f0_gCDLQYOTC9sr9B6y94PpljRWlZ97wvboccTpnScA'
 	RANGE_NAME = args.range or 'ddata'
