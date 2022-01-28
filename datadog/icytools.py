@@ -5,6 +5,7 @@ import pandas as pd
 import argparse
 import datetime as dt
 from datetime import datetime, timedelta
+import time 
 
 def statsQuery(gte, lte, address):
   query = gql(
@@ -30,14 +31,7 @@ def statsQuery(gte, lte, address):
   parameters = {"address": address, "gte":gte, "lte":lte}
   return query, parameters
 
-def statsFromICY(query, parameters):
-  transport = AIOHTTPTransport(url='https://developers.icy.tools/graphql', headers={'x-api-key': 'f59a44bd-c4a7-457f-8844-37f911577970'})
-  client = Client(transport=transport, fetch_schema_from_transport=True)
-  result = client.execute(query, variable_values=parameters)
-  return result
-
 def transactionQuery(after):
-  if after:
     return gql(
       """
       query Vayner ($filter: LogsFilterInputType, $first: Int!, $after: String!){
@@ -51,7 +45,8 @@ def transactionQuery(after):
         estimatedConfirmedAt
         type
         token {tokenId}
-       
+       transactionHash
+
         ... on OrderLog {
           marketplace
           priceInEth
@@ -62,33 +57,8 @@ def transactionQuery(after):
 }
   """
   )
-  else:
-    return gql(
-      """
-      query Vayner ($filter: LogsFilterInputType, $first: Int!){
- logs(first: $first, filter: $filter) {
-    edges {
-      cursor
-      node {
-        contractAddress
-        fromAddress
-        toAddress
-        estimatedConfirmedAt
-        type
-        token {tokenId}
-       
-        ... on OrderLog {
-          marketplace
-          priceInEth
-        }
-      }
-    }
-  }
-}
-  """
 
-      )
-def transactionsFromICY(query, address_dict, after, contracts, estconfirmed):
+def transactionsFromICY(query, after, contracts, estconfirmed):
   transport = AIOHTTPTransport(url='https://developers.icy.tools/graphql', headers={'x-api-key': 'f59a44bd-c4a7-457f-8844-37f911577970'})
   client = Client(transport=transport, fetch_schema_from_transport=True)
   params = { 
@@ -106,6 +76,7 @@ def transactionsFromICY(query, address_dict, after, contracts, estconfirmed):
   return result
 
 def processStatResult(result, lte, lookback):
+  # average,ceiling,floor,totalSales,volume
   x = {
   'datapull_ds':dt.date.today().strftime('%Y-%m-%d')
   ,'ds': lte
@@ -113,11 +84,20 @@ def processStatResult(result, lte, lookback):
   , 'address': result.get('contract').get('address')
   , 'name': result.get('contract').get('name')
   }
-  y = result.get('contract').get('stats')
+  if result.get('stats'):
+    y = result.get('contract').get('stats')
+  else:
+    y = {
+    'average':0
+    ,'ceiling':0
+    ,'floor':0
+    ,'totalSales':0
+    ,'volume':0
+    }
   return {**x,**y}
 
 def processTransactionResult(result):
-  x = [i.get('node') for i in result.get('logs').get('edges')]
+  x = [{**i.get('node'),**{'cursor':i.get('cursor')}} for i in result.get('logs').get('edges')]
   for i in x:
     try:
       i['token'] = i.get('token').get('tokenId')
@@ -128,7 +108,16 @@ def processTransactionResult(result):
 def processDF(df):
   df['collection'] = df['contractAddress'].map(address_dict)
   df.marketplace=df.marketplace.fillna('UNK')
+  df['ds'] = df['estimatedConfirmedAt'].apply(lambda x: x.split('T')[0])
+  df['transactionHash'] = df['transactionHash'].fillna(df['fromAddress']+df['toAddress']+df['cursor'])
   return df
+
+def dedupeDF(list_of_dataframes, dedup_cols, sort_cols):
+  newdf = pd.concat(list_of_dataframes)
+  newdf = newdf.drop_duplicates(subset=dedup_cols)
+  newdf = newdf.sort_values(by=sort_cols, ascending=False)
+  return newdf
+
 
 if __name__ == '__main__':
 
@@ -139,16 +128,27 @@ if __name__ == '__main__':
   parser.add_argument("--end", help='')
   parser.add_argument("--backfill", help='')
   args = parser.parse_args()
-  address_dict = {"0xd6f4a923e2ecd9ab7391840ac78d04bfe40bd5e1":"budverse", "0xa67d63e68715dcf9b65e45e5118b5fcd1e554b5f":"pepsi-mic-drop"}
-  contracts = ["0xd6f4a923e2ecd9ab7391840ac78d04bfe40bd5e1", "0xa67d63e68715dcf9b65e45e5118b5fcd1e554b5f"]
+  address_dict = {
+    "0xd6f4a923e2ecd9ab7391840ac78d04bfe40bd5e1":"budverse"
+  , "0xa67d63e68715dcf9b65e45e5118b5fcd1e554b5f":"pepsi-mic-drop"
+  , "0x7ab2352b1d2e185560494d5e577f9d3c238b78c5":'abs'
+  , "0xe785e82358879f061bc3dcac6f0444462d4b5330":'wow'
+  , "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d":'bayc'
+  , "0x28472a58a490c5e09a238847f66a68a47cc76f0f":'adidas'
+  , "0x8a90cab2b38dba80c64b7734e58ee1db38b8992e":'doodles'
+  }
+  contracts = list(address_dict.keys())
+  transaction_df = pd.read_csv('data/icy_transactions.csv')
+
   if args.endpoint == 'transactions':    
-    estconfirmed = {"gte":"2021-12-01T00:00:00.000Z"}
+    
+    estconfirmed = {"gte":"2021-11-01T00:00:00.000Z"}
     record_list = []
-    after = None
+    after=transaction_df.cursor[0]
     continue_flag = True
     while continue_flag:
       query = transactionQuery(after)
-      result = transactionsFromICY(query, address_dict, after, contracts, estconfirmed)
+      result = transactionsFromICY(query, after, contracts, estconfirmed) 
       data = processTransactionResult(result)
       if data != []:
         record_list += data
@@ -157,29 +157,48 @@ if __name__ == '__main__':
         continue_flag=False
     df = pd.DataFrame.from_records(record_list)
     df = processDF(df)
-    df.to_csv('data/icy_transactions.csv', index=False, header=list(df.columns))
+    ndf = dedupeDF([df,transaction_df], ['contractAddress', 'fromAddress', 'toAddress', 'cursor','token'], 'estimatedConfirmedAt')
+    ndf.to_csv('data/icy_transactions.csv', index=False, header=list(ndf.columns))
 
   if args.endpoint=='stats':
+    transport = AIOHTTPTransport(url='https://developers.icy.tools/graphql', headers={'x-api-key': 'f59a44bd-c4a7-457f-8844-37f911577970'})
+    client = Client(transport=transport, fetch_schema_from_transport=True)
     
-    start = args.start
+    old_df = pd.read_csv('data/icy_stats.csv')
+    if args.start == 'daily':
+      start = (datetime.today()-timedelta(days=1)).strftime('%Y-%m-%d')
+    else:
+      start = args.start
     start_ = dt.datetime.strptime(start, '%Y-%m-%d')
     backfill = int(args.backfill) or 0
+    lookbacks = [int(i) for i in args.lookback.split(',')] if args.lookback else [1]
     dt_range = [start_ - timedelta(days=x) for x in range(backfill)]
-
     result_list = []
     for contract in contracts:
-      for lookback in args.lookback.split(','):
-        lookback = int(lookback)
+      for lookback in lookbacks:
         for d in dt_range:
+          print(contract, d, lookback)
+          exist_df = old_df.loc[(old_df.ds==d.strftime('%Y-%m-%d')) & (old_df.lookback==lookback) & (old_df.address==contract)]
+          if len(exist_df) > 0:
+            print('data exists previously')
+            continue 
           gte = (d - timedelta(days=lookback)).strftime('%Y-%m-%d')
           lte = d.strftime('%Y-%m-%d')
           query, parameters = statsQuery(gte, lte, contract)
-          result = statsFromICY(query, parameters)
-          print(result)
           try:
+            result = client.execute(query, variable_values=parameters)
+            print(result)
             data = processStatResult(result, lte, lookback)
             result_list.append(data)
-          except TypeError:
-            print(d,gte,lte)
+          except:
+            df = pd.DataFrame.from_records(result_list)
+            ndf = dedupeDF([df,old_df],['ds', 'lookback', 'address'], ['ds', 'address','lookback'])
+            ndf.to_csv('data/icy_stats.csv', index=False, header=list(ndf.columns))
+            print('breaking from API error')
+            break
+          
+          time.sleep(5)
     df = pd.DataFrame.from_records(result_list)
-    df.to_csv('data/icy_stats.csv', index=False, header=list(df.columns))
+    ndf = dedupeDF([df,old_df],['ds', 'lookback', 'address'], ['ds', 'address','lookback'])
+    ndf.to_csv('data/icy_stats.csv', index=False, header=list(ndf.columns))
+
