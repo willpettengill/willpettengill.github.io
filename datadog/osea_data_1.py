@@ -4,6 +4,8 @@ import pandas as pd
 import argparse
 import datetime as dt
 import time 
+from icytools import dedupeDF
+import json
 
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.max_colwidth', 20)
@@ -43,20 +45,24 @@ def fieldsFromAPI(c):
 	asset_data = {'token': token, 'owner':owner, 'collection': collection_slug, 'contractAddress':contractAddress, 'datapull_ds': datapull_ds,  'permalink': permalink, 'num_sales': num_sales, 'traits': traits, 'priceInEth':priceInEth}
 	return asset_data
 
-def dfFromCollection(collection, headers, test):
+def dfFromCollection(asset_contract_address, headers, test):
 	asset_list = []	
 	offset=0
 	pagination_flag=True
 	while pagination_flag==True:
-		url = "https://api.opensea.io/api/v1/assets?order_direction=desc&offset={1}&collection={0}&limit=50".format(collection, offset)
+		url = "https://api.opensea.io/api/v1/assets?order_direction=desc&offset={1}&asset_contract_address={0}&limit=50".format(asset_contract_address, offset)
 		response = requests.request("GET", url, headers=headers)
+		if response.status_code != 200:
+			print(response.text)
+			break
 		assets = dict(response.json()).get('assets', {})
 		for c in assets:
 			asset_data = fieldsFromAPI(c)
-			asset_data['collection']=collection
+			asset_data['collection']=contract_mapping.get(asset_contract_address,{})
 			asset_list.append(asset_data)
 		if response.text != '{"assets":[]}':
 			offset += 50
+			time.sleep(5)
 		else:
 			pagination_flag=False
 		if test:
@@ -82,11 +88,11 @@ def ListingStatus(collection, headers):
 	
 	return dict(response.json()).get("asset_events",{})
 
-def mapLastSale(df, tf):
+def mapLastSale(df, tf): # could be refactored to take column as function parameter
 	contract = df.contractAddress[0]
 	tf_ = tf.loc[tf.contractAddress==contract]
-	map_dict= tf.loc[tf.contractAddress==contract].groupby('token').first()['priceInEth'].to_dict()
-	df['last_sold_price_eth'] = df['token'].map(map_dict)
+	map_price_dict= tf.loc[tf.contractAddress==contract].groupby('token').first()['priceInEth'].to_dict()
+	df['last_sold_price_eth'] = df['token'].map(map_price_dict)
 	df['last_sold_price_eth'].fillna(value=0, inplace=True)
 	return df
 
@@ -100,21 +106,37 @@ if __name__ == '__main__':
 	parser.add_argument("--outfile_prefix", help='prefix for outfile')
 	parser.add_argument("--endpoint", help='e.g. stats or token')
 	args = parser.parse_args()
-	collections = args.collections.split(',')
 	api_key = '610c839f631b446f98c8ed1f2611d89e'
 	headers = {
-    "Accept": "application/json",
-    "X-API-KEY": '610c839f631b446f98c8ed1f2611d89e'
+	"Accept": "application/json",
+	"X-API-KEY": '610c839f631b446f98c8ed1f2611d89e'
+		#"X-API-KEY": '61b26b9037b34d19bfdac807abff6140'
 	}
-	tf = pd.read_csv('data/icy_transactions.csv')
+	
+	with open('data/royalty_dict.json') as json_file:
+		royalty_dict = json.load(json_file)
+
+	with open('data/address_dict.json') as json_file:
+		address_dict = json.load(json_file)
+
+	contracts = list(address_dict.keys()) 
+	contracts_with_royalty_contracts = contracts + [i.lower() for i in royalty_dict.keys()]
+	contract_mapping = {**{k:'royalty' for k,v in royalty_dict.items()}, **address_dict}
+	transaction_df = pd.read_csv('data/icy_transactions.csv', keep_default_na=False)    
+	tf = pd.read_csv('data/icy_transactions.csv', dtype={'token':'string'})
 	
 	if args.endpoint == 'token':
-		for collection in collections:
-			print(collection)
-			df, assets = dfFromCollection(collection, headers, args.test)
-			df = mapLastSale(df, tf)
-			file_to_write = (args.outfolder or 'data') + '/' + (args.outfile_prefix or '') + collection + '.csv'
-			df.to_csv(file_to_write, index=False, header=list(df.columns))
+		list_of_dataframes = []
+		for asset_contract_address in contracts_with_royalty_contracts:
+			print(contract_mapping.get(asset_contract_address))
+			df_, assets = dfFromCollection(asset_contract_address, headers, args.test)
+			df_ = mapLastSale(df_, tf)
+			list_of_dataframes.append(df_)        
+		df = pd.concat(list_of_dataframes)
+		ndf = dedupeDF([df],['token','contractAddress'], ['collection'])
+		ndf['notes'] = df['contractAddress'].map(royalty_dict)
+		ndf['notes'].fillna(value=' ', inplace=True)
+		ndf.to_csv('data/token_metadata.csv', index=False, header=list(ndf.columns))
 
 	if args.endpoint == 'stats':
 		list_of_dataframes=[]
@@ -122,5 +144,4 @@ if __name__ == '__main__':
 			_df = StatsByCollection(collection, addToday=True, addCollection=True)
 			list_of_dataframes.append(_df)
 		df = pd.concat(list_of_dataframes)
-		file_to_write = (args.outfolder or 'data') + '/' + (args.outfile_prefix or '') + collection + '.csv'
-		df.to_csv(file_to_write, index=False, header=list(df.columns))
+		df.to_csv('data/os_stats.csv', index=False, header=list(df.columns))
