@@ -33,10 +33,37 @@ def statsQuery(gte, lte, address):
   return query, parameters
 
 def transactionQuery(after):
-    return gql(
+    if after:
+      return gql(
       """
       query Vayner ($filter: LogsFilterInputType, $first: Int!, $after: String!){
  logs(first: $first, after: $after, filter: $filter) {
+    edges {
+      cursor
+      node {
+        contractAddress
+        fromAddress
+        toAddress
+        estimatedConfirmedAt
+        type
+        token {tokenId}
+       transactionHash
+
+        ... on OrderLog {
+          marketplace
+          priceInEth
+        }
+      }
+    }
+  }
+}
+  """
+  )
+    else:
+      return gql(
+      """
+      query Vayner ($filter: LogsFilterInputType, $first: Int!){
+ logs(first: $first, filter: $filter) {
     edges {
       cursor
       node {
@@ -65,16 +92,14 @@ def transactionsFromICY(query, after, contracts, estconfirmed):
 
   client = Client(transport=transport, fetch_schema_from_transport=True)
   params = { 
-  "first":50,
+  "first":1000,
+  "after":after,
   "filter": {
-    "contractAddress": {
-    "in": contracts},
+    "contractAddress": {"in": contracts},
     "type": {'eq': "ORDER"},
     "estimatedConfirmedAt": estconfirmed
         }
   }
-  if after:
-    params["after"] = after
   result = client.execute(query, variable_values=params)
   return result
 
@@ -87,7 +112,7 @@ def processStatResult(result, lte, lookback):
   , 'address': result.get('contract').get('address')
   , 'name': result.get('contract').get('name')
   }
-  if result.get('stats'):
+  if result.get('contract').get('stats'):
     y = result.get('contract').get('stats')
   else:
     y = {
@@ -98,6 +123,24 @@ def processStatResult(result, lte, lookback):
     ,'volume':0
     }
   return {**x,**y}
+
+def getFirstCursor(contracts):
+  query = transactionQuery(None)
+  start = (datetime.today()-timedelta(days=1)).strftime('%Y-%m-%d')
+  estC = {"gte":"{0}".format(start+"T00:00:00.000Z")}
+  transport = AIOHTTPTransport(url='https://graphql.icy.tools/graphql', headers={'x-api-key': 'f59a44bd-c4a7-457f-8844-37f911577970'})
+  client = Client(transport=transport, fetch_schema_from_transport=True)
+  params = { 
+  "first":50,
+  "filter": {
+    "contractAddress": {"in": contracts},
+    "type": {'eq': "ORDER"},
+    "estimatedConfirmedAt": estC
+        }
+  }
+  result = client.execute(query, variable_values=params)
+  print('first cursor: ', result.get('logs').get('edges')[0])
+  return result.get('logs').get('edges')[0].get('cursor')
 
 def processTransactionResult(result):
   x = [{**i.get('node'),**{'cursor':i.get('cursor')}} for i in result.get('logs').get('edges')]
@@ -147,18 +190,19 @@ if __name__ == '__main__':
 
   if args.endpoint == 'transactions':    
     
-    estconfirmed = {"gte":"2021-11-01T00:00:00.000Z"}
+    estconfirmed = {"gte":"{0}".format(transaction_df.estimatedConfirmedAt[0])}
     record_list = []
-    after=transaction_df.cursor[0]
-    after='YXJyYXljb25uZWN0aW9uOjk2NjY='
+    after=getFirstCursor(contracts_with_royalty_contracts)
     continue_flag = True
     while continue_flag:
       query = transactionQuery(after)
       result = transactionsFromICY(query, after, contracts_with_royalty_contracts, estconfirmed) 
       data = processTransactionResult(result)
       if data != []:
+        print(data[0].get('estimatedConfirmedAt'), data[-1].get('estimatedConfirmedAt'))
         record_list += data
         after = result.get('logs').get('edges')[-1].get('cursor')
+        time.sleep(1)
       else:
         continue_flag=False
     df = pd.DataFrame.from_records(record_list)
@@ -199,8 +243,8 @@ if __name__ == '__main__':
           query, parameters = statsQuery(gte, lte, contract)
           try:
             result = client.execute(query, variable_values=parameters)
-            print(result)
             data = processStatResult(result, lte, lookback)
+            print(data)
             result_list.append(data)
           except:
             df = pd.DataFrame.from_records(result_list)
