@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "nft-analytics-tableau-oauth",
+  "private_key_id": "f7f8e561aa6387b8416f7e241a5e6ea8c78330e5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDkAemgN2hKdk2v\nZRHy96DpvSwJDqBCNSj3NkN2QXuQkAz1D1cPSTweoZqzDvq2M2XzmBq6ubsBO8Ke\n2aJYCgbdR/8pfB8mb7EeyX/uzPTWMpQKbxW4xSqatAEsRBDTL7/cKrT/gdo2aRtA\nUwhe4fTGUcc0RsbMtPaKRKtJ68ZwtW8gYP6bbt7iKZaArwFCLOrZpAlDUMQqf4YI\ntdGig0xZzODJE4cY24bIHMORO6uXm3bALEIFb3zefwhQ4s2UNsLFRvGMVKZ3vJbH\nzlS5G0Ti87f1TQH3HPchyTEs4BxqoACcBdfrKzUtZnKd1JiEOab5xipcM8QOXgCb\nS9v5nfiZAgMBAAECggEANFPnCwzkS8CSbChJQgaIYNR4VHzNlVxPckr7GRsGsYMJ\n4j0aySiQ2mPS1fjgW6v4oDr+mW+SRkJxlFTU0Bk/AY5qNlpk6MSV9P+gM41IvJb/\niFR9uvnPIRGiOkdFyD4LbYtEnmYuDzI4nZ7gyyvW6iPvEKWUrvryIQIJAK5SjN97\n4Kc9I9z3VMbpInX0vdazDXu/RmUHop+3i2Gk9Cxvvo+7wKlBDXxde5Yu2yqZ8TXq\nwaYTMo4haYHY4zW7jzyCN552neykQE6c4WXBWaBDOn8wJcuQi1LcXsei29lbt9QJ\nVSoBly49UzsGOa04fn06SOZJc7Af5il6oK+YlkMVnQKBgQD99j0Ac7jFX0PQKIxX\nObUpuZn5d10sEcJy1ZSQiMThZtC2QHLvP7MTdrNOA+97kylk0EEfrs+UnJrqEyP9\nPHqiG0Ed7u9747bbc4/Lt2CzgmuUudfjoab5G1R7ThwhEwIQcCDq7DA9osjODqPL\n0m+kpH8OAUSvxOQJLr9ITSu0DQKBgQDl1lnvHaeae9WPYQXVGBBStvvvQn1Hxk16\nSnC/K3JqGSHnUmMprNrwoblp4xKhkoWRSYM8TQLScGl5l9YyAJBHjbxp2yY/UHDa\n6iDL2RYaGh2NoalbXvkCCz0QZMFTUmmyCyH2ADrf0vJYgR/I5k1GRbHBOVjXu2Iq\nwTwWPEh3vQKBgQDD+ZmXWLWT8XC2GCQ8RzbqrOQJ4zeOA2JnFTPg2Pn86kdS7KcE\nwsYg1e+F23mZhbViq2Yl2dMr3jGZQg36pAoKQDfernw1wUJhVGr5jFfeDl2QVl0n\ntp3QC2wE/wCr8SwdnTl5r6uGVLDaeeeiKJCon5vAJfBoJurFv0IyvAJmnQKBgQDU\nkL50i/Sqx8Tn6k++mZbfKSUwT0oWy6x0YcyMwd37imr0yhm0PY3v52LYL47Xp++o\nQ1kAuCjX/+dM8cTEUgkeZFPRg0GIZRk7HjZe0dPDKEwU5WMAgoHCBirfso+qRBpE\n9E7gea35u9svR5zh7T2itGqFzkgAnelYqYas+ev78QKBgQCccBgD9D9232Wqyynj\nmNg+thE9yZJDcdJ2YuUZFXteH4DeIMbMttIKQ4uKpRnW7fXXji77L/PnLiZKxd/k\nxhNWasD9h57L8bc/a8Ef0NtQ/1iPOYKvD3OrzIlNTrdcQf7WMQzqUSn7KjUc+6sO\nxcp/9xLTOZJ9ty7o5grZe/wKmQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "pettengill-laptop@nft-analytics-tableau-oauth.iam.gserviceaccount.com",
+  "client_id": "103113191417022066029",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pettengill-laptop%40nft-analytics-tableau-oauth.iam.gserviceaccount.com"
+}
