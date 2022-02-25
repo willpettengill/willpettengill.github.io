@@ -180,7 +180,7 @@ if __name__ == '__main__':
     
     if args.debug:
         runTests()
-        cursor.execute("SHOW GRANTS FOR CURRENT_USER;")
+        cursor.execute("truncate test;")
         for row in cursor:
             print(row)
         cursor.execute('select * from vnft.token_metadata limit 3') # test is like token_metadata
@@ -189,15 +189,16 @@ if __name__ == '__main__':
             res_.append(row)
         dbug = pd.DataFrame.from_records(res_) 
         q_ = getInsertQuery('token_metadata').replace('token_metadata','test')
+#        try:
+#            cursor.executemany(q_, list(dbug.to_records(index=False)))
+#        except Exception as e: 
+#            print(e)
         try:
-            cursor.executemany(q_, list(dbug.to_records(index=False)))
-        except Exception as e: 
-            print(e)
-        try:
-            for values in list(dbug.to_records(index=False)):
+            for values in dbug.to_records(index=False):
                 print(type(values))
                 print(values)
                 cursor.execute(q_, list(values))
+                cnxn.commit()
         except Exception as e: 
             print(e)
                 
