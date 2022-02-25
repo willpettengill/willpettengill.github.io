@@ -138,8 +138,12 @@ def writeDftoMySQL(query, data, n, cursor, cnxn):
     list_df = [data[i:i+n] for i in range(0,data.shape[0],n)]
     for df in list_df:
         print(df)
-        cursor.executemany(query, list(df.to_records(index=False)))
-        cnxn.commit()  # and commit changes
+        for values in df.to_records(index=False):
+            try:
+                cursor.execute(query, list(values))
+                cnxn.commit()
+            except Exception as e: 
+                print(e)
 
 def getExistingData(table, cursor, dx, seed=False):
     if seed:
