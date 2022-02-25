@@ -2,6 +2,7 @@ import pandas as pd
 import mysql.connector
 from sqlalchemy import create_engine
 from mysql.connector.constants import ClientFlag
+import argparse
 
 config = {
     'user': 'root',
