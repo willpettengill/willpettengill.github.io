@@ -54,7 +54,7 @@ def dropAndCreate(table):
         owner VARCHAR(755),
         collection VARCHAR(755),
         contractAddress VARCHAR(755),
-        datapull_ds DATETIME,
+        datapull_ds VARCHAR(755),
         permalink VARCHAR(755),
         num_sales SMALLINT,
         traits VARCHAR(7755),
@@ -81,7 +81,7 @@ def dropAndCreate(table):
         icy_cursor VARCHAR(755),
         collection VARCHAR(755),
         notes VARCHAR(755),
-        ds DATETIME,
+        ds VARCHAR(755),
         PRIMARY KEY (contractAddress(5),fromAddress(10),toAddress(10),transactionHash(10))
         ) 
         ''')
@@ -102,7 +102,7 @@ def dropAndCreate(table):
         icy_cursor VARCHAR(755),
         collection VARCHAR(755),
         notes VARCHAR(755),
-        ds DATETIME,
+        ds VARCHAR(755),
         PRIMARY KEY (contractAddress(10),fromAddress(10),toAddress(10),transactionHash(10))
         ) 
         ''')
@@ -141,12 +141,18 @@ def writeDftoMySQL(query, data, n, cursor, cnxn):
         cursor.executemany(query, list(df.to_records(index=False)))
         cnxn.commit()  # and commit changes
 
-def getExistingData(table, cursor):
-    cursor.execute('select * from {}'.format(table))
-    res = []
-    for row in cursor:
-        res.append(row)
-    data = pd.DataFrame.from_records(res)    
+def getExistingData(table, cursor, dx, seed=False):
+    if seed:
+        try:
+            data = dx.loc[dx.ds=='a']
+        except:
+            data = dx.loc[dx.datapull_ds=='a']
+    else:
+        cursor.execute('select * from {}'.format(table))
+        res = []
+        for row in cursor:
+            res.append(row)
+        data = pd.DataFrame.from_records(res)
     return data,cursor
 
 
@@ -165,27 +171,36 @@ def cleanAndDedupe(ex, dx, table, table_dict):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--debug", help='debug')
+    parser.add_argument("--seed", help='default false if true drop and replace')
     args=parser.parse_args()
-
+    seed = args.seed or None
     cnxn = mysql.connector.connect(**config)
     cnxn.set_converter_class(NumpyMySQLConverter)
     cursor = cnxn.cursor()  # initialize connection cursor
     
     if args.debug:
-        cursor.execute('select * from vnft.token_metadata limit 3')
+        runTests()
+        cursor.execute('select * from vnft.token_metadata limit 3') # test is like token_metadata
+        res_ = []
         for row in cursor:
-            print(row)
-
+            res_.append(row)
+        dbug = pd.DataFrame.from_records(res_) 
+        q_ = getInsertQuery('token_metadata').replace('token_metadata','test')
+        cursor.executemany(q_, list(dbug.to_records(index=False)))
+        cnxn.commit()
+        runTests()
+        cursor.close()
+        cnxn.close()
     else:
         for table in list(table_dict.keys()): # ['icy_transactions','icy_stats']:
             print(table)
             dx = pd.read_csv('data/'+table+'.csv')    
-            ex, cursor = getExistingData(table, cursor) # if seeding a new table from scratch use: ex = dx.loc[dx.ds=='a']
+            ex, cursor = getExistingData(table, cursor, dx, seed=seed) # if seeding a new table use: ex = dx.loc[dx.ds=='a']
             data = cleanAndDedupe(ex, dx, table, table_dict)
             query = getInsertQuery(table)
-            #dropAndCreate(table)
+            if seed:
+                dropAndCreate(table)
             writeDftoMySQL(query, data, 2000, cursor, cnxn)
         runTests()
         cursor.close()
         cnxn.close()
-
