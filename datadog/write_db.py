@@ -181,7 +181,8 @@ if __name__ == '__main__':
     if args.debug:
         runTests()
         cursor.execute('select user();')
-        cursor.fetchall()
+        for row in cursor:
+            print(row)
         cursor.execute('select * from vnft.token_metadata limit 3') # test is like token_metadata
         res_ = []
         for row in cursor:
