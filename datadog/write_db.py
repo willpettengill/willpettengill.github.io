@@ -194,7 +194,8 @@ if __name__ == '__main__':
         except Exception as e: 
             print(e)
         try:
-            cursor.execute(q_, list(dbug.to_records(index=False)))
+            for values in list(dbug.to_records(index=False)):
+                cursor.execute(q_, values)
         except Exception as e: 
             print(e)
                 
