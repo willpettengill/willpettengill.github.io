@@ -12,7 +12,8 @@ config = {
     'ssl_cert': 'config/client-cert.pem',
     'ssl_key': 'config/client-key.pem',
     'database':'vnft',
-    'connection_timeout':1000
+    'connection_timeout':1000,
+    'buffered': True
 }
 
 class NumpyMySQLConverter(mysql.connector.conversion.MySQLConverter):
@@ -126,52 +127,55 @@ def getUpsertQuery(table):
          "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
 
 
-def writeDftoMySQL(query, data, n):
+def writeDftoMySQL(query, data, n, cursor, cnxn):
     list_df = [data[i:i+n] for i in range(0,data.shape[0],n)]
     for df in list_df:
         print(df)
         cursor.executemany(query, list(df.to_records(index=False)))
         cnxn.commit()  # and commit changes
 
-def getExistingData(table):
+def getExistingData(table, cursor):
     cursor.execute('select * from {}'.format(table))
     res = []
     for row in cursor:
         res.append(row)
-    return pd.DataFrame.from_records(res)    
+    data = pd.DataFrame.from_records(res)    
+    return data,cursor
 
-# now we establish our connection
-cnxn = mysql.connector.connect(**config)
-cnxn.set_converter_class(NumpyMySQLConverter)
-cursor = cnxn.cursor()  # initialize connection cursor
-# table dict
-table_dict = {
-    'icy_transactions':['contractAddress', 'fromAddress', 'toAddress','transactionHash'],
-    'icy_stats':['contractAddress', 'fromAddress', 'toAddress','transactionHash'],
-    'token_metadata':['contractAddress', 'token']
-}
 
 def cleanAndDedupe(ex, dx, table, table_dict):
     
     dx = dx.drop_duplicates(subset=table_dict.get(table))
     ex.columns=dx.columns
-    ex = ex[1000:] # DELETE ---- [64549 rows x 13 columns]
+    #ex = ex[1000:] # DELETE ---- [64549 rows x 13 columns]
     try:
         dx['estimatedConfirmedAt'].astype('object')
     except:
         pass
     fx = pd.concat([dx, ex])
-    return fx.loc[~fx.duplicated(subset=table_dict.get(table))]
+    return fx.loc[~fx.duplicated(keep=False, subset=table_dict.get(table))]
 
 if __name__ == '__main__':
     
-    for table in ['token_metadata']: # list(table_dict.keys()): # ['icy_transactions','icy_stats']:
-        dx = pd.read_csv('data/'+table+'.csv')
-        ex = getExistingData(table) # if seeding a new table from scratch use: ex = dx.loc[dx.ds=='a']
+    cnxn = mysql.connector.connect(**config)
+    cnxn.set_converter_class(NumpyMySQLConverter)
+    cursor = cnxn.cursor()  # initialize connection cursor
+    # table dict
+    table_dict = {
+        'icy_transactions':['contractAddress', 'fromAddress', 'toAddress','transactionHash'],
+        'icy_stats':['contractAddress', 'fromAddress', 'toAddress','transactionHash'],
+        'token_metadata':['contractAddress', 'token']
+    }
+
+    for table in list(table_dict.keys()): # ['icy_transactions','icy_stats']:
+        print(table)
+        dx = pd.read_csv('data/'+table+'.csv')    
+        ex, cursor = getExistingData(table, cursor) # if seeding a new table from scratch use: ex = dx.loc[dx.ds=='a']
         data = cleanAndDedupe(ex, dx, table, table_dict)
         query = getInsertQuery(table)
-        dropAndCreate(table)
-        writeDftoMySQL(query, data, 2000)
+        #dropAndCreate(table)
+        writeDftoMySQL(query, data, 2000, cursor, cnxn)
     runTests()
     cursor.close()
     cnxn.close()
+
