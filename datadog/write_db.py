@@ -191,12 +191,13 @@ if __name__ == '__main__':
         q_ = getInsertQuery('token_metadata').replace('token_metadata','test')
         try:
             cursor.executemany(q_, list(dbug.to_records(index=False)))
-        except:
-            print('executemany fails')
-            try:
-                cursor.execute(q_, list(dbug.to_records(index=False)))
-            except:
-                print('execute fails')
+        except Exception as e: 
+            print(e)
+        try:
+            cursor.execute(q_, list(dbug.to_records(index=False)))
+        except Exception as e: 
+            print(e)
+                
         cnxn.commit()
         runTests()
         cursor.close()
