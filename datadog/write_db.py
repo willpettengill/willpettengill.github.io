@@ -195,6 +195,8 @@ if __name__ == '__main__':
             print(e)
         try:
             for values in list(dbug.to_records(index=False)):
+                print(type(values))
+                print(values)
                 cursor.execute(q_, values)
         except Exception as e: 
             print(e)
