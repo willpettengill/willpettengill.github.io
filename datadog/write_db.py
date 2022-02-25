@@ -16,6 +16,12 @@ config = {
     'buffered': True
 }
 
+table_dict = {
+        'icy_transactions':['contractAddress', 'fromAddress', 'toAddress','transactionHash'],
+        'icy_stats':['contractAddress', 'fromAddress', 'toAddress','transactionHash'],
+        'token_metadata':['contractAddress', 'token']
+    }
+
 class NumpyMySQLConverter(mysql.connector.conversion.MySQLConverter):
     """ A mysql.connector Converter that handles Numpy types """
 
@@ -156,26 +162,29 @@ def cleanAndDedupe(ex, dx, table, table_dict):
     return fx.loc[~fx.duplicated(keep=False, subset=table_dict.get(table))]
 
 if __name__ == '__main__':
-    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--debug", help='debug')
+    args=parser.parse_args()
+
     cnxn = mysql.connector.connect(**config)
     cnxn.set_converter_class(NumpyMySQLConverter)
     cursor = cnxn.cursor()  # initialize connection cursor
-    # table dict
-    table_dict = {
-        'icy_transactions':['contractAddress', 'fromAddress', 'toAddress','transactionHash'],
-        'icy_stats':['contractAddress', 'fromAddress', 'toAddress','transactionHash'],
-        'token_metadata':['contractAddress', 'token']
-    }
+    
+    if args.debug:
+        cursor.execute('select * from vnft.token_metadata limit 3')
+        for row in cursor:
+            print(row)
 
-    for table in list(table_dict.keys()): # ['icy_transactions','icy_stats']:
-        print(table)
-        dx = pd.read_csv('data/'+table+'.csv')    
-        ex, cursor = getExistingData(table, cursor) # if seeding a new table from scratch use: ex = dx.loc[dx.ds=='a']
-        data = cleanAndDedupe(ex, dx, table, table_dict)
-        query = getInsertQuery(table)
-        #dropAndCreate(table)
-        writeDftoMySQL(query, data, 2000, cursor, cnxn)
-    runTests()
-    cursor.close()
-    cnxn.close()
+    else:
+        for table in list(table_dict.keys()): # ['icy_transactions','icy_stats']:
+            print(table)
+            dx = pd.read_csv('data/'+table+'.csv')    
+            ex, cursor = getExistingData(table, cursor) # if seeding a new table from scratch use: ex = dx.loc[dx.ds=='a']
+            data = cleanAndDedupe(ex, dx, table, table_dict)
+            query = getInsertQuery(table)
+            #dropAndCreate(table)
+            writeDftoMySQL(query, data, 2000, cursor, cnxn)
+        runTests()
+        cursor.close()
+        cnxn.close()
 
