@@ -186,7 +186,14 @@ if __name__ == '__main__':
             res_.append(row)
         dbug = pd.DataFrame.from_records(res_) 
         q_ = getInsertQuery('token_metadata').replace('token_metadata','test')
-        cursor.executemany(q_, list(dbug.to_records(index=False)))
+        try:
+            cursor.executemany(q_, list(dbug.to_records(index=False)))
+        except:
+            print('executemany fails')
+            try:
+                cursor.execute(q_, list(dbug.to_records(index=False)))
+            except:
+                print('execute fails')
         cnxn.commit()
         runTests()
         cursor.close()
