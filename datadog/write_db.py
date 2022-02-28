@@ -19,7 +19,7 @@ config = {
 
 table_dict = {
         'icy_transactions':['contractAddress', 'fromAddress', 'toAddress','transactionHash'],
-        'icy_stats':['contractAddress', 'fromAddress', 'toAddress','transactionHash'],
+        'icy_stats':['address', 'lookback', 'ds'],
         'token_metadata':['contractAddress', 'token']
     }
 
@@ -90,20 +90,17 @@ def dropAndCreate(table):
         cursor.execute("DROP TABLE if exists icy_stats;")
         cnxn.commit()
         cursor.execute('''CREATE TABLE icy_stats (
-        contractAddress VARCHAR(755),
-        fromAddress VARCHAR(755),
-        toAddress VARCHAR(755),
-        estimatedConfirmedAt VARCHAR(755),
-        type VARCHAR(755),
-        token VARCHAR(755),
-        transactionHash VARCHAR(755),
-        marketplace VARCHAR(755),
-        priceInEth FLOAT,
-        icy_cursor VARCHAR(755),
-        collection VARCHAR(755),
-        notes VARCHAR(755),
+        datapull_ds VARCHAR(755),
         ds VARCHAR(755),
-        PRIMARY KEY (contractAddress(10),fromAddress(10),toAddress(10),transactionHash(10))
+        lookback VARCHAR(755),
+        address VARCHAR(755),
+        name VARCHAR(755),
+        average FLOAT,
+        ceiling FLOAT,
+        floor FLOAT,
+        totalSales INT,
+        volume FLOAT,
+        PRIMARY KEY (ds(5),lookback(1),address(10))
         ) 
         ''')
     cnxn.commit()
@@ -119,8 +116,8 @@ def getInsertQuery(table):
         return ("INSERT INTO icy_transactions (contractAddress, fromAddress, toAddress, estimatedConfirmedAt, type, token, transactionHash, marketplace, priceInEth, icy_cursor, collection, notes, ds) "
          "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
     elif table=='icy_stats':
-        return ("INSERT INTO icy_stats (contractAddress, fromAddress, toAddress, estimatedConfirmedAt, type, token, transactionHash, marketplace, priceInEth, icy_cursor, collection, notes, ds) "
-         "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
+        return ("INSERT INTO icy_stats (datapull_ds, ds, lookback, address, name, average, ceiling, floor, totalSales, volume) "
+         "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
 
 def getUpsertQuery(table):
     if table=='token_metadata':
