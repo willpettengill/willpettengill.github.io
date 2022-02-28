@@ -115,6 +115,7 @@ def processStatResult(result, lte, lookback):
   if result.get('contract').get('stats'):
     y = result.get('contract').get('stats')
   else:
+    print('Process Stat Result Error', result)
     y = {
     'average':0
     ,'ceiling':0
