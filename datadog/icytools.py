@@ -158,6 +158,8 @@ def processDF(df):
   df.marketplace=df.marketplace.fillna('UNK')
   df['ds'] = df['estimatedConfirmedAt'].apply(lambda x: x.split('T')[0])
   df['transactionHash'] = df['transactionHash'].fillna(df['fromAddress']+df['toAddress']+df['ds'])
+  df['icy_cursor'] = df['cursor']
+  df = df.drop(['cursor'], axis=1)
   return df
 
 def dedupeDF(list_of_dataframes, dedup_cols, sort_cols):
@@ -176,7 +178,7 @@ if __name__ == '__main__':
   parser.add_argument("--end", help='')
   parser.add_argument("--backfill", help='')
   args = parser.parse_args()
-  
+
   with open('data/royalty_dict.json') as json_file:
     royalty_dict = json.load(json_file)
 
@@ -209,12 +211,13 @@ if __name__ == '__main__':
     df = processDF(df)
     transaction_df = processDF(transaction_df)
     ndf = dedupeDF([df,transaction_df], ['contractAddress', 'fromAddress', 'toAddress', 'token', 'ds'], 'estimatedConfirmedAt')
+    # choose transaction_df, ndf, or df to write out. Prior to mysql, using NDF
     # fix weird notes bug
-    ndf['notes_'] = ndf['notes'].apply(lambda x: x+' ') 
-    ndf['notes'] = ndf['notes_']
-    ndf.drop('notes_', axis=1, inplace=True)
+    df['notes_'] = df['notes'].apply(lambda x: x+' ') 
+    df['notes'] = df['notes_']
+    df.drop('notes_', axis=1, inplace=True)
     # write to csv
-    ndf.to_csv('data/icy_transactions.csv', index=False, header=list(ndf.columns))
+    df.to_csv('data/icy_transactions.csv', index=False, header=list(df.columns))
 
   if args.endpoint=='stats':
     transport = AIOHTTPTransport(url='https://graphql.icy.tools/graphql', headers={'x-api-key': 'f59a44bd-c4a7-457f-8844-37f911577970'})
