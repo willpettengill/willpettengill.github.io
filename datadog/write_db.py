@@ -171,7 +171,7 @@ def cleanAndDedupe(ex, dx, table, table_dict):
         ex.lookback = ex.lookback.astype(int)
         fx = pd.concat([dx, ex])
         data = fx.loc[~fx.duplicated(keep=False, subset=table_dict.get(table))]
-        data.lookback = data.lookback.astype(object)
+        data.lookback = data.lookback.astype('object')
     else:
         fx = pd.concat([dx, ex])
         data = fx.loc[~fx.duplicated(keep=False, subset=table_dict.get(table))]

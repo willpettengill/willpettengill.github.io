@@ -258,6 +258,8 @@ if __name__ == '__main__':
             break
           time.sleep(5)
     df = pd.DataFrame.from_records(result_list)
-    ndf = dedupeDF([df,old_df],['ds', 'lookback', 'address'], ['ds', 'address','lookback'])
-    ndf.to_csv('data/icy_stats.csv', index=False, header=list(ndf.columns))
+    #ndf = dedupeDF([df,old_df],['ds', 'lookback', 'address'], ['ds', 'address','lookback'])
+    #fx = pd.concat([ndf, old_df])
+    #fx = fx.loc[~fx.duplicated(keep=False, subset=['ds', 'lookback', 'address'])]
+    df.to_csv('data/icy_stats.csv', index=False, header=list(df.columns))
 
