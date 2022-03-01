@@ -166,8 +166,16 @@ def cleanAndDedupe(ex, dx, table, table_dict):
         dx['estimatedConfirmedAt'].astype('object')
     except:
         pass
-    fx = pd.concat([dx, ex])
-    return fx.loc[~fx.duplicated(keep=False, subset=table_dict.get(table))]
+    if table=='icy_stats':
+        dx.lookback = dx.lookback.astype(int)
+        ex.lookback = ex.lookback.astype(int)
+        fx = pd.concat([dx, ex])
+        data = fx.loc[~fx.duplicated(keep=False, subset=table_dict.get(table))]
+        data.lookback = data.lookback.astype(object)
+    else:
+        fx = pd.concat([dx, ex])
+        data = fx.loc[~fx.duplicated(keep=False, subset=table_dict.get(table))]
+    return data
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
