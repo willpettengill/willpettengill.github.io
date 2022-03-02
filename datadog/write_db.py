@@ -113,7 +113,7 @@ def getInsertQuery(table):
         return ("INSERT INTO token_metadata (token, owner, collection, contractAddress, datapull_ds, permalink, num_sales, traits, priceInEth, last_sold_price_eth, notes) "
          "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
     elif table=='icy_transactions':
-        return ("INSERT INTO icy_transactions (contractAddress, fromAddress, toAddress, estimatedConfirmedAt, type, token, transactionHash, marketplace, priceInEth, icy_cursor, collection, notes, ds) "
+        return ("INSERT INTO icy_transactions (contractAddress, fromAddress, toAddress, estimatedConfirmedAt, type, token, transactionHash, marketplace, priceInEth, collection, notes, ds, icy_cursor) "
          "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
     elif table=='icy_stats':
         return ("INSERT INTO icy_stats (datapull_ds, ds, lookback, address, name, average, ceiling, floor, totalSales, volume) "
@@ -124,7 +124,7 @@ def getUpsertQuery(table):
         return ("REPLACE INTO token_metadata (token, owner, collection, contractAddress, datapull_ds, permalink, num_sales, traits, priceInEth, last_sold_price_eth, notes) "
          "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
     elif table=='icy_transactions':
-        return ("REPLACE INTO icy_transactions (contractAddress, fromAddress, toAddress, estimatedConfirmedAt, type, token, transactionHash, marketplace, priceInEth, icy_cursor, collection, notes, ds) "
+        return ("REPLACE INTO icy_transactions (contractAddress, fromAddress, toAddress, estimatedConfirmedAt, type, token, transactionHash, marketplace, priceInEth, icy_cursor, collection, notes, ds, icy_cursor) "
          "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
     elif table=='icy_stats':
         return ("REPLACE INTO icy_stats (contractAddress, fromAddress, toAddress, estimatedConfirmedAt, type, token, transactionHash, marketplace, priceInEth, icy_cursor, collection, notes, ds) "
@@ -169,11 +169,11 @@ def cleanAndDedupe(ex, dx, table, table_dict):
     if table=='icy_stats':
         dx.lookback = dx.lookback.astype(int)
         ex.lookback = ex.lookback.astype(int)
-        fx = pd.concat([dx, ex])
+        fx = pd.concat([dx, ex, ex])
         data = fx.loc[~fx.duplicated(keep=False, subset=table_dict.get(table))]
         data.lookback = data.lookback.astype('object')
     else:
-        fx = pd.concat([dx, ex])
+        fx = pd.concat([dx, ex, ex])
         data = fx.loc[~fx.duplicated(keep=False, subset=table_dict.get(table))]
     return data
 

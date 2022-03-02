@@ -153,14 +153,16 @@ def processTransactionResult(result):
   return x
 
 def processDF(df):
+  print(df.columns)
   df['collection'] = df['contractAddress'].map(contract_mapping)
   df['notes'] = df['contractAddress'].map(royalty_dict)
   df['notes']=df['notes'].fillna('n/a')
   df.marketplace=df.marketplace.fillna('UNK')
   df['ds'] = df['estimatedConfirmedAt'].apply(lambda x: x.split('T')[0])
   df['transactionHash'] = df['transactionHash'].fillna(df['fromAddress']+df['toAddress']+df['ds'])
-  df['icy_cursor'] = df['cursor']
-  df = df.drop(['cursor'], axis=1)
+  if 'icy_cursor' not in df.columns:
+    df['icy_cursor'] = df['cursor']
+    df = df.drop(['cursor'], axis=1)
   return df
 
 def dedupeDF(list_of_dataframes, dedup_cols, sort_cols):
@@ -193,7 +195,7 @@ if __name__ == '__main__':
 
   if args.endpoint == 'transactions':    
     
-    estconfirmed = {"gte":"{0}".format(transaction_df.estimatedConfirmedAt[0])}
+    estconfirmed = {"gte":"{0}".format(transaction_df.estimatedConfirmedAt[0])} # estconfirmed = {"gte":"2021-11-01T00:00:00.000Z"}
     record_list = []
     after=getFirstCursor(contracts_with_royalty_contracts)
     continue_flag = True
