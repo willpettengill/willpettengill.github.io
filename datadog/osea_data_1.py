@@ -109,8 +109,8 @@ if __name__ == '__main__':
 	api_key = '610c839f631b446f98c8ed1f2611d89e'
 	headers = {
 	"Accept": "application/json",
-	"X-API-KEY": '610c839f631b446f98c8ed1f2611d89e'
-		#"X-API-KEY": '61b26b9037b34d19bfdac807abff6140'
+	#"X-API-KEY": '610c839f631b446f98c8ed1f2611d89e'
+		"X-API-KEY": '61b26b9037b34d19bfdac807abff6140'
 	}
 	
 	with open('data/royalty_dict.json') as json_file:
@@ -133,7 +133,7 @@ if __name__ == '__main__':
 			df_ = mapLastSale(df_, tf)
 			list_of_dataframes.append(df_)        
 		df = pd.concat(list_of_dataframes)
-		ndf = dedupeDF([df],['token','contractAddress'], ['collection'])
+		ndf = df.drop_duplicates(subset=['token','contractAddress','collection'])
 		ndf['notes'] = df['contractAddress'].map(royalty_dict)
 		ndf['notes'].fillna(value=' ', inplace=True)
 		ndf.to_csv('data/token_metadata.csv', index=False, header=list(ndf.columns))
