@@ -4,7 +4,7 @@ python icytools.py --endpoint transactions
 #python etl_1.py --sheetid 1f0_gCDLQYOTC9sr9B6y94PpljRWlZ97wvboccTpnScA --range icy_transactions --push true --append false --header true --csv data/icy_transactions.csv
 
 # tokens: Opensea 
-#python osea_data_1.py --endpoint token
+python osea_data_1.py --endpoint token
 
 #python etl_1.py --sheetid 1f0_gCDLQYOTC9sr9B6y94PpljRWlZ97wvboccTpnScA --range token_metadata --push true --csv data/token_metadata.csv --header true
 

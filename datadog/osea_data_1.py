@@ -62,7 +62,7 @@ def dfFromCollection(asset_contract_address, headers, test):
 			asset_list.append(asset_data)
 		if response.text != '{"assets":[]}':
 			offset += 50
-			time.sleep(10)
+			time.sleep(20)
 		else:
 			pagination_flag=False
 		if test:

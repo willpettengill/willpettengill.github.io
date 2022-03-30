@@ -180,6 +180,7 @@ if __name__ == '__main__':
   parser.add_argument("--start", help='')
   parser.add_argument("--end", help='')
   parser.add_argument("--backfill", help='')
+  parser.add_argument("--seed", help='start without existing data')
   args = parser.parse_args()
 
   with open('data/royalty_dict.json') as json_file:
@@ -191,11 +192,13 @@ if __name__ == '__main__':
   contracts = list(address_dict.keys()) 
   contracts_with_royalty_contracts = contracts + list(royalty_dict.keys())
   contract_mapping = {**{k:'royalty' for k,v in royalty_dict.items()}, **address_dict}
-  transaction_df = pd.read_csv('data/icy_transactions.csv', keep_default_na=False)    
 
   if args.endpoint == 'transactions':    
-    
-    estconfirmed = {"gte":"{0}".format(transaction_df.estimatedConfirmedAt[0])} # estconfirmed = {"gte":"2021-11-01T00:00:00.000Z"}
+    if args.seed:
+      estconfirmed = {"gte":"2022-03-25T00:00:00.000Z"}
+    else:  
+      estconfirmed = {"gte":"{0}".format(transaction_df.estimatedConfirmedAt[0])} 
+      transaction_df = pd.read_csv('data/icy_transactions.csv', keep_default_na=False)    
     record_list = []
     after=getFirstCursor(contracts_with_royalty_contracts)
     continue_flag = True
@@ -212,21 +215,20 @@ if __name__ == '__main__':
         continue_flag=False
     df = pd.DataFrame.from_records(record_list)
     df = processDF(df)
-    transaction_df = processDF(transaction_df)
-    ndf = dedupeDF([df,transaction_df], ['contractAddress', 'fromAddress', 'toAddress', 'token', 'ds'], 'estimatedConfirmedAt')
-    # choose transaction_df, ndf, or df to write out. Prior to mysql, using NDF
-    # fix weird notes bug
     df['notes_'] = df['notes'].apply(lambda x: x+' ') 
     df['notes'] = df['notes_']
     df.drop('notes_', axis=1, inplace=True)
-    # write to csv
-    df.to_csv('data/icy_transactions.csv', index=False, header=list(df.columns))
+    
+    if args.seed:
+      df.to_csv('data/icy_transactions.csv', index=False, header=list(df.columns))
+    else:
+      transaction_df = processDF(transaction_df)
+      ndf = dedupeDF([df,transaction_df], ['contractAddress', 'fromAddress', 'toAddress', 'token', 'ds'], 'estimatedConfirmedAt')
+      ndf.to_csv('data/icy_transactions.csv', index=False, header=list(ndf.columns))
 
   if args.endpoint=='stats':
     transport = AIOHTTPTransport(url='https://graphql.icy.tools/graphql', headers={'x-api-key': 'f59a44bd-c4a7-457f-8844-37f911577970'})
     client = Client(transport=transport, fetch_schema_from_transport=True)
-    
-    old_df = pd.read_csv('data/icy_stats.csv')
     if args.start == 'daily':
       start = (datetime.today()-timedelta(days=1)).strftime('%Y-%m-%d')
     else:
@@ -240,10 +242,13 @@ if __name__ == '__main__':
       for lookback in lookbacks:
         for d in dt_range:
           print(contract, d, lookback)
-          exist_df = old_df.loc[(old_df.ds==d.strftime('%Y-%m-%d')) & (old_df.lookback==lookback) & (old_df.address==contract)]
-          if len(exist_df) > 0:
-            print('data exists previously')
-            continue 
+          if args.seed:
+            pass
+          else:
+            exist_df = old_df.loc[(old_df.ds==d.strftime('%Y-%m-%d')) & (old_df.lookback==lookback) & (old_df.address==contract)]
+            if len(exist_df) > 0:
+              print('data exists previously')
+              continue 
           gte = (d - timedelta(days=lookback)).strftime('%Y-%m-%d')
           lte = d.strftime('%Y-%m-%d')
           query, parameters = statsQuery(gte, lte, contract)
@@ -260,8 +265,13 @@ if __name__ == '__main__':
             break
           time.sleep(5)
     df = pd.DataFrame.from_records(result_list)
-    #ndf = dedupeDF([df,old_df],['ds', 'lookback', 'address'], ['ds', 'address','lookback'])
+    if args.seed:
+      df.to_csv('data/icy_stats.csv', index=False, header=list(df.columns))  
+    else:
+      old_df = pd.read_csv('data/icy_stats.csv')
+      ndf = dedupeDF([df,old_df],['ds', 'lookback', 'address'], ['ds', 'address','lookback'])
+      ndf.to_csv('data/icy_stats.csv', index=False, header=list(ndf.columns))
     #fx = pd.concat([ndf, old_df])
     #fx = fx.loc[~fx.duplicated(keep=False, subset=['ds', 'lookback', 'address'])]
-    df.to_csv('data/icy_stats.csv', index=False, header=list(df.columns))
+    
 
