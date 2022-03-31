@@ -153,7 +153,6 @@ def processTransactionResult(result):
   return x
 
 def processDF(df):
-  print(df.columns)
   df['collection'] = df['contractAddress'].map(contract_mapping)
   df['notes'] = df['contractAddress'].map(royalty_dict)
   df['notes']=df['notes'].fillna('n/a')
@@ -195,10 +194,10 @@ if __name__ == '__main__':
 
   if args.endpoint == 'transactions':    
     if args.seed:
-      estconfirmed = {"gte":"2022-03-25T00:00:00.000Z"}
+      estconfirmed = {"gte":"2021-11-01T00:00:00.000Z"}
     else:  
-      estconfirmed = {"gte":"{0}".format(transaction_df.estimatedConfirmedAt[0])} 
       transaction_df = pd.read_csv('data/icy_transactions.csv', keep_default_na=False)    
+      estconfirmed = {"gte":"{0}".format(transaction_df.estimatedConfirmedAt[0])} 
     record_list = []
     after=getFirstCursor(contracts_with_royalty_contracts)
     continue_flag = True
@@ -245,6 +244,7 @@ if __name__ == '__main__':
           if args.seed:
             pass
           else:
+            old_df = pd.read_csv('data/icy_stats.csv')
             exist_df = old_df.loc[(old_df.ds==d.strftime('%Y-%m-%d')) & (old_df.lookback==lookback) & (old_df.address==contract)]
             if len(exist_df) > 0:
               print('data exists previously')
@@ -268,7 +268,6 @@ if __name__ == '__main__':
     if args.seed:
       df.to_csv('data/icy_stats.csv', index=False, header=list(df.columns))  
     else:
-      old_df = pd.read_csv('data/icy_stats.csv')
       ndf = dedupeDF([df,old_df],['ds', 'lookback', 'address'], ['ds', 'address','lookback'])
       ndf.to_csv('data/icy_stats.csv', index=False, header=list(ndf.columns))
     #fx = pd.concat([ndf, old_df])
