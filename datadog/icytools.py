@@ -232,6 +232,11 @@ if __name__ == '__main__':
       start = (datetime.today()-timedelta(days=1)).strftime('%Y-%m-%d')
     else:
       start = args.start
+    if args.seed:
+      old_df = pd.DataFrame(columns=['ds','lookback','address'])
+    else:
+      old_df = pd.read_csv('data/icy_stats.csv')
+      
     start_ = dt.datetime.strptime(start, '%Y-%m-%d')
     backfill = int(args.backfill) or 0
     lookbacks = [int(i) for i in args.lookback.split(',')] if args.lookback else [1]
@@ -241,10 +246,6 @@ if __name__ == '__main__':
       for lookback in lookbacks:
         for d in dt_range:
           print(contract, d, lookback)
-          if args.seed:
-            pass
-          else:
-            old_df = pd.read_csv('data/icy_stats.csv')
             exist_df = old_df.loc[(old_df.ds==d.strftime('%Y-%m-%d')) & (old_df.lookback==lookback) & (old_df.address==contract)]
             if len(exist_df) > 0:
               print('data exists previously')
