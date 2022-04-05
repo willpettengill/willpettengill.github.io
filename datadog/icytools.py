@@ -246,10 +246,10 @@ if __name__ == '__main__':
       for lookback in lookbacks:
         for d in dt_range:
           print(contract, d, lookback)
-            exist_df = old_df.loc[(old_df.ds==d.strftime('%Y-%m-%d')) & (old_df.lookback==lookback) & (old_df.address==contract)]
-            if len(exist_df) > 0:
-              print('data exists previously')
-              continue 
+          exist_df = old_df.loc[(old_df.ds==d.strftime('%Y-%m-%d')) & (old_df.lookback==lookback) & (old_df.address==contract)]
+          if len(exist_df) > 0:
+            print('data exists previously')
+            continue 
           gte = (d - timedelta(days=lookback)).strftime('%Y-%m-%d')
           lte = d.strftime('%Y-%m-%d')
           query, parameters = statsQuery(gte, lte, contract)
