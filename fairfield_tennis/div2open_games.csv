@@ -1,0 +1,255 @@
+line,t1score,t2score,t1p1,t1p2,t2p1,t2p2,team1,team2,t1_points,t2_points
+1,76,61,cyril_moulle-berteaux,allan_cosby,rob_neuner,sam_sullivan,FC Greenwich 2,Woodway 1,3.0,-3.0
+2,66877,171063,stu_brown,stewie_whitman,don_san,shannon_bass,FC Greenwich 2,Woodway 1,0.0,-0.0
+3,66,43,sam_welch,brad_radulovacki,john_degulis,ted_conway,FC Greenwich 2,Woodway 1,2.5,-2.5
+4,631,466,cody_kittle,nico_moulle,jud_staniar,long_ellis,FC Greenwich 2,Woodway 1,-2.0,2.0
+1,24,66,santiago_gilfond,ben_powis,david_fink,daniel_brous,Innis Arden 1,Bailiwick 1,-3.0,3.0
+2,24,66,terry_o'brien,josh_frank,larry_hirsch,johnny_riehl,Innis Arden 1,Bailiwick 1,-3.0,3.0
+3,736,564,rich_goldman,james_rowley,zach_firestone,brett_howard,Innis Arden 1,Bailiwick 1,0.3333333333333333,-0.3333333333333333
+4,40,66,bourgeois_rod,mirek_fajt,steve_greenberg,brian_balanoff,Innis Arden 1,Bailiwick 1,-4.0,4.0
+1,22,66,david_dickson,david_king,bill_nichols,ben_swett,Round Hill,CC of Darien 1,-4.0,4.0
+2,01,66,winston_bragg,brian_stern,neil_duncan,chris_smailes,Round Hill,CC of Darien 1,-5.5,5.5
+3,24,62,jon_old(retired),william_ewald(retired),duane_biasi,mark_langer,Round Hill,CC of Darien 1,-1.0,1.0
+4,21,66,dave_bechtel,leighton_welch,christian_brown,mike_meyer,Round Hill,CC of Darien 1,-4.5,4.5
+1,02,66,ken_schmidt,steve_molkenthin,ted_danforth,zach_portnoy,Middlesex 1,FC Greenwich 2,-5.0,5.0
+2,04,66,tim_bepler,fritz_schweitzer,allan_cosby,mike_boardman,Middlesex 1,FC Greenwich 2,-4.0,4.0
+3,11,66,brad_scholtz,henrik_christiansen,stu_brown,stewie_whitman,Middlesex 1,FC Greenwich 2,-5.0,5.0
+1,33,64,mike_nyguen,thomas_youn,steve_pozatek,jeff_gould,Roxbury 1,Woodway 1,-2.0,2.0
+2,30,66,mark_sweeney,steven_jones,rob_neuner,bobby_neuner,Roxbury 1,Woodway 1,-4.5,4.5
+3,16,63,chul_park,james_shen,blake_wieczorek,don_san,Roxbury 1,Woodway 1,-1.0,1.0
+1,66,32,ben_swett,chris_smailes,edward_glassmeyer,aaron_smith,CC of Darien 1,Wee Burn,3.5,-3.5
+2,7716,6463,bill_nichols,mark_langer,frank_gallagher,paul_swirbul,CC of Darien 1,Wee Burn,0.0,-0.0
+3,66,12,neil_duncan,duane_biasi,rory_callagy,bo_brown,CC of Darien 1,Wee Burn,4.5,-4.5
+4,756,573,matt_d'acunto,christian_brown,shedd_glassmeyer,graham_hill,CC of Darien 1,Wee Burn,1.0,-1.0
+1,26,67,paul_swirbul,patrick_connors,alain_decoster,steve_scharff,Wee Burn,Milbrook 1,-2.5,2.5
+2,66,23,frank_gallagher,john_karcher,david_lee,mike_benenson,Wee Burn,Milbrook 1,3.5,-3.5
+3,266,642,aaron_smith,peter_sosnow,marcelo_pizzimbono,steve_zaminski,Wee Burn,Milbrook 1,0.6666666666666666,-0.6666666666666666
+4,624,466,shedd_glassmeyer,dominic_napolitano,luke_delaney,henry_rowland,Wee Burn,Milbrook 1,-1.3333333333333333,1.3333333333333333
+1,66,23,steve_scharff,rob_mackay,allan_cosby,james_cosby,Milbrook 1,FC Greenwich 2,3.5,-3.5
+2,03,66,steve_zaminski,alain_decoster,patrick_barth,cyril_moulle-berteaux,Milbrook 1,FC Greenwich 2,-4.5,4.5
+3,01,66,larry_garinger,todd_ertel,mike_boardman,stewie_whitman,Milbrook 1,FC Greenwich 2,-5.5,5.5
+4,02,66,greg_frumin,nick_barile,brooks_harris,brad_radulovacki,Milbrook 1,FC Greenwich 2,-5.0,5.0
+1,43,66,ernest_verrico,rick_jeffrey,cullen_mcmahon,steve_scharff,Greenwich CC 1,Milbrook 1,-2.5,2.5
+2,264,636,terrence_(t.w.),thomas_odelfelt,jack_dowdle,rob_mackay,Greenwich CC 1,Milbrook 1,-1.0,1.0
+3,736,564,roger_knight,peter_bailey,david_lee,steve_zaminski,Greenwich CC 1,Milbrook 1,0.3333333333333333,-0.3333333333333333
+4,03,66,phil_pratley,tom_twiggs,mike_benenson,josh_frumin,Greenwich CC 1,Milbrook 1,-4.5,4.5
+1,61,76,pete_kim,david_abbott,adam_king,john_leslie,Middlesex 1,Rowayton 1,-3.0,3.0
+2,15,67,ed_kosnik,christopher_barton,joe_rogers,stefan_wagner,Middlesex 1,Rowayton 1,-3.5,3.5
+3,4610,647,steve_molkenthin,todd_morgan,jim_kerans,john_marshall,Middlesex 1,Rowayton 1,0.0,-0.0
+4,6610,747,fritz_schweitzer,brian_o'hagan,tim_widmer,sergey_chernysh,Middlesex 1,Rowayton 1,0.0,-0.0
+1,67,36,david_dickson,marc_tabah,steve_scharff,jack_dowdle,Round Hill,Milbrook 1,2.0,-2.0
+2,4773,6636,david_king,winston_bragg,david_lee,steve_zaminski,Round Hill,Milbrook 1,0.0,-0.0
+3,21,66,doug_hurst,jenkins_marshall,mike_benenson,matt_kearns,Round Hill,Milbrook 1,-4.5,4.5
+4,40,66,leighton_welch,john_woodruff,akshay_shetty,josh_frumin,Round Hill,Milbrook 1,-4.0,4.0
+1,42,66,henry_de,steve_scharff,pat_mullin,steve_pozatek,Milbrook 1,Woodway 1,-3.0,3.0
+2,67,45,cullen_mcmahon,rob_mackay,rob_neuner,blake_wieczorek,Milbrook 1,Woodway 1,2.0,-2.0
+3,22,66,alain_decoster,jack_dowdle,ed_orenstein,sam_sullivan,Milbrook 1,Woodway 1,-4.0,4.0
+4,66,33,david_lee,matt_kearns,sean_durkin,ted_conway,Milbrook 1,Woodway 1,3.0,-3.0
+1,66,21,kevin_nyarady,david_abbott,steve_pozatek,blake_wieczorek,Middlesex 1,Woodway 1,4.5,-4.5
+2,641,466,ed_kosnik,justin_byczek,pat_mullin,sam_sullivan,Middlesex 1,Woodway 1,-1.6666666666666667,1.6666666666666667
+3,67,45,ken_schmidt,christopher_barton,sean_durkin,jud_staniar,Middlesex 1,Woodway 1,2.0,-2.0
+4,22,66,todd_morgan,fritz_schweitzer,carter_sullivan,long_ellis,Middlesex 1,Woodway 1,-4.0,4.0
+1,7777,6564,john_leslie,adam_king,john_long,patrick_connors,Rowayton 1,Wee Burn,0.0,-0.0
+2,66,23,alex_luchars,joe_rogers,bartt_kellermann,paul_swirbul,Rowayton 1,Wee Burn,3.5,-3.5
+3,644,466,jim_kerans,john_marshall,frank_gallagher,graham_hill,Rowayton 1,Wee Burn,-0.6666666666666666,0.6666666666666666
+4,10,66,tim_widmer,keven_herrold,rory_callagy,aaron_smith,Rowayton 1,Wee Burn,-5.5,5.5
+1,365,677,cullen_mcmahon,steve_scharff,keith_butterfield,mark_kremheller,Milbrook 1,Roxbury 1,-2.0,2.0
+2,615,367,jack_dowdle,david_lee,tim_everett,mark_sweeney,Milbrook 1,Roxbury 1,-1.3333333333333333,1.3333333333333333
+3,42,66,matt_kearns,marcelo_pizzimbono,mike_nyguen,joseph_schipani,Milbrook 1,Roxbury 1,-3.0,3.0
+4,11,66,luke_delaney,larry_garinger,steven_jones,thomas_youn,Milbrook 1,Roxbury 1,-5.0,5.0
+1,44,66,david_fink,johnny_riehl,chris_smailes,ben_swett,Bailiwick 1,CC of Darien 1,-2.0,2.0
+2,23,66,steve_greenberg,zach_firestone,bill_nichols,ken_lavine,Bailiwick 1,CC of Darien 1,-3.5,3.5
+3,462,636,dave_harmon,brett_howard,duane_biasi,duncan_prichard,Bailiwick 1,CC of Darien 1,-1.0,1.0
+4,776,651,tony_polak,cliff_silverman,steve_wright,mark_langer,Bailiwick 1,CC of Darien 1,2.6666666666666665,-2.6666666666666665
+1,6967,71115,henry_de,steve_scharff,adam_king,alex_roszkowski,Milbrook 1,Rowayton 1,0.0,-0.0
+2,52,76,alain_decoster,rob_mackay,john_leslie,stefan_wagner,Milbrook 1,Rowayton 1,-3.0,3.0
+3,53,76,david_lee,akshay_shetty,alex_luchars,joe_rogers,Milbrook 1,Rowayton 1,-2.5,2.5
+4,42,66,jack_dowdle,steve_zaminski,mark_heffern,mark_lesson,Milbrook 1,Rowayton 1,-3.0,3.0
+1,66,12,daniel_brous,david_fink,pete_kim,ed_kosnik,Bailiwick 1,Middlesex 1,4.5,-4.5
+2,66,43,cliff_silverman,johnny_riehl,christopher_barton,ken_schmidt,Bailiwick 1,Middlesex 1,2.5,-2.5
+3,66,03,zach_firestone,brett_howard,elo_comfort,steve_molkenthin,Bailiwick 1,Middlesex 1,4.5,-4.5
+4,67,25,dave_harmon,steve_greenberg,todd_morgan,tim_bepler,Bailiwick 1,Middlesex 1,3.0,-3.0
+1,76,54,adam_king,alex_roszkowski,tim_everett,todd_parker,Rowayton 1,Roxbury 1,2.0,-2.0
+2,34,66,mark_heffern,joe_rogers,mark_kremheller,mark_sweeney,Rowayton 1,Roxbury 1,-2.5,2.5
+3,22,66,jack_birch,tim_widmer,steven_jones,thomas_youn,Rowayton 1,Roxbury 1,-4.0,4.0
+4,062,646,michael_frey,jim_kerans,mike_nyguen,joseph_schipani,Rowayton 1,Roxbury 1,-2.6666666666666665,2.6666666666666665
+1,23,66,john_long,paul_swirbul,ryan_shockley,santiago_gilfond,Wee Burn,Innis Arden 1,-3.5,3.5
+2,7711,6566,frank_gallagher,graham_hill,zach_hascoe,terry_o'brien,Wee Burn,Innis Arden 1,0.0,-0.0
+3,656,470,dominic_napolitano,peter_sosnow,mirek_fajt,finn_swarting,Wee Burn,Innis Arden 1,2.0,-2.0
+4,66,40,shedd_glassmeyer,reid_smith,rich_goldman,steve_schelz,Wee Burn,Innis Arden 1,4.0,-4.0
+1,66,01,pat_mullin,steve_pozatek,winston_bragg,david_king,Woodway 1,Round Hill,5.5,-5.5
+2,66,22,carter_sullivan,blake_wieczorek,paul_vittone,brian_stern,Woodway 1,Round Hill,4.0,-4.0
+3,66,21,john_degulis,don_san,john_woodruff,dave_bechtel,Woodway 1,Round Hill,4.5,-4.5
+1,66,32,keith_butterfield,tim_everett,david_dickson,marc_tabah,Roxbury 1,Round Hill,3.5,-3.5
+2,66,32,mark_sweeney,thomas_youn,david_king,winston_bragg,Roxbury 1,Round Hill,3.5,-3.5
+3,67,15,james_shen,doug_conn,doug_hurst,paul_vittone,Roxbury 1,Round Hill,3.5,-3.5
+4,23,66,john_wood,rick_disesa,greg_martinez,taran_bakker,Roxbury 1,Round Hill,-3.5,3.5
+1,41,66,marcelo_pizzimbono,david_lee,justin_byczek,ed_kosnik,Milbrook 1,Middlesex 1,-3.5,3.5
+2,366,601,rob_mackay,jack_dowdle,pete_kim,christopher_barton,Milbrook 1,Middlesex 1,2.6666666666666665,-2.6666666666666665
+3,66,14,mike_benenson,matt_kearns,ken_schmidt,steve_molkenthin,Milbrook 1,Middlesex 1,3.5,-3.5
+4,66,23,henry_rowland,josh_frumin,todd_morgan,fritz_schweitzer,Milbrook 1,Middlesex 1,3.5,-3.5
+1,637,466,larry_hirsch,david_fink,spike_hayden,ernest_verrico,Bailiwick 1,Greenwich CC 1,0.0,-0.0
+2,54,76,steve_greenberg,cliff_silverman,terrence_(t.w.),john_redett,Bailiwick 1,Greenwich CC 1,-2.0,2.0
+3,67,45,brian_balanoff,mark_levine,andrew_hanson,peter_bailey,Bailiwick 1,Greenwich CC 1,2.0,-2.0
+4,66,13,tony_polak,peter_grabel,mark_mindich,david_tompkins,Bailiwick 1,Greenwich CC 1,4.0,-4.0
+1,477,665,ernest_verrico,spike_hayden,patrick_barth,anders_hebrand,Greenwich CC 1,FC Greenwich 2,0.3333333333333333,-0.3333333333333333
+2,20,66,john_redett,rick_jeffrey,cyril_moulle-berteaux,christian_nagler,Greenwich CC 1,FC Greenwich 2,-5.0,5.0
+3,20,66,roger_knight,thomas_odelfelt,stu_brown,stewie_whitman,Greenwich CC 1,FC Greenwich 2,-5.0,5.0
+4,263,646,peter_bailey,andrew_hanson,brad_radulovacki,mike_boardman,Greenwich CC 1,FC Greenwich 2,-1.6666666666666667,1.6666666666666667
+1,66,40,john_long,dan_swan,tim_everett,mike_nyguen,Wee Burn,Roxbury 1,4.0,-4.0
+2,646,163,jim_ballentine,brett_stephens,mark_sweeney,joseph_schipani,Wee Burn,Roxbury 1,2.0,-2.0
+3,66,42,paul_swirbul,rory_callagy,james_shen,john_wood,Wee Burn,Roxbury 1,3.0,-3.0
+4,566,722,edward_glassmeyer,dominic_napolitano,rick_disesa,steve_denardo,Wee Burn,Roxbury 1,2.0,-2.0
+1,66,24,brett_stephens,john_long,ernest_verrico,rick_jeffrey,Wee Burn,Greenwich CC 1,3.0,-3.0
+2,466,611,frank_gallagher,paul_swirbul,john_redett,thomas_odelfelt,Wee Burn,Greenwich CC 1,2.6666666666666665,-2.6666666666666665
+3,642,366,rory_callagy,aaron_smith,todd_khoury,roger_knight,Wee Burn,Greenwich CC 1,-1.0,1.0
+4,66,34,dominic_napolitano,bo_brown,andrew_hanson,peter_bailey,Wee Burn,Greenwich CC 1,2.5,-2.5
+1,463,636,paul_swirbul,john_long,kevin_nyarady,ed_kosnik,Wee Burn,Middlesex 1,-0.6666666666666666,0.6666666666666666
+2,66,32,brett_stephens,frank_gallagher,tim_bepler,todd_morgan,Wee Burn,Middlesex 1,3.5,-3.5
+3,66,12,graham_hill,aaron_smith,brian_rayhill,brad_scholtz,Wee Burn,Middlesex 1,4.5,-4.5
+4,66,12,peter_sosnow,peter_millones,jim_reilly,bill_ross,Wee Burn,Middlesex 1,4.5,-4.5
+1,46711,6369,marc_tabah,winston_bragg,john_long,patrick_connors,Round Hill,Wee Burn,0.0,-0.0
+2,23,66,david_king,william_ewald,bartt_kellermann,jim_ballentine,Round Hill,Wee Burn,-3.5,3.5
+1,45,67,rick_jeffrey,spike_hayden,christopher_barton,kevin_nyarady,Greenwich CC 1,Middlesex 1,-2.0,2.0
+2,466,622,thomas_odelfelt,ernest_verrico,pete_kim,ed_kosnik,Greenwich CC 1,Middlesex 1,2.0,-2.0
+3,466,631,roger_knight,terrence_(t.w.),todd_morgan,fritz_schweitzer,Greenwich CC 1,Middlesex 1,2.0,-2.0
+4,66,12,john_redett,andrew_hanson,brian_o'hagan,steve_molkenthin,Greenwich CC 1,Middlesex 1,4.5,-4.5
+1,66,20,patrick_barth,david_flowerdew,david_king,david_dickson,FC Greenwich 2,Round Hill,5.0,-5.0
+2,66,11,cyril_moulle-berteaux,adam_epstein,winston_bragg,greg_martinez,FC Greenwich 2,Round Hill,5.0,-5.0
+3,66,24,stu_brown,allan_cosby,jenkins_marshall,doug_hurst,FC Greenwich 2,Round Hill,3.0,-3.0
+4,66,20,randy_stern,brad_radulovacki,dave_bechtel,jim_knight,FC Greenwich 2,Round Hill,5.0,-5.0
+1,66,31,adam_king,john_leslie,david_dickson,paul_vittone,Rowayton 1,Round Hill,4.0,-4.0
+2,66,34,alex_luchars,joe_rogers,david_king,winston_bragg,Rowayton 1,Round Hill,2.5,-2.5
+3,466,603,mark_heffern,mark_lesson,greg_martinez,doug_hurst,Rowayton 1,Round Hill,2.3333333333333335,-2.3333333333333335
+2,626,361,john_leslie,mark_heffern,steve_greenberg,cliff_silverman,Rowayton 1,Bailiwick 1,1.3333333333333333,-1.3333333333333333
+3,24,66,jack_birch,tim_widmer,zach_firestone,brett_howard,Rowayton 1,Bailiwick 1,-3.0,3.0
+1,01,66,peter_millones,bartt_kellermann,david_fink,daniel_brous,Wee Burn,Bailiwick 1,-5.5,5.5
+2,23,66,edward_glassmeyer,aaron_smith,larry_hirsch,johnny_riehl,Wee Burn,Bailiwick 1,-3.5,3.5
+3,42,66,frank_gallagher,dominic_napolitano,zach_firestone,david_hudesman,Wee Burn,Bailiwick 1,-3.0,3.0
+4,24,66,peter_sosnow,peter_sosnow,mark_levine,steve_greenberg,Wee Burn,Bailiwick 1,-3.0,3.0
+1,66,00,ben_powis,ryan_shockley,david_dickson,william_ewald,Innis Arden 1,Round Hill,6.0,-6.0
+2,66,20,santiago_gilfond,zach_hascoe,david_king,winston_bragg,Innis Arden 1,Round Hill,5.0,-5.0
+3,66,21,mirek_fajt,terry_o'brien,doug_hurst,brian_stern,Innis Arden 1,Round Hill,4.5,-4.5
+4,66,13,rich_goldman,glenn_oztemel,teddy_schiff,david_ball,Innis Arden 1,Round Hill,4.0,-4.0
+1,76,53,spike_hayden,ernest_verrico,keith_butterfield,tim_everett,Greenwich CC 1,Roxbury 1,2.5,-2.5
+2,174,656,terrence_(t.w.),john_redett,mark_kremheller,mark_sweeney,Greenwich CC 1,Roxbury 1,-1.6666666666666667,1.6666666666666667
+3,643,776,roger_knight,thomas_odelfelt,joseph_schipani,thomas_youn,Greenwich CC 1,Roxbury 1,-2.3333333333333335,2.3333333333333335
+4,636,362,peter_bailey,andrew_hanson,rick_disesa,steven_jones,Greenwich CC 1,Roxbury 1,1.3333333333333333,-1.3333333333333333
+1,66,12,daniel_brous,larry_hirsch,david_king,david_dickson,Bailiwick 1,Round Hill,4.5,-4.5
+2,776,640,johnny_riehl,cliff_silverman,william_ewald,paul_vittone,Bailiwick 1,Round Hill,3.3333333333333335,-3.3333333333333335
+3,66,34,zach_firestone,brett_howard,leighton_welch,greg_martinez,Bailiwick 1,Round Hill,2.5,-2.5
+4,66,42,dave_harmon,mark_levine,doug_hurst,jenkins_marshall,Bailiwick 1,Round Hill,3.0,-3.0
+1,2776,6654,bill_nichols,ken_lavine,allan_cosby,anders_hebrand,CC of Darien 1,FC Greenwich 2,0.0,-0.0
+2,41,66,neil_duncan,duane_biasi,cyril_moulle-berteaux,patrick_barth,CC of Darien 1,FC Greenwich 2,-3.5,3.5
+3,24,66,dave_sherwood,mike_meyer,stu_brown,stewie_whitman,CC of Darien 1,FC Greenwich 2,-3.0,3.0
+4,01,66,andrew_davidson,bill_jennings,randy_stern,mike_boardman,CC of Darien 1,FC Greenwich 2,-5.5,5.5
+1,66,03,keith_butterfield,todd_parker,kevin_nyarady,pete_kim,Roxbury 1,Middlesex 1,4.5,-4.5
+2,36,67,mark_kremheller,tim_everett,justin_byczek,ed_kosnik,Roxbury 1,Middlesex 1,-2.0,2.0
+3,66,02,mike_nyguen,joseph_schipani,steve_molkenthin,ken_schmidt,Roxbury 1,Middlesex 1,5.0,-5.0
+4,66,01,mark_sweeney,john_wood,brian_rayhill,steve_hansen,Roxbury 1,Middlesex 1,5.5,-5.5
+1,66,10,keith_butterfield,todd_parker,stu_brown,cyril_moulle-berteaux,Roxbury 1,FC Greenwich 2,5.5,-5.5
+2,625,367,tim_everett,mark_sweeney,james_cosby,allan_cosby,Roxbury 1,FC Greenwich 2,-1.0,1.0
+3,6566,7743,mike_nyguen,joseph_schipani,mike_boardman,randy_stern,Roxbury 1,FC Greenwich 2,0.0,-0.0
+4,43,66,doug_conn,steven_jones,brad_radulovacki,brooks_harris,Roxbury 1,FC Greenwich 2,-2.5,2.5
+1,366,622,adam_king,alex_roszkowski,ernest_verrico,rick_jeffrey,Rowayton 1,Greenwich CC 1,1.6666666666666667,-1.6666666666666667
+2,35,67,jim_kerans,john_leslie,todd_khoury,terrence_(t.w.),Rowayton 1,Greenwich CC 1,-2.5,2.5
+3,32,66,michael_frey,jack_birch,roger_knight,thomas_odelfelt,Rowayton 1,Greenwich CC 1,-3.5,3.5
+1,35,67,rick_jeffrey,terrence_(t.w.),ben_swett,chris_smailes,Greenwich CC 1,CC of Darien 1,-2.5,2.5
+2,66,34,thomas_odelfelt,ernest_verrico,bill_nichols,duncan_prichard,Greenwich CC 1,CC of Darien 1,2.5,-2.5
+3,634,776,todd_khoury,andrew_hanson,duane_biasi,neil_duncan,Greenwich CC 1,CC of Darien 1,-2.3333333333333335,2.3333333333333335
+4,6564,7736,patrick_marshall,peter_bailey,bill_jennings,ken_lavine,Greenwich CC 1,CC of Darien 1,0.0,-0.0
+1,33,66,rob_mackay,alain_decoster,ben_swett,chris_smailes,Milbrook 1,CC of Darien 1,-3.0,3.0
+2,462,636,mike_benenson,jack_dowdle,bill_nichols,mark_langer,Milbrook 1,CC of Darien 1,-1.0,1.0
+3,613,366,matt_kearns,henry_rowland,duane_biasi,neil_duncan,Milbrook 1,CC of Darien 1,-1.6666666666666667,1.6666666666666667
+4,22,66,chris_combe,fred_tuck,christian_brown,jared_nolen,Milbrook 1,CC of Darien 1,-4.0,4.0
+1,65,77,ed_orenstein,blake_wieczorek,spike_hayden,rick_jeffrey,Woodway 1,Greenwich CC 1,-1.5,1.5
+2,76,63,shannon_bass,john_degulis,todd_khoury,john_redett,Woodway 1,Greenwich CC 1,2.0,-2.0
+3,23,66,eduardo_cortes,will_harned,roger_knight,thomas_odelfelt,Woodway 1,Greenwich CC 1,-3.5,3.5
+4,66,43,jud_staniar,jim_weinstock,andrew_hanson,nicholas_keyes,Woodway 1,Greenwich CC 1,2.5,-2.5
+1,6379,2667,zach_hascoe,ben_powis,ted_danforth,christian_nagler,Innis Arden 1,FC Greenwich 2,0.0,-0.0
+2,166,621,dave_meyer,santiago_gilfond,cyril_moulle-berteaux,elliot_wagner,Innis Arden 1,FC Greenwich 2,1.3333333333333333,-1.3333333333333333
+3,10,66,finn_swarting,steve_schelz,randy_stern,mike_boardman,Innis Arden 1,FC Greenwich 2,-5.5,5.5
+4,266,624,mirek_fajt,rod_bourgeois,tucker_hastings,brad_radulovacki,Innis Arden 1,FC Greenwich 2,0.6666666666666666,-0.6666666666666666
+1,41,66,edward_glassmeyer,patrick_connors,cyril_moulle-berteaux,anders_hebrand,Wee Burn,FC Greenwich 2,-3.5,3.5
+2,466,642,brett_stephens,aaron_smith,mike_boardman,randy_stern,Wee Burn,FC Greenwich 2,1.3333333333333333,-1.3333333333333333
+3,263,677,graham_hill,frank_gallagher,stu_brown,stewie_whitman,Wee Burn,FC Greenwich 2,-3.0,3.0
+4,66,13,paul_swirbul,bartt_kellermann,brad_radulovacki,brooks_harris,Wee Burn,FC Greenwich 2,4.0,-4.0
+1,66,21,blake_wieczorek,steve_pozatek,edward_glassmeyer,brett_stephens,Woodway 1,Wee Burn,4.5,-4.5
+2,66,33,don_san,sam_sullivan,aaron_smith,jim_ballentine,Woodway 1,Wee Burn,3.0,-3.0
+3,643,366,shannon_bass,eduardo_cortes,frank_gallagher,graham_hill,Woodway 1,Wee Burn,-0.6666666666666666,0.6666666666666666
+4,4776,6634,will_harned,ted_conway,bo_brown,paul_swirbul,Woodway 1,Wee Burn,0.0,-0.0
+1,67,46,pat_mullin,steve_pozatek,adam_king,john_leslie,Woodway 1,Rowayton 1,1.5,-1.5
+2,626,261,blake_wieczorek,rob_neuner,joe_rogers,stefan_wagner,Woodway 1,Rowayton 1,1.6666666666666667,-1.6666666666666667
+3,66,04,don_san,sam_sullivan,mark_lesson,jim_kerans,Woodway 1,Rowayton 1,4.0,-4.0
+4,67,36,sean_durkin,carter_sullivan,jack_birch,tim_widmer,Woodway 1,Rowayton 1,2.0,-2.0
+1,260,646,david_flowerdew,anders_hebrand,daniel_brous,david_fink,FC Greenwich 2,Bailiwick 1,-2.6666666666666665,2.6666666666666665
+2,67,35,cyril_moulle-berteaux,stewie_whitman,brett_howard,cliff_silverman,FC Greenwich 2,Bailiwick 1,2.5,-2.5
+3,66,34,mike_boardman,stu_brown,david_hudesman,mark_levine,FC Greenwich 2,Bailiwick 1,2.5,-2.5
+4,67,35,brooks_harris,brad_radulovacki,howard_levine,brian_balanoff,FC Greenwich 2,Bailiwick 1,2.5,-2.5
+1,34,66,keith_butterfield,todd_parker,david_fink,daniel_brous,Roxbury 1,Bailiwick 1,-2.5,2.5
+2,365,637,tim_everett,mike_nyguen,larry_hirsch,zach_firestone,Roxbury 1,Bailiwick 1,-0.6666666666666666,0.6666666666666666
+3,66,13,thomas_youn,james_shen,mark_levine,cliff_silverman,Roxbury 1,Bailiwick 1,4.0,-4.0
+4,647010,775112,rick_disesa,mark_sweeney,howard_levine,tony_polak,Roxbury 1,Bailiwick 1,0.0,-0.0
+1,25,67,kevin_nyarady,david_abbott,ryan_shockley,zach_hascoe,Middlesex 1,Innis Arden 1,-3.0,3.0
+2,12,66,fritz_schweitzer,ed_kosnik,terry_o'brien,steve_schelz,Middlesex 1,Innis Arden 1,-4.5,4.5
+3,466,644,christopher_barton,todd_morgan,glenn_oztemel,rich_goldman,Middlesex 1,Innis Arden 1,0.6666666666666666,-0.6666666666666666
+4,6653,1776,brian_rayhill,brad_scholtz,josh_rosen,josh_rosen,Middlesex 1,Innis Arden 1,0.0,-0.0
+1,601,466,gregory_vadasdi,patrick_barth,mark_ableman,john_leslie,FC Greenwich 2,Rowayton 1,-3.0,3.0
+2,66,01,david_flowerdew,cyril_moulle-berteaux,alex_luchars,stefan_wagner,FC Greenwich 2,Rowayton 1,5.5,-5.5
+3,668,4710,allan_cosby,stewie_whitman,mark_heffern,mark_lesson,FC Greenwich 2,Rowayton 1,2.6666666666666665,-2.6666666666666665
+4,66,01,mike_boardman,randy_stern,keven_herrold,tim_widmer,FC Greenwich 2,Rowayton 1,5.5,-5.5
+1,76,54,david_abbott,kevin_nyarady,ben_swett,chris_smailes,Middlesex 1,CC of Darien 1,2.0,-2.0
+2,12,66,todd_morgan,steve_molkenthin,bill_nichols,neil_duncan,Middlesex 1,CC of Darien 1,-4.5,4.5
+3,21,66,fritz_schweitzer,tim_bepler,duane_biasi,mark_langer,Middlesex 1,CC of Darien 1,-4.5,4.5
+4,22,66,brad_scholtz,brian_rayhill,ken_lavine,christian_brown,Middlesex 1,CC of Darien 1,-4.0,4.0
+1,66,22,ben_powis,zach_hascoe,pat_mullin,blake_wieczorek,Innis Arden 1,Woodway 1,4.0,-4.0
+2,162,636,terry_o'brien,santiago_gilfond,jeff_gould,rob_neuner,Innis Arden 1,Woodway 1,-2.0,2.0
+3,366,642,james_rowley,finn_swarting,shannon_bass,john_degulis,Innis Arden 1,Woodway 1,1.0,-1.0
+4,165,637,mirek_fajt,glenn_oztemel,carter_sullivan,long_ellis,Innis Arden 1,Woodway 1,-1.3333333333333333,1.3333333333333333
+1,20,66,ben_swett,bill_nichols,ben_powis,ryan_shockley,CC of Darien 1,Innis Arden 1,-5.0,5.0
+2,21,66,duane_biasi,neil_duncan,terry_o'brien,zach_hascoe,CC of Darien 1,Innis Arden 1,-4.5,4.5
+3,467,635,duncan_prichard,mike_meyer,mirek_fajt,james_rowley,CC of Darien 1,Innis Arden 1,1.0,-1.0
+4,576,753,ken_lavine,matt_d'acunto,steve_schelz,rich_goldman,CC of Darien 1,Innis Arden 1,1.0,-1.0
+1,65,45,zach_hascoe,ben_powis,adam_king(retired),stefan_wagner(retired),Innis Arden 1,Rowayton 1,1.0,-1.0
+2,67,35,santiago_gilfond,terry_o'brien,mark_heffern,mark_lesson,Innis Arden 1,Rowayton 1,2.5,-2.5
+3,14,64,finn_swarting,james_rowley,alex_luchars,joe_rogers,Innis Arden 1,Rowayton 1,-2.5,2.5
+4,62,42,mirek_fajt,rich_goldman,jack_birch,tim_widmer,Innis Arden 1,Rowayton 1,1.0,-1.0
+1,66,31,kevin_nyarady,pete_kim,marc_tabah,winston_bragg,Middlesex 1,Round Hill,4.0,-4.0
+2,66,33,ed_kosnik,christopher_barton,david_king,paul_vittone,Middlesex 1,Round Hill,3.0,-3.0
+3,736,663,todd_morgan,steve_molkenthin,jenkins_marshall,doug_hurst,Middlesex 1,Round Hill,0.3333333333333333,-0.3333333333333333
+4,266,623,elo_comfort,fritz_schweitzer,taran_bakker,brian_stern,Middlesex 1,Round Hill,1.0,-1.0
+1,66,12,pat_mullin,blake_wieczorek,bill_nichols,ben_swett,Woodway 1,CC of Darien 1,4.5,-4.5
+2,66,21,sam_sullivan,don_san,neil_duncan,duane_biasi,Woodway 1,CC of Darien 1,4.5,-4.5
+3,54,76,sean_durkin,john_degulis,duncan_prichard,ken_lavine,Woodway 1,CC of Darien 1,-2.0,2.0
+4,465,677,carter_sullivan,will_harned,christian_brown,steve_wright,Woodway 1,CC of Darien 1,-1.6666666666666667,1.6666666666666667
+1,66,21,keith_butterfield,todd_parker,ben_swett,mark_langer,Roxbury 1,CC of Darien 1,4.5,-4.5
+2,65668,774710,steven_jones,mark_kremheller,bill_nichols,neil_duncan,Roxbury 1,CC of Darien 1,0.0,-0.0
+3,67,35,mark_sweeney,james_shen,duane_biasi,duncan_prichard,Roxbury 1,CC of Darien 1,2.5,-2.5
+4,465,677,steve_denardo,john_wood,bob_peck,bill_jennings,Roxbury 1,CC of Darien 1,-1.6666666666666667,1.6666666666666667
+1,21,66,spike_hayden,ernest_verrico,ryan_shockley,ben_powis,Greenwich CC 1,Innis Arden 1,-4.5,4.5
+2,263,626,terrence_(t.w.),rick_jeffrey,santiago_gilfond,zach_hascoe,Greenwich CC 1,Innis Arden 1,-1.0,1.0
+3,365,647,todd_khoury,thomas_odelfelt,terry_o'brien,mirek_fajt,Greenwich CC 1,Innis Arden 1,-1.0,1.0
+4,66,30,patrick_marshall,peter_bailey,rich_goldman,glenn_oztemel,Greenwich CC 1,Innis Arden 1,4.5,-4.5
+1,626,364,zach_hascoe,ben_powis,mike_nyguen,todd_parker,Innis Arden 1,Roxbury 1,0.3333333333333333,-0.3333333333333333
+2,646,463,santiago_gilfond,terry_o'brien,tim_everett,mark_sweeney,Innis Arden 1,Roxbury 1,1.0,-1.0
+3,66,22,josh_frank,mirek_fajt,doug_conn,james_shen,Innis Arden 1,Roxbury 1,4.0,-4.0
+4,66,01,rod_bourgeois,rich_goldman,steve_denardo,rick_disesa,Innis Arden 1,Roxbury 1,5.5,-5.5
+1,7754,6476,ben_powis,zach_hascoe,henry_de,steve_scharff,Innis Arden 1,Milbrook 1,0.0,-0.0
+2,466,614,terry_o'brien,santiago_gilfond,rob_mackay,jack_dowdle,Innis Arden 1,Milbrook 1,1.6666666666666667,-1.6666666666666667
+3,44,66,mirek_fajt,josh_frank,david_lee,akshay_shetty,Innis Arden 1,Milbrook 1,-2.0,2.0
+4,45,67,rich_goldman,bourgeois_rod,alain_decoster,steve_zaminski,Innis Arden 1,Milbrook 1,-2.0,2.0
+1,656110,77108,henry_de,steve_scharff,david_fink,cliff_silverman,Milbrook 1,Bailiwick 1,0.0,-0.0
+2,4774,6656,david_lee,matt_kearns,johnny_riehl,brett_howard,Milbrook 1,Bailiwick 1,0.0,-0.0
+3,20,66,marcelo_pizzimbono,steve_zaminski,dave_harmon,david_hudesman,Milbrook 1,Bailiwick 1,-5.0,5.0
+4,631,266,akshay_shetty,larry_garinger,howard_levine,brian_balanoff,Milbrook 1,Bailiwick 1,-1.3333333333333333,1.3333333333333333
+1,366,642,alex_roszkowski,john_leslie,mark_langer,ben_swett,Rowayton 1,CC of Darien 1,1.0,-1.0
+2,24,66,mark_heffern,mark_lesson,bill_nichols,chris_smailes,Rowayton 1,CC of Darien 1,-3.0,3.0
+3,765710,57766,alex_luchars,joe_rogers,duane_biasi,steve_wright,Rowayton 1,CC of Darien 1,0.0,-0.0
+4,67,35,jim_kerans,john_marshall,brian_smith,dave_sherwood,Rowayton 1,CC of Darien 1,2.5,-2.5
+1,4710,667,daniel_brous,steve_greenberg,blake_wieczorek,don_san,Bailiwick 1,Woodway 1,0.0,-0.0
+2,5,1,dave_harmon(retired),brett_howard(retired),shannon_bass,john_degulis,Bailiwick 1,Woodway 1,0.0,-0.0
+3,66,21,howard_levine,mark_levine,jud_staniar,jim_weinstock,Bailiwick 1,Woodway 1,4.5,-4.5
+4,635,267,tony_polak,brian_balanoff,jeff_grills,will_harned,Bailiwick 1,Woodway 1,-0.3333333333333333,0.3333333333333333
+1,66,31,rick_jeffrey,ernest_verrico,paul_vittone,david_dickson,Greenwich CC 1,Round Hill,4.0,-4.0
+2,677,463,todd_khoury,thomas_odelfelt,david_king,winston_bragg,Greenwich CC 1,Round Hill,2.3333333333333335,-2.3333333333333335
+3,66,21,matthew_petersen,peter_bailey,john_woodruff,jenkins_marshall,Greenwich CC 1,Round Hill,4.5,-4.5

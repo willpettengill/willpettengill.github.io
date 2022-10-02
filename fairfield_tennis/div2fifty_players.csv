@@ -1,0 +1,197 @@
+player,points,line,match_cnt,team,avg_points,line_quality,team_quality
+alain_decoster,8.833333333333334,2.5,5,Milbrook 1 (50),1.7666666666666668,4.5,12.0
+alan_sharpe,3.5,5.0,2,New Canaan FC 2 (50),1.75,2.5,2.0
+alan_walker,-3.5,3.0,1,Rowayton (50),-3.5,2.0,1.0
+allan_murphy,-6.0,4.5,3,Greenwich CC 1 (50),-2.0,3.5,7.0
+andrew_hanson,4.333333333333334,9.5,7,Greenwich CC 1 (50),0.6190476190476192,3.642857142857143,7.0
+andy_hunter,1.0,6.0,2,Woodway (50),0.5,2.0,3.0
+anthony_graham,-2.5,3.0,1,Innis Arden 1 (50),-2.5,2.0,4.0
+arin_wolfson,-0.5,2.0,2,New Canaan FC 2 (50),-0.25,4.0,2.0
+bart_lautenbach,7.0,3.0,2,Rolling Hills (50),3.5,3.5,5.0
+bob_eydt,1.3333333333333333,3.0,1,Roton Point 1 (50),1.3333333333333333,2.0,6.0
+bob_hogan,1.0,10.5,5,Roton Point 1 (50),0.2,2.9,6.0
+bob_jacobs,-14.5,5.0,3,Fairfield Hunt 1 (50),-4.833333333333333,3.333333333333333,9.0
+bob_upton,-5.0,3.0,1,Rolling Hills (50),-5.0,2.0,5.0
+brad_scholtz,16.166666666666668,7.5,4,Middlesex 1 (50),4.041666666666667,3.125,10.0
+bret_herman,22.666666666666664,5.0,6,Rolling Hills (50),3.7777777777777772,4.166666666666667,5.0
+brian_dolan,13.5,2.0,3,Rolling Hills (50),4.5,4.333333333333333,5.0
+brian_rayhill,13.833333333333334,14.5,7,Middlesex 1 (50),1.9761904761904763,2.9285714285714284,10.0
+carl_larouche,10.833333333333334,7.5,7,Fairfield Hunt 1 (50),1.5476190476190477,3.928571428571429,9.0
+carter_sullivan,-2.833333333333333,3.0,2,Woodway (50),-1.4166666666666665,3.5,3.0
+charles_crookenden,0.6666666666666666,2.0,1,New Canaan FC 2 (50),0.6666666666666666,3.0,2.0
+charles_rogers,-6.666666666666666,9.5,6,Silver Spring 1 (50),-1.111111111111111,3.416666666666667,8.0
+charles_timberlake,-4.5,3.0,1,New Canaan FC 2 (50),-4.5,2.0,2.0
+chip_mckinley,5.5,3.0,1,Roton Point 1 (50),5.5,2.0,6.0
+chris_dunn,-27.166666666666668,13.0,8,Rowayton (50),-3.3958333333333335,3.375,1.0
+chris_keelips,-19.833333333333336,9.0,6,Rowayton (50),-3.305555555555556,3.5,1.0
+chris_vollmer,-8.0,4.0,3,Innis Arden 1 (50),-2.6666666666666665,3.666666666666667,4.0
+craig_friedman,4.0,2.0,1,Milbrook 1 (50),4.0,3.0,12.0
+david_abbott,5.0,2.0,3,Middlesex 1 (50),1.6666666666666667,4.333333333333333,10.0
+david_carlson,1.0,6.0,2,Woodway (50),0.5,2.0,3.0
+david_durkin,0.0,1.0,1,Woodway (50),0.0,4.0,3.0
+david_gilio,-9.0,4.0,3,New Canaan FC 2 (50),-3.0,3.666666666666667,2.0
+david_kaplan,-16.5,8.0,4,Rowayton (50),-4.125,3.0,1.0
+david_lee,10.333333333333334,7.0,6,Milbrook 1 (50),1.7222222222222223,3.833333333333333,12.0
+david_patashnik,-1.0,3.0,1,Newfield (50),-1.0,2.0,11.0
+david_reiss,15.833333333333334,4.0,8,Fairfield Hunt 1 (50),1.9791666666666667,4.5,9.0
+david_zadik,-3.5,3.0,1,Milbrook 1 (50),-3.5,2.0,12.0
+don_san,-0.16666666666666652,1.0,2,Woodway (50),-0.08333333333333326,4.5,3.0
+doug_bassett,-7.499999999999999,7.4,10,Roton Point 1 (50),-0.7499999999999999,4.26,6.0
+ed_kosnik,7.5,2.0,3,Middlesex 1 (50),2.5,4.333333333333333,10.0
+ed_orenstein,11.166666666666666,3.0,3,Woodway (50),3.722222222222222,4.0,3.0
+ed_trask,22.833333333333332,8.0,11,Newfield (50),2.0757575757575757,4.2727272727272725,11.0
+eduardo_cortes,-2.3333333333333335,5.0,3,Woodway (50),-0.7777777777777778,3.333333333333333,3.0
+eduardo_menezes,14.333333333333332,7.5,5,Silver Spring 1 (50),2.8666666666666663,3.5,8.0
+eric_bass,6.833333333333333,17.0,6,Newfield (50),1.1388888888888888,2.1666666666666665,11.0
+eric_nadler,-2.0,3.0,2,Rolling Hills (50),-1.0,3.5,5.0
+eric_wenberg,-3.0,10.0,4,Milbrook 1 (50),-0.75,2.5,12.0
+even_berntsen,-0.8333333333333333,9.0,3,Innis Arden 1 (50),-0.27777777777777773,2.0,4.0
+faustino_cortina,-2.5,7.0,4,New Canaan FC 2 (50),-0.625,3.25,2.0
+finn_swarting,4.0,1.0,1,Innis Arden 1 (50),4.0,4.0,4.0
+forbes_hopper,1.0,2.0,1,Greenwich CC 1 (50),1.0,3.0,7.0
+fred_schweizer,0.0,8.0,4,Roton Point 1 (50),0.0,3.0,6.0
+fritz_schweitzer,8.666666666666666,8.0,8,Middlesex 1 (50),1.0833333333333333,4.0,10.0
+garry_feldman,-5.500000000000001,11.0,4,Newfield (50),-1.3750000000000002,2.25,11.0
+geoff_sweitzer,-4.166666666666667,8.0,3,Rowayton (50),-1.388888888888889,2.3333333333333335,1.0
+george_caffrey,-10.333333333333334,12.0,6,Rolling Hills (50),-1.7222222222222223,3.0,5.0
+george_hamilton,-7.5,15.0,6,Greenwich CC 1 (50),-1.25,2.5,7.0
+george_mandler,1.666666666666667,14.0,7,Roton Point 1 (50),0.23809523809523814,3.0,6.0
+greg_crowley,-0.5,7.0,3,Woodway (50),-0.16666666666666666,2.6666666666666665,3.0
+greg_frierson,-3.5,1.0,1,Silver Spring 1 (50),-3.5,4.0,8.0
+greg_frumin,3.5,3.0,1,Milbrook 1 (50),3.5,2.0,12.0
+greg_lyons,7.0,2.0,2,Silver Spring 1 (50),3.5,4.0,8.0
+hector_hoyos,-5.5,3.0,1,Silver Spring 1 (50),-5.5,2.0,8.0
+howard_bruck,-4.5,9.5,8,Rolling Hills (50),-0.5625,3.8125,5.0
+jack_birch,-5.333333333333334,6.5,6,Rowayton (50),-0.888888888888889,3.916666666666667,1.0
+jack_dowdle,5.333333333333334,4.0,5,Milbrook 1 (50),1.0666666666666669,4.2,12.0
+jack_dowdle(retired),0.5,1.0,1,Milbrook 1 (50),0.5,4.0,12.0
+james_hansford,-0.5,5.0,3,Roton Point 1 (50),-0.16666666666666666,3.333333333333333,6.0
+james_rowley,5.0,2.0,1,Innis Arden 1 (50),5.0,3.0,4.0
+jared_herman,4.0,1.0,1,Rolling Hills (50),4.0,4.0,5.0
+jason_mudd,4.0,1.0,1,Fairfield Hunt 1 (50),4.0,4.0,9.0
+jason_perez,-5.0,3.0,1,Middlesex 1 (50),-5.0,2.0,10.0
+jay_maymudes,-6.0,13.5,6,Rolling Hills (50),-1.0,2.75,5.0
+jed_duncan,-14.5,11.0,5,New Canaan FC 2 (50),-2.9,2.8,2.0
+jed_duncan(default),1.0,3.0,1,New Canaan FC 2 (50),1.0,2.0,2.0
+jeff_bates,-7.166666666666667,11.0,6,Rolling Hills (50),-1.1944444444444444,3.166666666666667,5.0
+jeff_carone,-5.0,2.0,1,Silver Spring 1 (50),-5.0,3.0,8.0
+jeff_grills,-2.0,7.0,3,Woodway (50),-0.6666666666666666,2.6666666666666665,3.0
+jeff_nelson,1.3333333333333333,3.0,1,Roton Point 1 (50),1.3333333333333333,2.0,6.0
+jerry_fine,2.0,2.0,1,Fairfield Hunt 1 (50),2.0,3.0,9.0
+jim_adams,-3.5,3.0,1,Milbrook 1 (50),-3.5,2.0,12.0
+jim_arliss,1.1666666666666665,2.3333333333333335,3,New Canaan FC 2 (50),0.38888888888888884,4.222222222222222,2.0
+jim_beecher,-1.0,9.0,4,Rolling Hills (50),-0.25,2.75,5.0
+jim_bradford,-5.166666666666666,8.333333333333334,7,Roton Point 1 (50),-0.738095238095238,3.8095238095238093,6.0
+jim_haskel,-3.5,1.0,1,Fairfield Hunt 1 (50),-3.5,4.0,9.0
+jim_mcguire,5.0,3.0,1,Milbrook 1 (50),5.0,2.0,12.0
+jim_steele,-3.5,2.0,1,New Canaan FC 2 (50),-3.5,3.0,2.0
+jim_weinstock,0.33333333333333337,3.75,5,Woodway (50),0.06666666666666668,4.25,3.0
+joe_blazovic,5.5,3.0,1,Roton Point 1 (50),5.5,2.0,6.0
+joe_carter,0.33333333333333304,13.0,6,Innis Arden 1 (50),0.055555555555555504,2.8333333333333335,4.0
+joe_fucigna,-12.5,4.5,4,Roton Point 1 (50),-3.125,3.875,6.0
+joe_gaudio,1.6666666666666667,2.0,1,Rowayton (50),1.6666666666666667,3.0,1.0
+joe_pastore,-5.0,2.0,1,Silver Spring 1 (50),-5.0,3.0,8.0
+joe_rogers,-2.5,5.0,5,Rowayton (50),-0.5,4.0,1.0
+john_davitt,-12.5,8.0,3,Rolling Hills (50),-4.166666666666667,2.3333333333333335,5.0
+john_flaherty,6.0,4.0,5,Silver Spring 1 (50),1.2,4.2,8.0
+john_hartner,-5.0,2.0,1,Woodway (50),-5.0,3.0,3.0
+john_heron,-2.5000000000000004,9.0,4,New Canaan FC 2 (50),-0.6250000000000001,2.75,2.0
+john_hursh,-0.666666666666667,9.0,5,Fairfield Hunt 1 (50),-0.1333333333333334,3.2,9.0
+john_hutchins,0.0,3.0,2,New Canaan FC 2 (50),0.0,3.5,2.0
+john_mcreynolds,-1.0,2.5,2,Silver Spring 1 (50),-0.5,3.75,8.0
+john_moulden,0.0,3.0,1,Rowayton (50),0.0,2.0,1.0
+john_phillips,-4.333333333333333,6.0,2,Rowayton (50),-2.1666666666666665,2.0,1.0
+john_redett,2.5,3.0,4,Greenwich CC 1 (50),0.625,4.25,7.0
+john_schmidt,-20.833333333333332,11.5,7,Woodway (50),-2.976190476190476,3.357142857142857,3.0
+john_stinebaugh,5.5,2.0,2,Milbrook 1 (50),2.75,4.0,12.0
+jonathan_fleisig,5.0,11.0,6,Rolling Hills (50),0.8333333333333334,3.166666666666667,5.0
+jonathan_ross,-4.5,5.5,3,Rolling Hills (50),-1.5,3.166666666666667,5.0
+jud_staniar,2.0,1.5,2,Woodway (50),1.0,4.25,3.0
+jud_stanier,-3.5,1.0,1,Woodway (50),-3.5,4.0,3.0
+justin_thomas,8.0,2.0,2,Fairfield Hunt 1 (50),4.0,4.0,9.0
+karl_mergenthaler,-1.6666666666666667,5.0,2,Fairfield Hunt 1 (50),-0.8333333333333334,2.5,9.0
+ken_gaizler,5.666666666666667,14.0,8,Newfield (50),0.7083333333333334,3.25,11.0
+ken_schmidt,-3.3333333333333335,9.0,6,Middlesex 1 (50),-0.5555555555555556,3.5,10.0
+kevan_herold,-5.0,3.0,1,Rowayton (50),-5.0,2.0,1.0
+kevin_clark,-4.5,1.0,1,New Canaan FC 2 (50),-4.5,4.0,2.0
+kevin_ertel,-0.9999999999999998,8.5,5,Innis Arden 1 (50),-0.19999999999999996,3.3,4.0
+kevin_quarantello,18.833333333333332,7.5,6,Silver Spring 1 (50),3.138888888888889,3.75,8.0
+larry_garinger,4.5,7.0,4,Milbrook 1 (50),1.125,3.25,12.0
+long_ellis,-4.5,4.0,3,Woodway (50),-1.5,3.666666666666667,3.0
+loyd_godwin,4.0,1.0,1,Rolling Hills (50),4.0,4.0,5.0
+marcelo_pizzimbono,5.5,9.0,4,Milbrook 1 (50),1.375,2.75,12.0
+mark_mindich,5.0,2.0,1,Greenwich CC 1 (50),5.0,3.0,7.0
+mark_noonan,-14.0,5.0,4,New Canaan FC 2 (50),-3.5,3.75,2.0
+matt_armstrong,-4.0,2.0,1,Greenwich CC 1 (50),-4.0,3.0,7.0
+matt_miller,-1.0000000000000004,6.0,3,New Canaan FC 2 (50),-0.3333333333333335,3.0,2.0
+matt_petersen,2.3333333333333335,5.5,4,Greenwich CC 1 (50),0.5833333333333334,3.625,7.0
+michael_frey,-3.166666666666666,7.333333333333333,6,Rowayton (50),-0.5277777777777777,3.7777777777777777,1.0
+michael_lockhart,-5.5,10.0,4,New Canaan FC 2 (50),-1.375,2.5,2.0
+michael_ryder,-9.0,2.5,2,Rolling Hills (50),-4.5,3.75,5.0
+mike_benenson,2.0,2.0,1,Milbrook 1 (50),2.0,3.0,12.0
+mike_benenson(retired),0.5,1.0,1,Milbrook 1 (50),0.5,4.0,12.0
+mike_frost,-6.5,5.666666666666667,7,Roton Point 1 (50),-0.9285714285714286,4.190476190476191,6.0
+mike_stern,3.0,2.0,1,Newfield (50),3.0,3.0,11.0
+mike_young,-2.0,8.0,3,Newfield (50),-0.6666666666666666,2.3333333333333335,11.0
+mirek_fajt,-9.0,8.0,10,Innis Arden 1 (50),-0.9,4.2,4.0
+nick_barile,-3.0,8.0,3,Milbrook 1 (50),-1.0,2.3333333333333335,12.0
+nick_steinbach,-5.166666666666666,4.5,3,Greenwich CC 1 (50),-1.722222222222222,3.5,7.0
+pablo_cagnoni,5.166666666666667,4.0,2,Innis Arden 1 (50),2.5833333333333335,3.0,4.0
+pat_mullin,5.5,2.0,3,Woodway (50),1.8333333333333333,4.333333333333333,3.0
+patrick_woodring,-3.333333333333333,9.0,3,Innis Arden 1 (50),-1.111111111111111,2.0,4.0
+paul_beatty,5.0,2.0,1,Silver Spring 1 (50),5.0,3.0,8.0
+paul_ferrarese,0.5,4.0,2,Milbrook 1 (50),0.25,3.0,12.0
+paul_fowler,-4.5,3.0,1,New Canaan FC 2 (50),-4.5,2.0,2.0
+paul_giusti,-5.0,5.0,2,Woodway (50),-2.5,2.5,3.0
+peder_arstorp,0.0,9.0,3,Middlesex 1 (50),0.0,2.0,10.0
+penko_ivanov,14.166666666666666,4.5,4,Silver Spring 1 (50),3.5416666666666665,3.875,8.0
+pete_koerner,1.1666666666666667,2.0,2,Roton Point 1 (50),0.5833333333333334,4.0,6.0
+peter_denious,-1.0,1.0,1,Silver Spring 1 (50),-1.0,4.0,8.0
+peter_massey,-9.0,6.0,3,Fairfield Hunt 1 (50),-3.0,3.0,9.0
+peter_reinemann,3.5,2.0,1,New Canaan FC 2 (50),3.5,3.0,2.0
+peter_weinbach,-5.5,3.0,1,New Canaan FC 2 (50),-5.5,2.0,2.0
+peter_wietfeldt,-5.5,3.0,1,Silver Spring 1 (50),-5.5,2.0,8.0
+phil_pratley,4.333333333333333,3.0,2,Greenwich CC 1 (50),2.1666666666666665,3.5,7.0
+raoul_schuddeboom,5.833333333333334,3.0,6,Roton Point 1 (50),0.9722222222222223,4.5,6.0
+rich_bienen,-1.6666666666666667,3.0,1,Rowayton (50),-1.6666666666666667,2.0,1.0
+richard_fortin,-5.0,4.0,4,New Canaan FC 2 (50),-1.25,4.0,2.0
+rick_jeffrey,9.833333333333334,3.0,4,Greenwich CC 1 (50),2.4583333333333335,4.25,7.0
+rob_fruithandler,25.333333333333332,7.0,10,Newfield (50),2.533333333333333,4.3,11.0
+rob_mackay,10.5,5.666666666666667,6,Milbrook 1 (50),1.75,4.055555555555555,12.0
+rod_bourgeois,-13.666666666666666,5.5,8,Innis Arden 1 (50),-1.7083333333333333,4.3125,4.0
+rodney_rideout,7.0,9.333333333333334,6,Newfield (50),1.1666666666666667,3.4444444444444446,11.0
+roger_knight,5.333333333333333,4.0,2,Greenwich CC 1 (50),2.6666666666666665,3.0,7.0
+santiago_gilfond,4.0,1.0,1,Innis Arden 1 (50),4.0,4.0,4.0
+scott_fleming,9.0,5.0,2,Woodway (50),4.5,2.5,3.0
+scott_johnson,-2.8333333333333335,6.0,2,Rowayton (50),-1.4166666666666667,2.0,1.0
+scott_seaton,5.0,9.0,3,Greenwich CC 1 (50),1.6666666666666667,2.0,7.0
+sean_durkin,4.0,1.0,1,Woodway (50),4.0,4.0,3.0
+sean_murdock,-5.666666666666666,5.0,2,Woodway (50),-2.833333333333333,2.5,3.0
+sergey_chernysh,-15.166666666666666,9.0,7,Rowayton (50),-2.1666666666666665,3.7142857142857144,1.0
+seth_kaplan,15.166666666666668,10.0,6,Newfield (50),2.527777777777778,3.333333333333333,11.0
+steve_hansen,1.0,6.0,2,Middlesex 1 (50),0.5,2.0,10.0
+steve_mccardell,-7.833333333333334,5.0,4,New Canaan FC 2 (50),-1.9583333333333335,3.75,2.0
+steve_molkenthin,-6.666666666666667,6.0,7,Middlesex 1 (50),-0.9523809523809524,4.142857142857143,10.0
+steve_schelz,4.5,1.0,2,Innis Arden 1 (50),2.25,4.5,4.0
+steve_zaminski,19.166666666666668,13.5,9,Milbrook 1 (50),2.1296296296296298,3.5,12.0
+steven_trepp,5.5,6.0,2,Innis Arden 1 (50),2.75,2.0,4.0
+ted_conway,-2.333333333333333,6.0,4,Woodway (50),-0.5833333333333333,3.5,3.0
+ted_fine,-0.5,8.0,3,Newfield (50),-0.16666666666666666,2.3333333333333335,11.0
+ted_huber,10.666666666666666,8.0,4,Fairfield Hunt 1 (50),2.6666666666666665,3.0,9.0
+thomas_odelfelt,0.3333333333333335,6.0,7,Greenwich CC 1 (50),0.04761904761904764,4.142857142857143,7.0
+tim_bepler,15.0,16.166666666666668,9,Middlesex 1 (50),1.6666666666666667,3.2037037037037033,10.0
+tim_daley,19.333333333333336,8.166666666666666,11,Fairfield Hunt 1 (50),1.7575757575757578,4.257575757575758,9.0
+tim_orr,3.3333333333333335,1.5,4,New Canaan FC 2 (50),0.8333333333333334,4.625,2.0
+tim_orr(default),1.0,3.0,1,New Canaan FC 2 (50),1.0,2.0,2.0
+tim_widmer,-22.0,6.0,9,Rowayton (50),-2.4444444444444446,4.333333333333333,1.0
+todd_lampert,-2.0,2.0,1,New Canaan FC 2 (50),-2.0,3.0,2.0
+todd_miranowski,-3.666666666666667,6.0,4,Innis Arden 1 (50),-0.9166666666666667,3.5,4.0
+todd_morgan,-10.5,7.0,9,Middlesex 1 (50),-1.1666666666666667,4.222222222222222,10.0
+tom_galione,-1.6666666666666665,6.0,2,Silver Spring 1 (50),-0.8333333333333333,2.0,8.0
+tom_hager,-4.5,2.0,1,Newfield (50),-4.5,3.0,11.0
+tom_michaud,1.3333333333333335,9.0,4,Greenwich CC 1 (50),0.33333333333333337,2.75,7.0
+tom_wilcox,-11.5,11.0,4,Rolling Hills (50),-2.875,2.25,5.0
+vince_pisano,-3.5,3.0,1,Rowayton (50),-3.5,2.0,1.0
+vinodh_swaminathan,-5.833333333333334,7.0,4,Innis Arden 1 (50),-1.4583333333333335,3.25,4.0
+walter_beatty,2.166666666666666,2.75,5,Silver Spring 1 (50),0.43333333333333324,4.45,8.0
+wiks_moffat,-5.5,9.5,5,Roton Point 1 (50),-1.1,3.1,6.0

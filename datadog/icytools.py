@@ -113,6 +113,7 @@ def processStatResult(result, lte, lookback):
   , 'name': result.get('contract').get('name')
   }
   if result.get('contract').get('stats'):
+    print('contract.stats returned from ICY')
     y = result.get('contract').get('stats')
   else:
     print('Process Stat Result Error', result)

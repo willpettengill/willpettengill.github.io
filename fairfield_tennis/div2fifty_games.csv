@@ -1,0 +1,172 @@
+line,t1score,t2score,t1p1,t1p2,t2p1,t2p2,team1,team2,t1_points,t2_points
+1,632,366,doug_bassett,pete_koerner,tim_daley,david_reiss,Roton Point 1 (50),Fairfield Hunt 1 (50),-1.3333333333333333,1.3333333333333333
+2,611,266,mike_frost,bob_hogan,jerry_fine,carl_larouche,Roton Point 1 (50),Fairfield Hunt 1 (50),-2.0,2.0
+3,66,10,wiks_moffat,george_mandler,peter_massey,bob_jacobs,Roton Point 1 (50),Fairfield Hunt 1 (50),5.5,-5.5
+1,13,66,mark_noonan,david_gilio,jason_mudd,tim_daley,New Canaan FC 2 (50),Fairfield Hunt 1 (50),-4.0,4.0
+2,14,66,jed_duncan,jim_steele,john_hursh,carl_larouche,New Canaan FC 2 (50),Fairfield Hunt 1 (50),-3.5,3.5
+1,21,66,carter_sullivan,john_schmidt,brian_dolan,bret_herman,Woodway (50),Rolling Hills (50),-4.5,4.5
+2,25,67,sean_murdock,jeff_grills,jim_beecher,jonathan_fleisig,Woodway (50),Rolling Hills (50),-3.0,3.0
+3,677,362,andy_hunter,david_carlson,jonathan_ross,jay_maymudes,Woodway (50),Rolling Hills (50),3.0,-3.0
+1,43,66,rob_fruithandler,ed_trask,david_abbott,fritz_schweitzer,Newfield (50),Middlesex 1 (50),-2.5,2.5
+2,27763,66477,seth_kaplan,ken_gaizler,todd_morgan,steve_molkenthin,Newfield (50),Middlesex 1 (50),0.0,-0.0
+3,621,466,eric_bass,garry_feldman,brian_rayhill,tim_bepler,Newfield (50),Middlesex 1 (50),-2.3333333333333335,2.3333333333333335
+1,33,66,howard_bruck,jim_beecher,david_lee,john_stinebaugh,Rolling Hills (50),Milbrook 1 (50),-3.0,3.0
+2,14,66,jay_maymudes,jeff_bates,steve_zaminski,marcelo_pizzimbono,Rolling Hills (50),Milbrook 1 (50),-3.5,3.5
+3,02,66,george_caffrey,tom_wilcox,larry_garinger,jim_mcguire,Rolling Hills (50),Milbrook 1 (50),-5.0,5.0
+1,726,563,carl_larouche,david_reiss,ed_trask,rob_fruithandler,Fairfield Hunt 1 (50),Newfield (50),0.3333333333333333,-0.3333333333333333
+2,66,24,tim_daley,ted_huber,ted_fine,rodney_rideout,Fairfield Hunt 1 (50),Newfield (50),3.0,-3.0
+1,66,24,steve_zaminski,rob_mackay,tim_daley,david_reiss,Milbrook 1 (50),Fairfield Hunt 1 (50),3.0,-3.0
+1,66,23,ed_trask,rob_fruithandler,jud_stanier,long_ellis,Newfield (50),Woodway (50),3.5,-3.5
+2,66,41,seth_kaplan,ken_gaizler,ted_conway,jim_weinstock,Newfield (50),Woodway (50),3.5,-3.5
+3,466,611,eric_bass,mike_young,john_schmidt,sean_murdock,Newfield (50),Woodway (50),2.6666666666666665,-2.6666666666666665
+1,20,66,rob_mackay,steve_zaminski,john_flaherty,kevin_quarantello,Milbrook 1 (50),Silver Spring 1 (50),-5.0,5.0
+2,33,66,eric_wenberg,nick_barile,walter_beatty,eduardo_menezes,Milbrook 1 (50),Silver Spring 1 (50),-3.0,3.0
+1,626,260,tim_widmer,jack_birch,rod_bourgeois,mirek_fajt,Rowayton (50),Innis Arden 1 (50),2.0,-2.0
+2,566,7410,joe_gaudio,michael_frey,vinodh_swaminathan,kevin_ertel,Rowayton (50),Innis Arden 1 (50),1.6666666666666667,-1.6666666666666667
+3,732,566,chris_dunn,rich_bienen,patrick_woodring,even_berntsen,Rowayton (50),Innis Arden 1 (50),-1.6666666666666667,1.6666666666666667
+1,4677,6365,todd_morgan,fritz_schweitzer,mirek_fajt,steve_schelz,Middlesex 1 (50),Innis Arden 1 (50),0.0,-0.0
+2,66,34,ken_schmidt,brian_rayhill,rod_bourgeois,chris_vollmer,Middlesex 1 (50),Innis Arden 1 (50),2.5,-2.5
+3,7763710,637768,tim_bepler,peder_arstorp,joe_carter,kevin_ertel,Middlesex 1 (50),Innis Arden 1 (50),0.0,-0.0
+1,641,166,rick_jeffrey,phil_pratley,alain_decoster,jack_dowdle,Greenwich CC 1 (50),Milbrook 1 (50),-0.6666666666666666,0.6666666666666666
+2,31,66,matt_armstrong,george_hamilton,craig_friedman,rob_mackay,Greenwich CC 1 (50),Milbrook 1 (50),-4.0,4.0
+1,630,776,mirek_fajt,rod_bourgeois,rob_fruithandler,ed_trask,Innis Arden 1 (50),Newfield (50),-3.6666666666666665,3.6666666666666665
+2,41,66,joe_carter,chris_vollmer,ken_gaizler,seth_kaplan,Innis Arden 1 (50),Newfield (50),-3.5,3.5
+3,31,63,anthony_graham,patrick_woodring,rodney_rideout,eric_bass,Innis Arden 1 (50),Newfield (50),-2.5,2.5
+1,44,66,joe_rogers,tim_widmer,ed_kosnik,fritz_schweitzer,Rowayton (50),Middlesex 1 (50),-2.0,2.0
+2,35,67,sergey_chernysh,chris_dunn,brian_rayhill,steve_molkenthin,Rowayton (50),Middlesex 1 (50),-2.5,2.5
+3,20,66,kevan_herold,john_phillips,tim_bepler,brad_scholtz,Rowayton (50),Middlesex 1 (50),-5.0,5.0
+1,66,43,todd_morgan,fritz_schweitzer,david_gilio,tim_orr,Middlesex 1 (50),New Canaan FC 2 (50),2.5,-2.5
+2,564,746,brian_rayhill,ken_schmidt,charles_crookenden,john_heron,Middlesex 1 (50),New Canaan FC 2 (50),-0.6666666666666666,0.6666666666666666
+3,66,10,tim_bepler,brad_scholtz,jim_arliss,peter_weinbach,Middlesex 1 (50),New Canaan FC 2 (50),5.5,-5.5
+1,466,641,alain_decoster,jack_dowdle,jack_birch,joe_rogers,Milbrook 1 (50),Rowayton (50),1.6666666666666667,-1.6666666666666667
+2,66,41,steve_zaminski,david_lee,sergey_chernysh,chris_keelips,Milbrook 1 (50),Rowayton (50),3.5,-3.5
+3,66,32,greg_frumin,eric_wenberg,chris_dunn,david_kaplan,Milbrook 1 (50),Rowayton (50),3.5,-3.5
+1,76,51,bret_herman,brian_dolan,tim_daley,jim_haskel,Rolling Hills (50),Fairfield Hunt 1 (50),3.5,-3.5
+2,33,66,howard_bruck,jonathan_fleisig,carl_larouche,justin_thomas,Rolling Hills (50),Fairfield Hunt 1 (50),-3.0,3.0
+3,16015,63117,jeff_bates,george_caffrey,karl_mergenthaler,peter_massey,Rolling Hills (50),Fairfield Hunt 1 (50),0.0,-0.0
+1,24,66,john_redett,andrew_hanson,ed_kosnik,ken_schmidt,Greenwich CC 1 (50),Middlesex 1 (50),-3.0,3.0
+2,14,66,george_hamilton,allan_murphy,todd_morgan,steve_molkenthin,Greenwich CC 1 (50),Middlesex 1 (50),-3.5,3.5
+1,66,31,jared_herman,loyd_godwin,rod_bourgeois,mirek_fajt,Rolling Hills (50),Innis Arden 1 (50),4.0,-4.0
+2,77,55,howard_bruck,jonathan_fleisig,todd_miranowski,chris_vollmer,Rolling Hills (50),Innis Arden 1 (50),2.0,-2.0
+3,44,66,jim_beecher,jay_maymudes,joe_carter,steven_trepp,Rolling Hills (50),Innis Arden 1 (50),-2.0,2.0
+1,01,66,long_ellis,john_schmidt,tim_daley,david_reiss,Woodway (50),Fairfield Hunt 1 (50),-5.5,5.5
+2,11,66,john_hartner,paul_giusti,ted_huber,justin_thomas,Woodway (50),Fairfield Hunt 1 (50),-5.0,5.0
+1,7838,66610,jack_dowdle,david_lee,david_abbott,fritz_schweitzer,Milbrook 1 (50),Middlesex 1 (50),0.0,-0.0
+2,646,262,mike_benenson,rob_mackay,todd_morgan,tim_bepler,Milbrook 1 (50),Middlesex 1 (50),2.0,-2.0
+3,66,20,steve_zaminski,marcelo_pizzimbono,peder_arstorp,jason_perez,Milbrook 1 (50),Middlesex 1 (50),5.0,-5.0
+1,66,32,rob_fruithandler,ed_trask,mark_noonan,arin_wolfson,Newfield (50),New Canaan FC 2 (50),3.5,-3.5
+2,12,66,ken_gaizler,tom_hager,john_hutchins,tim_orr,Newfield (50),New Canaan FC 2 (50),-4.5,4.5
+1,05,67,richard_fortin,mark_noonan,john_flaherty,greg_lyons,New Canaan FC 2 (50),Silver Spring 1 (50),-4.0,4.0
+2,50,76,faustino_cortina,john_heron,walter_beatty,penko_ivanov,New Canaan FC 2 (50),Silver Spring 1 (50),-4.0,4.0
+3,04,66,jed_duncan,michael_lockhart,kevin_quarantello,eduardo_menezes,New Canaan FC 2 (50),Silver Spring 1 (50),-4.0,4.0
+1,67,25,richard_fortin,arin_wolfson,mike_frost,joe_fucigna,New Canaan FC 2 (50),Roton Point 1 (50),3.0,-3.0
+2,34,66,david_gilio,mark_noonan,doug_bassett,jim_bradford,New Canaan FC 2 (50),Roton Point 1 (50),-2.5,2.5
+3,63,43,jed_duncan(default),tim_orr(default),james_hansford,fred_schweizer,New Canaan FC 2 (50),Roton Point 1 (50),1.0,-1.0
+1,24,66,rod_bourgeois,mirek_fajt,jack_dowdle,rob_mackay,Innis Arden 1 (50),Milbrook 1 (50),-3.0,3.0
+2,640,366,joe_carter,vinodh_swaminathan,alain_decoster,steve_zaminski,Innis Arden 1 (50),Milbrook 1 (50),-1.6666666666666667,1.6666666666666667
+3,43,66,patrick_woodring,even_berntsen,marcelo_pizzimbono,john_stinebaugh,Innis Arden 1 (50),Milbrook 1 (50),-2.5,2.5
+1,165,677,carl_larouche,tim_daley,walter_beatty,penko_ivanov,Fairfield Hunt 1 (50),Silver Spring 1 (50),-2.6666666666666665,2.6666666666666665
+2,6406,46110,john_hursh,ted_huber,kevin_quarantello,john_mcreynolds,Fairfield Hunt 1 (50),Silver Spring 1 (50),0.0,-0.0
+1,635,367,andrew_hanson,thomas_odelfelt,carl_larouche,david_reiss,Greenwich CC 1 (50),Fairfield Hunt 1 (50),-0.6666666666666666,0.6666666666666666
+2,061,636,tom_michaud,nick_steinbach,tim_daley,ted_huber,Greenwich CC 1 (50),Fairfield Hunt 1 (50),-2.6666666666666665,2.6666666666666665
+3,66,32,george_hamilton,scott_seaton,peter_massey,bob_jacobs,Greenwich CC 1 (50),Fairfield Hunt 1 (50),3.5,-3.5
+1,22,66,jack_birch,tim_widmer,sean_durkin,pat_mullin,Rowayton (50),Woodway (50),-4.0,4.0
+2,66,32,michael_frey,sergey_chernysh,jud_staniar,john_schmidt,Rowayton (50),Woodway (50),3.5,-3.5
+3,30,66,chris_keelips,david_kaplan,scott_fleming,jim_weinstock,Rowayton (50),Woodway (50),-4.5,4.5
+1,624,166,bret_herman,jeff_bates,eduardo_menezes,kevin_quarantello,Rolling Hills (50),Silver Spring 1 (50),-0.3333333333333333,0.3333333333333333
+2,66,32,bart_lautenbach,jonathan_fleisig,walter_beatty,charles_rogers,Rolling Hills (50),Silver Spring 1 (50),3.5,-3.5
+3,646,463,jim_beecher,tom_wilcox,tom_galione,john_mcreynolds,Rolling Hills (50),Silver Spring 1 (50),1.0,-1.0
+1,463,677,mirek_fajt,rod_bourgeois,eduardo_cortes,don_san,Innis Arden 1 (50),Woodway (50),-2.3333333333333335,2.3333333333333335
+2,21,66,vinodh_swaminathan,kevin_ertel,long_ellis,scott_fleming,Innis Arden 1 (50),Woodway (50),-4.5,4.5
+3,6656,0773,joe_carter,even_berntsen,greg_crowley,john_schmidt,Innis Arden 1 (50),Woodway (50),0.0,-0.0
+1,76,53,tim_daley,david_reiss,steve_molkenthin,todd_morgan,Fairfield Hunt 1 (50),Middlesex 1 (50),2.5,-2.5
+2,615,467,karl_mergenthaler,john_hursh,tim_bepler,brad_scholtz,Fairfield Hunt 1 (50),Middlesex 1 (50),-1.6666666666666667,1.6666666666666667
+1,22,66,thomas_odelfelt,tom_michaud,pat_mullin,ed_orenstein,Greenwich CC 1 (50),Woodway (50),-4.0,4.0
+1,53,76,howard_bruck,george_caffrey,faustino_cortina,steve_mccardell,Rolling Hills (50),New Canaan FC 2 (50),-2.5,2.5
+2,22,66,john_davitt,tom_wilcox,jim_arliss,tim_orr,Rolling Hills (50),New Canaan FC 2 (50),-4.0,4.0
+1,22,66,john_flaherty,walter_beatty,ed_trask,rob_fruithandler,Silver Spring 1 (50),Newfield (50),-4.0,4.0
+2,11,66,joe_pastore,jeff_carone,seth_kaplan,ken_gaizler,Silver Spring 1 (50),Newfield (50),-5.0,5.0
+1,32,66,ken_schmidt,todd_morgan,bret_herman,bart_lautenbach,Middlesex 1 (50),Rolling Hills (50),-3.5,3.5
+2,66,21,brian_rayhill,tim_bepler,george_caffrey,michael_ryder,Middlesex 1 (50),Rolling Hills (50),4.5,-4.5
+3,66,11,peder_arstorp,steve_hansen,john_davitt,bob_upton,Middlesex 1 (50),Rolling Hills (50),5.0,-5.0
+1,43,60,jack_dowdle(retired),mike_benenson(retired),doug_bassett,raoul_schuddeboom,Milbrook 1 (50),Roton Point 1 (50),0.5,-0.5
+2,66,43,david_lee,steve_zaminski,jim_bradford,mike_frost,Milbrook 1 (50),Roton Point 1 (50),2.5,-2.5
+3,67,45,larry_garinger,nick_barile,bob_hogan,george_mandler,Milbrook 1 (50),Roton Point 1 (50),2.0,-2.0
+1,62,76,ed_trask,rodney_rideout,rick_jeffrey,andrew_hanson,Newfield (50),Greenwich CC 1 (50),-2.5,2.5
+2,20,66,ken_gaizler,garry_feldman,phil_pratley,mark_mindich,Newfield (50),Greenwich CC 1 (50),-5.0,5.0
+3,361,616,ted_fine,david_patashnik,allan_murphy,nick_steinbach,Newfield (50),Greenwich CC 1 (50),-1.0,1.0
+1,663,786,john_flaherty,charles_rogers,mirek_fajt,vinodh_swaminathan,Silver Spring 1 (50),Innis Arden 1 (50),-2.0,2.0
+1,646,062,jack_birch,joe_rogers,richard_fortin,tim_orr,Rowayton (50),New Canaan FC 2 (50),2.6666666666666665,-2.6666666666666665
+2,363,677,sergey_chernysh,chris_keelips,jim_arliss,matt_miller,Rowayton (50),New Canaan FC 2 (50),-2.6666666666666665,2.6666666666666665
+3,34,66,david_kaplan,geoff_sweitzer,john_heron,faustino_cortina,Rowayton (50),New Canaan FC 2 (50),-2.5,2.5
+1,66,02,rob_fruithandler,ed_trask,tim_widmer,sergey_chernysh,Newfield (50),Rowayton (50),5.0,-5.0
+2,467,615,seth_kaplan,ken_gaizler,chris_keelips,geoff_sweitzer,Newfield (50),Rowayton (50),1.6666666666666667,-1.6666666666666667
+3,66,23,eric_bass,rodney_rideout,chris_dunn,vince_pisano,Newfield (50),Rowayton (50),3.5,-3.5
+1,77,65,joe_rogers,tim_widmer,thomas_odelfelt,john_redett,Rowayton (50),Greenwich CC 1 (50),1.5,-1.5
+2,636,367,jack_birch,michael_frey,roger_knight,matt_petersen,Rowayton (50),Greenwich CC 1 (50),-0.3333333333333333,0.3333333333333333
+3,23,66,chris_dunn,alan_walker,andrew_hanson,tom_michaud,Rowayton (50),Greenwich CC 1 (50),-3.5,3.5
+1,14,66,faustino_cortina,michael_lockhart,rick_jeffrey,john_redett,New Canaan FC 2 (50),Greenwich CC 1 (50),-3.5,3.5
+2,66,23,peter_reinemann,alan_sharpe,allan_murphy,nick_steinbach,New Canaan FC 2 (50),Greenwich CC 1 (50),3.5,-3.5
+3,03,66,paul_fowler,charles_timberlake,george_hamilton,scott_seaton,New Canaan FC 2 (50),Greenwich CC 1 (50),-4.5,4.5
+1,66,21,rick_jeffrey,thomas_odelfelt,howard_bruck,eric_nadler,Greenwich CC 1 (50),Rolling Hills (50),4.5,-4.5
+2,66,20,roger_knight,matt_petersen,jonathan_ross,jeff_bates,Greenwich CC 1 (50),Rolling Hills (50),5.0,-5.0
+3,66,21,andrew_hanson,tom_michaud,jay_maymudes,michael_ryder,Greenwich CC 1 (50),Rolling Hills (50),4.5,-4.5
+1,30,66,john_hutchins,kevin_clark,mirek_fajt,steve_schelz,New Canaan FC 2 (50),Innis Arden 1 (50),-4.5,4.5
+2,23,66,jed_duncan,steve_mccardell,rod_bourgeois,todd_miranowski,New Canaan FC 2 (50),Innis Arden 1 (50),-3.5,3.5
+1,10,66,marcelo_pizzimbono,larry_garinger,ed_trask,rob_fruithandler,Milbrook 1 (50),Newfield (50),-5.5,5.5
+2,46,67,paul_ferrarese,eric_wenberg,seth_kaplan,ken_gaizler,Milbrook 1 (50),Newfield (50),-1.5,1.5
+3,32,66,david_zadik,jim_adams,eric_bass,rodney_rideout,Milbrook 1 (50),Newfield (50),-3.5,3.5
+1,66,33,ed_trask,rob_fruithandler,jonathan_fleisig,howard_bruck,Newfield (50),Rolling Hills (50),3.0,-3.0
+2,25,67,eric_bass,mike_young,george_caffrey,jeff_bates,Newfield (50),Rolling Hills (50),-3.0,3.0
+3,66,23,garry_feldman,ted_fine,tom_wilcox,john_davitt,Newfield (50),Rolling Hills (50),3.5,-3.5
+1,626,364,rod_bourgeois,todd_miranowski,doug_bassett,raoul_schuddeboom,Innis Arden 1 (50),Roton Point 1 (50),0.3333333333333333,-0.3333333333333333
+2,623,066,kevin_ertel,pablo_cagnoni,bob_hogan,jim_bradford,Innis Arden 1 (50),Roton Point 1 (50),-0.3333333333333333,0.3333333333333333
+3,66,14,joe_carter,steven_trepp,wiks_moffat,fred_schweizer,Innis Arden 1 (50),Roton Point 1 (50),3.5,-3.5
+1,467,635,doug_bassett,raoul_schuddeboom,peter_denious,charles_rogers,Roton Point 1 (50),Silver Spring 1 (50),1.0,-1.0
+3,66,10,joe_blazovic,chip_mckinley,hector_hoyos,peter_wietfeldt,Roton Point 1 (50),Silver Spring 1 (50),5.5,-5.5
+1,66,33,penko_ivanov,eduardo_menezes,joe_rogers,tim_widmer,Silver Spring 1 (50),Rowayton (50),3.0,-3.0
+2,66,11,paul_beatty,kevin_quarantello,chris_keelips,chris_dunn,Silver Spring 1 (50),Rowayton (50),5.0,-5.0
+3,066,644,charles_rogers,tom_galione,scott_johnson,john_phillips,Silver Spring 1 (50),Rowayton (50),-0.6666666666666666,0.6666666666666666
+1,66,43,thomas_odelfelt,andrew_hanson,joe_fucigna,mike_frost,Greenwich CC 1 (50),Roton Point 1 (50),2.5,-2.5
+2,756,573,forbes_hopper,matt_petersen,wiks_moffat,doug_bassett,Greenwich CC 1 (50),Roton Point 1 (50),1.0,-1.0
+3,33,66,scott_seaton,george_hamilton,jim_bradford,bob_hogan,Greenwich CC 1 (50),Roton Point 1 (50),-3.0,3.0
+1,01,66,jim_bradford,doug_bassett,brian_dolan,bret_herman,Roton Point 1 (50),Rolling Hills (50),-5.5,5.5
+2,15,67,george_mandler,wiks_moffat,jay_maymudes,howard_bruck,Roton Point 1 (50),Rolling Hills (50),-3.5,3.5
+3,366,6410,bob_eydt,jeff_nelson,jeff_bates,george_caffrey,Roton Point 1 (50),Rolling Hills (50),1.3333333333333333,-1.3333333333333333
+1,66,43,mike_frost,pete_koerner,tim_widmer,michael_frey,Roton Point 1 (50),Rowayton (50),2.5,-2.5
+2,67,35,james_hansford,fred_schweizer,sergey_chernysh,chris_keelips,Roton Point 1 (50),Rowayton (50),2.5,-2.5
+3,47110,6604,jim_bradford,george_mandler,geoff_sweitzer,john_moulden,Roton Point 1 (50),Rowayton (50),0.0,-0.0
+1,66,33,john_flaherty,greg_lyons,ken_schmidt,fritz_schweitzer,Silver Spring 1 (50),Middlesex 1 (50),3.0,-3.0
+2,66,21,penko_ivanov,kevin_quarantello,todd_morgan,steve_molkenthin,Silver Spring 1 (50),Middlesex 1 (50),4.5,-4.5
+3,66,31,charles_rogers,eduardo_menezes,tim_bepler,steve_hansen,Silver Spring 1 (50),Middlesex 1 (50),4.0,-4.0
+1,32,66,charles_rogers,greg_frierson,john_redett,thomas_odelfelt,Silver Spring 1 (50),Greenwich CC 1 (50),-3.5,3.5
+1,7723,6366,david_durkin,jim_weinstock,jack_dowdle,david_lee,Woodway (50),Milbrook 1 (50),0.0,-0.0
+2,14,66,ted_conway,greg_crowley,alain_decoster,rob_mackay,Woodway (50),Milbrook 1 (50),-3.5,3.5
+3,52,76,eduardo_cortes,john_schmidt,larry_garinger,steve_zaminski,Woodway (50),Milbrook 1 (50),-3.0,3.0
+1,76,50,finn_swarting,santiago_gilfond,thomas_odelfelt,matt_petersen,Innis Arden 1 (50),Greenwich CC 1 (50),4.0,-4.0
+2,66,11,mirek_fajt,james_rowley,andrew_hanson,george_hamilton,Innis Arden 1 (50),Greenwich CC 1 (50),5.0,-5.0
+1,67,26,david_abbott,ed_kosnik,pat_mullin,don_san,Middlesex 1 (50),Woodway (50),2.5,-2.5
+2,460,636,steve_molkenthin,ken_schmidt,ed_orenstein,carter_sullivan,Middlesex 1 (50),Woodway (50),-1.6666666666666667,1.6666666666666667
+3,646,464,brian_rayhill,fritz_schweitzer,jeff_grills,jim_weinstock,Middlesex 1 (50),Woodway (50),0.6666666666666666,-0.6666666666666666
+1,01,66,mirek_fajt,todd_miranowski,tim_daley,david_reiss,Innis Arden 1 (50),Fairfield Hunt 1 (50),-5.5,5.5
+2,66,01,kevin_ertel,pablo_cagnoni,bob_jacobs,john_hursh,Innis Arden 1 (50),Fairfield Hunt 1 (50),5.5,-5.5
+1,10,66,jed_duncan,steve_mccardell,jud_staniar,ed_orenstein,New Canaan FC 2 (50),Woodway (50),-5.5,5.5
+2,631,366,john_heron,matt_miller,ted_conway,jeff_grills,New Canaan FC 2 (50),Woodway (50),-1.6666666666666667,1.6666666666666667
+3,6364,3677,alan_sharpe,michael_lockhart,paul_giusti,jim_weinstock,New Canaan FC 2 (50),Woodway (50),0.0,-0.0
+1,063,616,richard_fortin,steve_mccardell,alain_decoster,david_lee,New Canaan FC 2 (50),Milbrook 1 (50),-1.3333333333333333,1.3333333333333333
+2,36,67,todd_lampert,matt_miller,steve_zaminski,paul_ferrarese,New Canaan FC 2 (50),Milbrook 1 (50),-2.0,2.0
+3,76,54,jed_duncan,michael_lockhart,eric_wenberg,nick_barile,New Canaan FC 2 (50),Milbrook 1 (50),2.0,-2.0
+1,77563,657710,doug_bassett,raoul_schuddeboom,ed_trask,rob_fruithandler,Roton Point 1 (50),Newfield (50),0.0,-0.0
+2,33,66,joe_fucigna,wiks_moffat,mike_stern,rodney_rideout,Roton Point 1 (50),Newfield (50),-3.0,3.0
+3,466,614,george_mandler,bob_hogan,mike_young,garry_feldman,Roton Point 1 (50),Newfield (50),1.6666666666666667,-1.6666666666666667
+1,22,66,steve_molkenthin,todd_morgan,mike_frost,raoul_schuddeboom,Middlesex 1 (50),Roton Point 1 (50),-4.0,4.0
+2,66,40,fritz_schweitzer,brad_scholtz,doug_bassett,joe_fucigna,Middlesex 1 (50),Roton Point 1 (50),4.0,-4.0
+3,466,604,tim_bepler,brian_rayhill,james_hansford,george_mandler,Middlesex 1 (50),Roton Point 1 (50),2.0,-2.0
+1,66,00,howard_bruck,bret_herman,tim_widmer,david_kaplan,Rolling Hills (50),Rowayton (50),6.0,-6.0
+2,76,62,eric_nadler,jonathan_fleisig,sergey_chernysh,michael_frey,Rolling Hills (50),Rowayton (50),2.5,-2.5
+3,66,23,jonathan_ross,jay_maymudes,chris_dunn,scott_johnson,Rolling Hills (50),Rowayton (50),3.5,-3.5
+1,66,33,david_reiss,john_hursh,tim_widmer,michael_frey,Fairfield Hunt 1 (50),Rowayton (50),3.0,-3.0
+2,66,22,carl_larouche,tim_daley,jack_birch,chris_dunn,Fairfield Hunt 1 (50),Rowayton (50),4.0,-4.0
+1,361,636,eduardo_cortes,john_schmidt,doug_bassett,raoul_schuddeboom,Woodway (50),Roton Point 1 (50),-1.6666666666666667,1.6666666666666667
+2,67,25,ted_conway,greg_crowley,jim_bradford,mike_frost,Woodway (50),Roton Point 1 (50),3.0,-3.0
+3,63,76,david_carlson,andy_hunter,fred_schweizer,george_mandler,Woodway (50),Roton Point 1 (50),-2.0,2.0

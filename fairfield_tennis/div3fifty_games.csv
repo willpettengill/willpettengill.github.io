@@ -1,0 +1,148 @@
+line,t1score,t2score,t1p1,t1p2,t2p1,t2p2,team1,team2,t1_points,t2_points
+1,165,647,michael_lockhart,alan_sharpe,kevin_nugent,mike_ward,New Canaan FC 3 (50),Wilton Riding 1 (50),-1.6666666666666667,1.6666666666666667
+2,30,66,robert_revelli,mike_innaurato,mark_rice,matt_greene,New Canaan FC 3 (50),Wilton Riding 1 (50),-4.5,4.5
+1,626,461,john_fusek,joe_sokol,tack_simmons,keith_luke,Lake Club 2 (50),Lake Club 3 (50),1.0,-1.0
+2,66,44,steve_stanley,doug_johnson,marc_foodman,tom_santacroce,Lake Club 2 (50),Lake Club 3 (50),2.0,-2.0
+1,31,66,vince_pisano,john_moulden,jim_arliss,matt_miller,Rowayton 2 (50),New Canaan FC 3 (50),-4.0,4.0
+2,12,66,john_massey,joel_fouquart,john_heron,alan_sharpe,Rowayton 2 (50),New Canaan FC 3 (50),-4.5,4.5
+3,10,66,paul_seymour,peter_mcdonough,mark_defranco,michael_lockhart,Rowayton 2 (50),New Canaan FC 3 (50),-5.5,5.5
+1,76,50,joe_sproviero,steve_soberman,vince_pisano,chris_keelips,Easton RC 3 (50),Rowayton 2 (50),4.0,-4.0
+2,66,31,steve_weiner,larry_wilner,joe_devierno,john_massey,Easton RC 3 (50),Rowayton 2 (50),4.0,-4.0
+1,63613,36715,reed_raggio,james_pratt-heaney,jeremy_mcwhorter,bob_fischer,Four Seasons 2 (50),Easton RC 3 (50),0.0,-0.0
+2,67,45,bob_vredenburgh,joe_watson,david_vine,steve_weiner,Four Seasons 2 (50),Easton RC 3 (50),2.0,-2.0
+3,466,642,joe_walsh,mack_reid,mitch_wein,dave_mercado,Four Seasons 2 (50),Easton RC 3 (50),1.3333333333333333,-1.3333333333333333
+1,23,66,greg_frierson,burt_brazill,wiks_moffat,john_murray,Silver Spring 2 (50),Roton Point 2 (50),-3.5,3.5
+1,566,712,jose_zepeda,robert_powell,joe_walsh,zach_horne,Roton Point 2 (50),Four Seasons 3 (50),2.3333333333333335,-2.3333333333333335
+2,05,67,chuck_cunningham,steve_petricone,joe_watson,ernie_schmidt,Roton Point 2 (50),Four Seasons 3 (50),-4.0,4.0
+1,76,51,forbes_burtt,jim_decesare,bob_kane,bob_fischer,Shore & Country 2 (50),Easton RC 3 (50),3.5,-3.5
+2,679,267,bob_twiss,rob_meyer,shelly_frank,steve_weiner,Shore & Country 2 (50),Easton RC 3 (50),2.3333333333333335,-2.3333333333333335
+3,14,66,paul_piasecki,will_fornshell,ted_granberg,david_dankenbrink,Shore & Country 2 (50),Easton RC 3 (50),-3.5,3.5
+1,21,66,zach_horne,joe_watson,tim_buono,noah_wilker,Four Seasons 3 (50),Shore & Country 2 (50),-4.5,4.5
+2,30,66,charlie_valenzuala,arnie_hoegler,lee_l'archievesque,rob_meyer,Four Seasons 3 (50),Shore & Country 2 (50),-4.5,4.5
+1,66,44,michael_sheldon,ernie_schmidt,brian_scott,carsten_hils,Four Seasons 3 (50),Lake Club 2 (50),2.0,-2.0
+2,66,24,eric_kotonski,steve_wimmers,john_fusek,keith_luke,Four Seasons 3 (50),Lake Club 2 (50),3.0,-3.0
+3,42,66,arnie_hoegler,zach_horne,bill_danford,steve_stanley,Four Seasons 3 (50),Lake Club 2 (50),-3.0,3.0
+1,610,466,dave_mercado,steve_soberman,john_fusek,brian_scott,Easton RC 3 (50),Lake Club 2 (50),-3.0,3.0
+2,52,66,doug_johnson,richard_wood,reed_raggio,bob_vredenburgh,Lake Club 3 (50),Four Seasons 2 (50),-2.5,2.5
+1,276,6610,bob_kane,larry_wilner,john_heron,alan_sharpe,Easton RC 3 (50),New Canaan FC 3 (50),0.6666666666666666,-0.6666666666666666
+2,11,66,bob_fischer,shelly_frank,mark_defranco,matt_miller,Easton RC 3 (50),New Canaan FC 3 (50),-5.0,5.0
+3,24,66,dave_mercado,steve_weiner,mike_pittaro,robert_revelli,Easton RC 3 (50),New Canaan FC 3 (50),-3.0,3.0
+1,626,162,james_pratt-heaney,michael_sheldon,dan_hage,mike_ward,Four Seasons 2 (50),Wilton Riding 1 (50),1.6666666666666667,-1.6666666666666667
+2,466,644,reed_raggio,bob_vredenburgh,mark_rice,kevin_nugent,Four Seasons 2 (50),Wilton Riding 1 (50),0.6666666666666666,-0.6666666666666666
+3,66,11,charlie_valenzuela,carl_bailey,paul_quinsee,jim_alonso,Four Seasons 2 (50),Wilton Riding 1 (50),5.0,-5.0
+1,66,41,david_cohen,rob_warren,chuck_cunningham,jose_zepeda,Easton RC 2 (50),Roton Point 2 (50),3.5,-3.5
+2,66,12,foster_mckeon,keith_rudolph,kevin_jaser,lee_zuckerman,Easton RC 2 (50),Roton Point 2 (50),4.5,-4.5
+3,66,02,steve_soberman,larry_wilner,dan_borgman,robert_bowtell,Easton RC 2 (50),Roton Point 2 (50),5.0,-5.0
+1,23,66,alan_walker,geoff_kieburtz,ken_maclin,ernie_schmidt,Rowayton 2 (50),Four Seasons 3 (50),-3.5,3.5
+2,11,66,john_massey,paul_seymour,andrew_leary,eric_kotonski,Rowayton 2 (50),Four Seasons 3 (50),-5.0,5.0
+1,21,66,dick_laughton,henry_hallinan,wiks_moffat,john_murray,New Canaan FC 3 (50),Roton Point 2 (50),-4.5,4.5
+2,22,66,steven_barlow,steven_barlow,joe_gold,brian_skinner,New Canaan FC 3 (50),Roton Point 2 (50),-4.0,4.0
+1,53,76,dave_mercado,steve_weiner,jeff_ford,tom_smith,Easton RC 3 (50),Silver Spring 2 (50),-2.5,2.5
+2,41,66,ted_granberg,patrick_stevener,bt_bowler,jeff_carone,Easton RC 3 (50),Silver Spring 2 (50),-3.5,3.5
+1,66,43,carsten_hils,tack_simmons,dave_koch,mike_ward,Lake Club 2 (50),Wilton Riding 1 (50),2.5,-2.5
+2,10,66,bill_danford,ken_worst,steve_batter,mark_rice,Lake Club 2 (50),Wilton Riding 1 (50),-5.5,5.5
+3,66,32,tim_dodman,michael_solecki,paul_quinsee,kevin_sullivan,Lake Club 2 (50),Wilton Riding 1 (50),3.5,-3.5
+1,02,66,alan_sharpe,michael_turpin,john_fusek,jamie_rhind,New Canaan FC 3 (50),Lake Club 2 (50),-5.0,5.0
+2,12,66,mike_pittaro,thomas_markey,steve_stanley,tack_simmons,New Canaan FC 3 (50),Lake Club 2 (50),-4.5,4.5
+3,21,66,dick_laughton,robert_revelli,david_friedman,paul_lynch,New Canaan FC 3 (50),Lake Club 2 (50),-4.5,4.5
+1,66,34,john_murray,jose_zepeda,pat_begos,alan_walker,Roton Point 2 (50),Rowayton 2 (50),2.5,-2.5
+2,66,01,joe_blazovic,brian_skinner,joe_devierno,john_massey,Roton Point 2 (50),Rowayton 2 (50),5.5,-5.5
+3,6306,46110,chuck_cunningham,lee_zuckerman,paul_seymour,peter_mcdonough,Roton Point 2 (50),Rowayton 2 (50),0.0,-0.0
+1,66,12,ken_maclin,ernie_schmidt,jeff_ford,joe_pastore,Four Seasons 3 (50),Silver Spring 2 (50),4.5,-4.5
+2,646,261,charlie_valenzuala,fred_lawrence,greg_frierson,bt_bowler,Four Seasons 3 (50),Silver Spring 2 (50),2.3333333333333335,-2.3333333333333335
+3,366,6010,joe_walsh,arnie_hoegler,burt_brazill,peter_wietfeldt,Four Seasons 3 (50),Silver Spring 2 (50),2.6666666666666665,-2.6666666666666665
+1,76,61,forbes_burtt,bob_twiss,dan_hage,kevin_sullivan,Shore & Country 2 (50),Wilton Riding 1 (50),3.0,-3.0
+2,21,66,john_davidson,ken_lempit,kurt_schneider,michael_house,Shore & Country 2 (50),Wilton Riding 1 (50),-4.5,4.5
+3,66,31,tim_buono,remo_tartaglia,steve_white,robert_desel,Shore & Country 2 (50),Wilton Riding 1 (50),4.0,-4.0
+1,66,04,david_cohen,rob_warren,forbes_burtt,ken_lempit,Easton RC 2 (50),Shore & Country 2 (50),4.0,-4.0
+2,66,42,keith_rudolph,foster_mckeon,bob_twiss,john_davidson,Easton RC 2 (50),Shore & Country 2 (50),3.0,-3.0
+3,66,43,greg_bambach,larry_wilner,rob_meyer,adam_morton,Easton RC 2 (50),Shore & Country 2 (50),2.5,-2.5
+1,20,66,joe_blazovic,jeff_nelson,steve_batter,kurt_schneider,Roton Point 2 (50),Wilton Riding 1 (50),-5.0,5.0
+3,44,66,joe_gold,brian_skinner,craig_johnson,matt_greene,Roton Point 2 (50),Wilton Riding 1 (50),-2.0,2.0
+1,66,33,steve_batter,michael_house,steve_soberman,joe_sproviero,Wilton Riding 1 (50),Easton RC 2 (50),3.0,-3.0
+1,366,643,bob_twiss,jim_decesare,wiks_moffat,jose_zepeda,Shore & Country 2 (50),Roton Point 2 (50),0.6666666666666666,-0.6666666666666666
+2,6610,478,rob_meyer,lee_l'archievesque,jim_bradford,john_murray,Shore & Country 2 (50),Roton Point 2 (50),0.0,-0.0
+3,66,33,paul_piasecki,adam_morton,robert_bowtell,chuck_cunningham,Shore & Country 2 (50),Roton Point 2 (50),3.0,-3.0
+1,66,22,bob_kane,steve_soberman,kevin_jaser,jose_zepeda,Easton RC 3 (50),Roton Point 2 (50),4.0,-4.0
+2,23,66,bob_fischer,steve_weiner,joe_blazovic,brian_skinner,Easton RC 3 (50),Roton Point 2 (50),-3.5,3.5
+3,66,12,ted_granberg,dave_mercado,tom_ball,larry_warble,Easton RC 3 (50),Roton Point 2 (50),4.5,-4.5
+1,36,67,michael_lockhart,alan_sharpe,forbes_burtt,ken_lempit,New Canaan FC 3 (50),Shore & Country 2 (50),-2.0,2.0
+2,31,66,peter_reinemann,mark_defranco,jeff_booth,lee_l'archievesque,New Canaan FC 3 (50),Shore & Country 2 (50),-4.0,4.0
+3,41,66,dick_laughton,eric_glerum,cameron_letters,bob_twiss,New Canaan FC 3 (50),Shore & Country 2 (50),-3.5,3.5
+1,34,66,ken_maclin,bruce_browning,james_pratt-heaney,michael_sheldon,Four Seasons 3 (50),Four Seasons 2 (50),-2.5,2.5
+2,66,43,andrew_leary,eric_kotonski,stephen_wimmers,zach_horne,Four Seasons 3 (50),Four Seasons 2 (50),2.5,-2.5
+3,636,463,arnie_hoegler,igor_zoubarev,bob_thron,charlie_valenzuela,Four Seasons 3 (50),Four Seasons 2 (50),0.6666666666666666,-0.6666666666666666
+1,66,43,thom_healy,tack_simmons,joe_blazovic,jeff_nelson,Lake Club 2 (50),Roton Point 2 (50),2.5,-2.5
+2,20,66,marc_foodman,michael_solecki,chuck_cunningham,jose_zepeda,Lake Club 2 (50),Roton Point 2 (50),-5.0,5.0
+3,266,602,jeff_altman,tom_ferguson,tom_ball,kevin_jaser,Lake Club 2 (50),Roton Point 2 (50),2.0,-2.0
+1,66,24,david_cohen,foster_mckeon,fred_lawrence,ken_maclin,Easton RC 2 (50),Four Seasons 3 (50),3.0,-3.0
+2,66,23,keith_rudolph,steve_soberman,joe_walsh,zach_horne,Easton RC 2 (50),Four Seasons 3 (50),3.5,-3.5
+3,67,45,steve_weiner,dave_mercado,arnie_hoegler,mack_reid,Easton RC 2 (50),Four Seasons 3 (50),2.0,-2.0
+1,26,67,bob_thron,james_pratt-heaney,tim_buono,rob_meyer,Four Seasons 2 (50),Shore & Country 2 (50),-2.5,2.5
+2,633,366,and_leary,stephen_wimmers,forbes_burtt,bob_twiss,Four Seasons 2 (50),Shore & Country 2 (50),-1.0,1.0
+3,53,76,bob_vredenburgh,charlie_valenzuela,paul_piasecki,keith_overland,Four Seasons 2 (50),Shore & Country 2 (50),-2.5,2.5
+1,66,34,foster_mckeon,kyle_bast,jamie_rhind,brian_scott,Easton RC 2 (50),Lake Club 2 (50),2.5,-2.5
+2,44,66,larry_wilner,keith_rudolph,john_fusek,carsten_hils,Easton RC 2 (50),Lake Club 2 (50),-2.0,2.0
+3,063,616,shelly_frank,steve_soberman,bill_danford,keith_luke,Easton RC 2 (50),Lake Club 2 (50),-1.3333333333333333,1.3333333333333333
+1,10,66,don_moyle,marc_foodman,sean_cahill,jim_decesare,Lake Club 3 (50),Shore & Country 2 (50),-5.5,5.5
+1,66,22,keith_overland,bob_twiss,chris_dunn,vince_pisano,Shore & Country 2 (50),Rowayton 2 (50),4.0,-4.0
+2,67,05,jeff_booth,tim_buono,john_moulden,alan_walker,Shore & Country 2 (50),Rowayton 2 (50),4.0,-4.0
+3,66,21,will_fornshell,rob_meyer,pat_begos,scott_johnson,Shore & Country 2 (50),Rowayton 2 (50),4.5,-4.5
+1,667,735,ken_maclin,ernie_schmidt,dan_hage,mike_ward,Four Seasons 3 (50),Wilton Riding 1 (50),1.3333333333333333,-1.3333333333333333
+2,13,66,fred_lawrence,igor_zoubarev,kevin_sullivan,steve_batter,Four Seasons 3 (50),Wilton Riding 1 (50),-4.0,4.0
+3,32,66,charlie_valenzuala,arnie_hoegler,paul_quinsee,jim_alonso,Four Seasons 3 (50),Wilton Riding 1 (50),-3.5,3.5
+1,363,6110,keith_luke,steve_stanley,tom_galione,rob_delman,Lake Club 2 (50),Silver Spring 2 (50),1.3333333333333333,-1.3333333333333333
+2,03,66,michael_solecki,tack_simmons,jeff_ford,john_mcreynolds,Lake Club 2 (50),Silver Spring 2 (50),-4.5,4.5
+3,462,616,marc_foodman,don_moyle,greg_frierson,bt_bowler,Lake Club 2 (50),Silver Spring 2 (50),-0.3333333333333333,0.3333333333333333
+1,51,76,burt_brazill,joe_pastore,tim_buono,forbes_burtt,Silver Spring 2 (50),Shore & Country 2 (50),-3.5,3.5
+1,652,776,john_massey,alan_walker,william_bergner,tom_ferguson,Rowayton 2 (50),Lake Club 3 (50),-2.3333333333333335,2.3333333333333335
+2,6652,3776,john_moulden,joe_devierno,jay_dulberg,john_burgdorfer,Rowayton 2 (50),Lake Club 3 (50),0.0,-0.0
+1,66,12,ken_lempit,bob_twiss,thom_healy,rick_croarkin,Shore & Country 2 (50),Lake Club 2 (50),4.5,-4.5
+2,476,664,tim_buono,rob_meyer,david_friedman,marc_foodman,Shore & Country 2 (50),Lake Club 2 (50),0.3333333333333333,-0.3333333333333333
+3,66,24,paul_piasecki,cameron_letters,thomas_santacroce,doug_johnson,Shore & Country 2 (50),Lake Club 2 (50),3.0,-3.0
+1,623,166,carlos_cruz,dave_mercado,mark_rice,mike_ward,Easton RC 3 (50),Wilton Riding 1 (50),-0.6666666666666666,0.6666666666666666
+2,13,66,ted_granberg,david_vine,jim_alonso,michael_house,Easton RC 3 (50),Wilton Riding 1 (50),-4.0,4.0
+1,658,2710,jim_bradford,bob_eydt,paul_mellinger,bob_vredenburgh,Roton Point 2 (50),Four Seasons 2 (50),3.0,-3.0
+2,735,5610,charlie_sahlia,jeff_nelson,eric_kotonski,bob_thron,Roton Point 2 (50),Four Seasons 2 (50),1.0,-1.0
+3,03,66,dan_borgman,robert_bowtell,joe_watson,stephen_wimmers,Roton Point 2 (50),Four Seasons 2 (50),-4.5,4.5
+1,66,13,fred_schweizer,jeff_nelson,michael_solecki,marc_foodman,Roton Point 2 (50),Lake Club 3 (50),4.0,-4.0
+2,66,00,kevin_jaser,robert_powell,rick_croarkin,doug_johnson,Roton Point 2 (50),Lake Club 3 (50),6.0,-6.0
+3,6278,3666,robert_bowtell,dan_borgman,jason_brandt,don_moyle,Roton Point 2 (50),Lake Club 3 (50),0.0,-0.0
+1,01,66,don_moyle,tom_santacroce,joe_pastore,jeff_carone,Lake Club 3 (50),Silver Spring 2 (50),-5.5,5.5
+2,54,76,tom_ferguson,jay_dulberg,bt_bowler,jason_meier,Lake Club 3 (50),Silver Spring 2 (50),-2.0,2.0
+1,3678,6466,geoff_sweitzer,alan_walker,tom_galione,jeff_ford,Rowayton 2 (50),Silver Spring 2 (50),0.0,-0.0
+2,13,66,joe_devierno,peter_mcdonough,joe_pastore,jeff_carone,Rowayton 2 (50),Silver Spring 2 (50),-4.0,4.0
+1,11,66,john_burgdorfer,graham_henley,paul_fowler,peter_reinemann,Lake Club 3 (50),New Canaan FC 3 (50),-5.0,5.0
+1,44,66,joe_sproviero,steve_soberman,david_cohen,foster_mckeon,Easton RC 3 (50),Easton RC 2 (50),-2.0,2.0
+2,02,66,bob_kane,frank_ball,kyle_bast,keith_rudolph,Easton RC 3 (50),Easton RC 2 (50),-5.0,5.0
+1,43,66,paul_mellinger,ken_maclin,david_cohen,foster_mckeon,Four Seasons 2 (50),Easton RC 2 (50),-2.5,2.5
+2,76505,647110,bob_vredenburgh,stephen_wimmers,steve_soberman,greg_bambach,Four Seasons 2 (50),Easton RC 2 (50),0.0,-0.0
+3,54,76,joe_walsh,zach_horne,keith_rudolph,larry_wilner,Four Seasons 2 (50),Easton RC 2 (50),-2.0,2.0
+1,66,14,david_cohen,keith_rudolph,bt_bowler,jason_meier,Easton RC 2 (50),Silver Spring 2 (50),3.5,-3.5
+2,66,21,shelly_frank,larry_wilner,sanjay_patel,steve_mckessy,Easton RC 2 (50),Silver Spring 2 (50),4.5,-4.5
+1,563,716,reed_raggio,bob_vredenburgh,chris_dunn,alan_walker,Four Seasons 2 (50),Rowayton 2 (50),0.0,-0.0
+2,66,03,stephen_wimmers,eric_kotonski,john_phillips,john_massey,Four Seasons 2 (50),Rowayton 2 (50),4.5,-4.5
+3,66,41,bob_thron,arnie_hoegler,joe_devierno,paul_seymour,Four Seasons 2 (50),Rowayton 2 (50),3.5,-3.5
+1,11,66,joe_devierno,john_moulden,ridgely_cromwell,david_cohen,Rowayton 2 (50),Easton RC 2 (50),-5.0,5.0
+2,12,66,john_massey,geoff_kieburtz,foster_mckeon,keith_rudolph,Rowayton 2 (50),Easton RC 2 (50),-4.5,4.5
+1,11,66,michael_solecki,tack_simmons,steve_batter,michael_house,Lake Club 3 (50),Wilton Riding 1 (50),-5.0,5.0
+2,50,66,tom_ferguson,john_burgdorfer,kevin_nugent,mike_ward,Lake Club 3 (50),Wilton Riding 1 (50),-3.5,3.5
+3,6365,7777,william_bergner,rick_croarkin,matt_greene,kevin_sullivan,Lake Club 3 (50),Wilton Riding 1 (50),0.0,-0.0
+1,66,33,tim_dodman,jamie_rhind,james_pratt-heaney,bob_vredenburgh,Lake Club 2 (50),Four Seasons 2 (50),3.0,-3.0
+2,615,465,john_fusek,bill_danford,reed_raggio,bob_thron,Lake Club 2 (50),Four Seasons 2 (50),-1.0,1.0
+3,756,677,tack_simmons,keith_luke,and_leary,stephen_wimmers,Lake Club 2 (50),Four Seasons 2 (50),-0.6666666666666666,0.6666666666666666
+1,66,04,mark_rice,michael_house,joe_devierno,kevan_herold,Wilton Riding 1 (50),Rowayton 2 (50),4.0,-4.0
+2,367,646,dan_hage,kevin_sullivan,chris_keelips,alan_walker,Wilton Riding 1 (50),Rowayton 2 (50),0.0,-0.0
+1,67,45,ken_maclin,ernie_schmidt,eric_glerum,peter_reinemann,Four Seasons 3 (50),New Canaan FC 3 (50),2.0,-2.0
+2,66,11,zach_horne,joe_walsh,dick_laughton,charles_timberlake,Four Seasons 3 (50),New Canaan FC 3 (50),5.0,-5.0
+1,44,66,paul_fowler,peter_reinemann,reed_raggio,james_pratt-heaney,New Canaan FC 3 (50),Four Seasons 2 (50),-2.0,2.0
+2,12,66,charles_timberlake,mike_pittaro,joe_walsh,zach_horne,New Canaan FC 3 (50),Four Seasons 2 (50),-4.5,4.5
+3,11,66,steven_barlow,dick_laughton,stephen_wimmers,bob_thron,New Canaan FC 3 (50),Four Seasons 2 (50),-5.0,5.0
+1,66,10,david_cohen,rob_warren,eric_glerum,peter_reinemann,Easton RC 2 (50),New Canaan FC 3 (50),5.5,-5.5
+2,66,13,keith_rudolph,foster_mckeon,mark_defranco,robert_revelli,Easton RC 2 (50),New Canaan FC 3 (50),4.0,-4.0
+3,366,610,shelly_frank,bob_fischer,henry_hallinan,steven_barlow,Easton RC 2 (50),New Canaan FC 3 (50),2.6666666666666665,-2.6666666666666665
+1,11,66,dave_mercado,steve_weiner,dan_mahlstedt,joe_watson,Easton RC 3 (50),Four Seasons 3 (50),-5.0,5.0
+2,15,67,bob_fischer,ted_granberg,james_pratt-heaney,bruce_browning,Easton RC 3 (50),Four Seasons 3 (50),-3.5,3.5
+3,15,67,patrick_stevener,mitch_wein,igor_zoubarev,charlie_valenzuala,Easton RC 3 (50),Four Seasons 3 (50),-3.5,3.5
+1,66,24,zach_horne,joe_walsh,marc_foodman,don_moyle,Four Seasons 3 (50),Lake Club 3 (50),3.0,-3.0
+2,66,13,ken_maclin,ernie_schmidt,joe_sokol,mike_boscaino,Four Seasons 3 (50),Lake Club 3 (50),4.0,-4.0

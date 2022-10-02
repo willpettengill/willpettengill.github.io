@@ -78,7 +78,7 @@ class Stars:
 		self.chart = Chart(self.new_date_obj, self.pos, IDs=const.LIST_OBJECTS)
 
 	def get_birthplace(self, bplacezip):
-		search = SearchEngine(simple_zipcode=True)
+		search = SearchEngine() # simple_zipcode=True
 		zipcode = search.by_zipcode(bplacezip).to_dict()
 		if zipcode['lat'] is not None and zipcode['lng'] is not None:
 			self.zipcode_dict=zipcode
@@ -329,6 +329,9 @@ def main(test=True):
 	#	with open('sends.json', 'w') as fp:
 	#		    json.dump(sends, fp)
 
+wp=Stars(udf.birthdate[0], udf.birthtime[i], udf.birthplacezipcode[i])
+
+wp.p.keys()
 
 if __name__ == "__main__":
 	main()

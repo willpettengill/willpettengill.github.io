@@ -1,0 +1,255 @@
+line,t1score,t2score,t1p1,t1p2,t2p1,t2p2,team1,team2,t1_points,t2_points
+1,267,636,john_massey,dan_murphy,richard_rosenthal,marc_robustelli,Tokeneke 2,Wilton Riding,0.0,-0.0
+2,43,66,ian_smith,david_magrone,david_gould,mike_ward,Tokeneke 2,Wilton Riding,-2.5,2.5
+3,44,66,steven_trepp,jp_peter,steve_batter,kurt_schneider,Tokeneke 2,Wilton Riding,-2.0,2.0
+4,41,66,jay_bennett,ed_canaday,dave_koch,ryan_faherty,Tokeneke 2,Wilton Riding,-3.5,3.5
+1,30,64,sergey_chernysh,dzuy-thanh_luong,john_hutchins,richard_fortin,Rowayton 2,New Canaan FC 2,-3.5,3.5
+2,11,64,michael_frey,addison_frey,todd_lampert,tim_davenport,Rowayton 2,New Canaan FC 2,-4.0,4.0
+3,02,66,william_pettengill,geoff_sweitzer,john_heron,brian_thackray,Rowayton 2,New Canaan FC 2,-5.0,5.0
+4,22,60,joey_devierno,alan_walker,jed_duncan,dan_fishman,Rowayton 2,New Canaan FC 2,-1.0,1.0
+1,21,66,alan_sharpe,brian_lombardi,matt_d'acunto,scott_hapgood,New Canaan FC 3,CC of Darien 2,-4.5,4.5
+2,465,647,chris_stevenson,guarav_sood,tim_henn,hadi_tabbaa,New Canaan FC 3,CC of Darien 2,-0.6666666666666666,0.6666666666666666
+3,66,42,terry_fillingham,charles_coristine,joe_sarbonowski,michael_kehoe,New Canaan FC 3,CC of Darien 2,3.0,-3.0
+4,66,41,peter_reinemann,jim_huetter,dan_blouin,bryan_dietz,New Canaan FC 3,CC of Darien 2,3.5,-3.5
+1,746,563,brian_lombardi,terry_fillingham,mike_frost,joseph_fucigna,New Canaan FC 3,Roton Point 2,1.0,-1.0
+2,21,66,alan_sharpe,mike_simko,john_murray,fred_schweizer,New Canaan FC 3,Roton Point 2,-4.5,4.5
+3,622,466,jim_huetter,michael_turpin,nelson_jantzen,george_mandler,New Canaan FC 3,Roton Point 2,-2.0,2.0
+4,21,66,thomas_markey,eric_glerum,chip_duggins,jose_zepeda,New Canaan FC 3,Roton Point 2,-4.5,4.5
+1,76,53,jack_birch,dzuy-thanh_luong,greg_macdonald,john_barsanti,Rowayton 2,CC of Darien 2,2.5,-2.5
+2,5677,7362,michael_frey,jan_lennertz,hadi_tabbaa,doug_traver,Rowayton 2,CC of Darien 2,0.0,-0.0
+3,67,35,william_pettengill,geoff_sweitzer,bryan_dietz,lee_haggin,Rowayton 2,CC of Darien 2,2.5,-2.5
+4,66,13,joey_devierno,alan_walker,connor_nackley,joseph_perry,Rowayton 2,CC of Darien 2,4.0,-4.0
+1,67,25,james_shen,tom_moellering,david_fowler,marc_robustelli,Roxbury 2,Wilton Riding,3.0,-3.0
+2,66,24,kevin_fahey,rob_zabronsky,nick_stevenson,david_gould,Roxbury 2,Wilton Riding,3.0,-3.0
+3,616,364,gillie_mccreath,alain_villemure,steve_batter,kurt_schneider,Roxbury 2,Wilton Riding,0.0,-0.0
+4,76,64,scott_muller,steve_denardo,michael_house,dave_koch,Roxbury 2,Wilton Riding,1.5,-1.5
+1,262,677,brian_o'hagan,steve_apy,john_massey,ian_smith,Middlesex 2,Tokeneke 2,-3.3333333333333335,3.3333333333333335
+2,7740,6566,lou_rawden,jim_reilly,bill_brady,gonzalo_escajadillo,Middlesex 2,Tokeneke 2,0.0,-0.0
+3,165,677,ben_adams,alan_eddie,david_magrone,eric_gaaserud,Middlesex 2,Tokeneke 2,-2.6666666666666665,2.6666666666666665
+4,21,66,nick_gupta,rob_steeves,ed_canaday,wright_ferguson,Middlesex 2,Tokeneke 2,-4.5,4.5
+1,6624,0776,dan_mahlstedt,steve_willliams,tim_henn,mike_meyer,Four Seasons 3,CC of Darien 2,0.0,-0.0
+2,366,633,joe_cappiello,james_pratt-heaney,hadi_tabbaa,greg_macdonald,Four Seasons 3,CC of Darien 2,1.0,-1.0
+3,66,04,reed_raggio,bob_vredenburgh,michael_kehoe,bryan_dietz,Four Seasons 3,CC of Darien 2,4.0,-4.0
+4,66,31,lance_pendelton,david_tatkow,doug_traver,justin_miller,Four Seasons 3,CC of Darien 2,4.0,-4.0
+1,267,625,jeff_grills,dave_ballard,sergey_chernysh,dzuy-thanh_luong,Woodway 2,Rowayton 2,0.6666666666666666,-0.6666666666666666
+2,22,66,sean_murdock,francisco_garcia,jan_lennertz,tim_widmer,Woodway 2,Rowayton 2,-4.0,4.0
+3,47110,6508,andy_hunter,dave_carlson,geoff_sweitzer,alan_walker,Woodway 2,Rowayton 2,0.0,-0.0
+4,636,261,george_close,matt_lauria,joey_devierno,william_pettengill,Woodway 2,Rowayton 2,2.0,-2.0
+1,66,42,mack_reid,james_pratt-heaney,charles_coristine,matt_kupersmith,Four Seasons 3,New Canaan FC 3,3.0,-3.0
+2,66,32,steve_willliams,dan_mahlstedt,guarav_sood,cristian_triay,Four Seasons 3,New Canaan FC 3,3.5,-3.5
+3,32,66,joe_watson,bob_vredenburgh,len_riddell,terry_fillingham,Four Seasons 3,New Canaan FC 3,-3.5,3.5
+4,36,67,charlie_valenzuela,lance_pendelton,neale_hanover,michael_mcdonough,Four Seasons 3,New Canaan FC 3,-2.0,2.0
+1,64,76,joseph_fucigna,nelson_jantzen,steve_hansen,brian_o'hagan,Roton Point 2,Middlesex 2,-1.5,1.5
+2,466,641,jim_bradford,fred_schweizer,jason_perez,josh_peschko,Roton Point 2,Middlesex 2,1.6666666666666667,-1.6666666666666667
+3,6477110,776407,george_mandler,john_murray,charlie_brown,jim_reilly,Roton Point 2,Middlesex 2,0.0,-0.0
+4,6365,7747,jeff_nelson,robert_powell,henrik_christiansen,robert_spanos,Roton Point 2,Middlesex 2,0.0,-0.0
+1,66,33,ian_smith,gonzalo_escajadillo,kevin_fahey,rob_zabronsky,Tokeneke 2,Roxbury 2,3.0,-3.0
+2,01,66,jp_peter,andrew_calderwood,tom_moellering,chul_park,Tokeneke 2,Roxbury 2,-5.5,5.5
+3,22,66,ed_canaday,roy_anderson,doug_conn,scott_muller,Tokeneke 2,Roxbury 2,-4.0,4.0
+4,04,66,wright_ferguson,rob_eising,alain_villemure,simon_teakle,Tokeneke 2,Roxbury 2,-4.0,4.0
+1,67,36,greg_crowley,peter_harned,david_gilio,john_hutchins,Woodway 2,New Canaan FC 2,2.0,-2.0
+2,54,76,dave_ballard,andy_hunter,kevin_clark,richard_fortin,Woodway 2,New Canaan FC 2,-2.0,2.0
+3,43,66,sean_murdock,riley_mullin,john_heron,brian_thackray,Woodway 2,New Canaan FC 2,-2.5,2.5
+4,20,66,george_cahill,francisco_garcia,jed_duncan,matt_miller,Woodway 2,New Canaan FC 2,-5.0,5.0
+1,66,32,ian_smith,bill_brady,steve_gruppo,dave_sherwood,Tokeneke 2,CC of Darien 2,3.5,-3.5
+2,76,52,david_magrone,jp_peter,tim_henn,david_eagle,Tokeneke 2,CC of Darien 2,3.0,-3.0
+3,646,461,steven_trepp,wright_ferguson,bob_peck,doug_traver,Tokeneke 2,CC of Darien 2,1.6666666666666667,-1.6666666666666667
+4,66,24,rob_eising,eric_gaaserud,joseph_perry,michael_kehoe,Tokeneke 2,CC of Darien 2,3.0,-3.0
+1,10,66,dzuy-thanh_luong,sergey_chernysh,will_jarvee,maurizio_morello,Rowayton 2,Lake Club 2,-5.5,5.5
+2,66,13,michael_frey,hayden_frey,randy_howie,jamie_rhind,Rowayton 2,Lake Club 2,4.0,-4.0
+1,263,636,gordon_hough,dan_murphy,matthew_tocks,aiden_bresnahan,Tokeneke 2,Roton Point 2,-1.3333333333333333,1.3333333333333333
+2,66,11,john_massey,bill_brady,john_murray,george_mandler,Tokeneke 2,Roton Point 2,5.0,-5.0
+3,66,13,david_magrone,steven_trepp,jp_spatola,nelson_jantzen,Tokeneke 2,Roton Point 2,4.0,-4.0
+4,366,624,ed_canaday,sam_pierpont,joe_blazovic,fred_schweizer,Tokeneke 2,Roton Point 2,1.0,-1.0
+1,67,15,john_massey,gonzalo_escajadillo,greg_crowley,luke_crowley,Tokeneke 2,Woodway 2,3.5,-3.5
+2,34,66,bill_brady,jp_peter,long_ellis,peter_harned,Tokeneke 2,Woodway 2,-2.5,2.5
+3,3774,6636,david_magrone,eric_gaaserud,dave_carlson,andy_hunter,Tokeneke 2,Woodway 2,0.0,-0.0
+4,66,01,jay_bennett,ed_canaday,john_hartner,peter_tchir,Tokeneke 2,Woodway 2,5.5,-5.5
+1,31,66,david_gilio,todd_lampert,tim_bepler,brad_scholtz,New Canaan FC 2,Middlesex 2,-4.0,4.0
+2,66,41,faustino_cortina,brian_thackray,charlie_brown,jim_reilly,New Canaan FC 2,Middlesex 2,3.5,-3.5
+3,04,66,jed_duncan,chris_stevenson,jason_perez,brian_o'hagan,New Canaan FC 2,Middlesex 2,-4.0,4.0
+4,50,76,mark_defranco,michael_lockhart,steve_apy,tom_cerussi,New Canaan FC 2,Middlesex 2,-4.0,4.0
+1,57765,765710,alan_sharpe,michael_lockhart,david_magrone,jp_peter,New Canaan FC 3,Tokeneke 2,0.0,-0.0
+2,30,66,charles_coristine,brian_lombardi,ed_canaday,jay_bennett,New Canaan FC 3,Tokeneke 2,-4.5,4.5
+3,04,66,cristian_triay,guarav_sood,eric_gaaserud,andrew_calderwood,New Canaan FC 3,Tokeneke 2,-4.0,4.0
+4,644,266,michael_turpin,michael_turpin,sam_pierpont,roy_anderson,New Canaan FC 3,Tokeneke 2,0.0,-0.0
+1,641,776,doug_bassett,jim_bradford,jack_birch,tim_widmer,Roton Point 2,Rowayton 2,-3.0,3.0
+2,66,44,mike_frost,john_murray,michael_frey,jan_lennertz,Roton Point 2,Rowayton 2,2.0,-2.0
+3,66,33,joseph_fucigna,nelson_jantzen,sergey_chernysh,geoff_sweitzer,Roton Point 2,Rowayton 2,3.0,-3.0
+4,643,466,joe_blazovic,arick_reynearson,zach_harrison,william_pettengill,Roton Point 2,Rowayton 2,-1.0,1.0
+1,66,22,christian_brown,tim_henn,long_ellis,jeff_grills,CC of Darien 2,Woodway 2,4.0,-4.0
+2,12,66,lee_haggin,hadi_tabbaa,greg_crowley,peter_harned,CC of Darien 2,Woodway 2,-4.5,4.5
+3,76,54,steve_gruppo,doug_traver,dave_ballard,sean_murdock,CC of Darien 2,Woodway 2,2.0,-2.0
+4,562,736,bryan_dietz,michael_kehoe,dave_carlson,andy_hunter,CC of Darien 2,Woodway 2,-1.0,1.0
+1,11,66,tom_cerussi,peder_arstorp,long_ellis,carter_sullivan,Middlesex 2,Woodway 2,-5.0,5.0
+2,77,65,charlie_brown,jim_reilly,greg_crowley,sean_murdock,Middlesex 2,Woodway 2,1.5,-1.5
+3,466,632,steve_apy,josh_peschko,dave_carlson,andy_hunter,Middlesex 2,Woodway 2,1.6666666666666667,-1.6666666666666667
+4,67,36,nick_gupta,rob_steeves,john_hartner,jim_weinstock,Middlesex 2,Woodway 2,2.0,-2.0
+1,66,12,jan_lennertz,joe_rogers,griffin_cramer,ian_smith,Rowayton 2,Tokeneke 2,4.5,-4.5
+2,654,476,garrett_clarke,dzuy-thanh_luong,gonzalo_escajadillo,dan_murphy,Rowayton 2,Tokeneke 2,-0.6666666666666666,0.6666666666666666
+3,33,66,chris_dunn,barry_fitzsimmons,jp_peter,steven_trepp,Rowayton 2,Tokeneke 2,-3.0,3.0
+4,76,53,joey_devierno,william_pettengill,eric_gaaserud,ed_canaday,Rowayton 2,Tokeneke 2,2.5,-2.5
+1,66,32,kevin_scanlan,will_jarvee,faustino_cortina,brian_lombardi,Lake Club 2,New Canaan FC 3,3.5,-3.5
+2,66,20,jon_achenbaum,maurizio_morello,alan_sharpe,dan_fishman,Lake Club 2,New Canaan FC 3,5.0,-5.0
+3,66,13,randy_howie,jeff_himmel,chris_cereghino,michael_lockhart,Lake Club 2,New Canaan FC 3,4.0,-4.0
+4,66,04,james_newfield,mark_lester,charles_coristine,guarav_sood,Lake Club 2,New Canaan FC 3,4.0,-4.0
+1,656,474,john_massey,ian_smith,chris_shay,will_jarvee,Tokeneke 2,Lake Club 2,0.6666666666666666,-0.6666666666666666
+2,54,76,gonzalo_escajadillo,steven_trepp,jeff_himmel,randy_howie,Tokeneke 2,Lake Club 2,-2.0,2.0
+3,62,76,jay_bennett,ed_canaday,jamie_rhind,mark_lester,Tokeneke 2,Lake Club 2,-2.5,2.5
+4,30,66,roy_anderson,rob_eising,steve_finn,dan_gimmel,Tokeneke 2,Lake Club 2,-4.5,4.5
+1,66,30,maurizio_morello,chris_shay,andrew_davidson,bill_jennings,Lake Club 2,CC of Darien 2,4.5,-4.5
+2,66,10,jamie_rhind,james_newfield,hadi_tabbaa,greg_macdonald,Lake Club 2,CC of Darien 2,5.5,-5.5
+3,76,51,jon_achenbaum,steve_finn,doug_traver,joe_sarbonowski,Lake Club 2,CC of Darien 2,3.5,-3.5
+4,66,20,mark_lester,dan_gimmel,bryan_dietz,david_eagle,Lake Club 2,CC of Darien 2,5.0,-5.0
+1,66,42,david_fowler,richard_rosenthal,mike_frost,joseph_fucigna,Wilton Riding,Roton Point 2,3.0,-3.0
+2,66,23,steve_batter,david_van,wiks_moffat,fred_schweizer,Wilton Riding,Roton Point 2,3.5,-3.5
+3,36,67,michael_house,kevin_nugent,john_murray,matthew_tocks,Wilton Riding,Roton Point 2,-2.0,2.0
+4,566,733,mark_rice,dave_koch,nelson_jantzen,jason_temerowski,Wilton Riding,Roton Point 2,1.3333333333333333,-1.3333333333333333
+1,646,464,tucker_golden,robert_powell,richard_fortin,matt_miller,Roton Point 2,New Canaan FC 2,0.6666666666666666,-0.6666666666666666
+2,655,377,jim_bradford,joseph_fucigna,sloan_alexander,brian_thackray,Roton Point 2,New Canaan FC 2,-0.3333333333333333,0.3333333333333333
+3,66,43,wiks_moffat,fred_schweizer,brian_lombardi,dan_fishman,Roton Point 2,New Canaan FC 2,2.5,-2.5
+4,32,66,chip_duggins,ryan_welch,jed_duncan,michael_lockhart,Roton Point 2,New Canaan FC 2,-3.5,3.5
+1,20,66,kevan_herold,chris_dunn,david_van,david_gould,Rowayton 2,Wilton Riding,-5.0,5.0
+2,13,66,geoff_sweitzer,william_pettengill,steve_batter,kurt_schneider,Rowayton 2,Wilton Riding,-4.0,4.0
+3,624,266,alan_walker,joey_devierno,matt_greene,dave_koch,Rowayton 2,Wilton Riding,-0.6666666666666666,0.6666666666666666
+1,66,11,christian_brown,steve_wright,steve_hansen,steve_apy,CC of Darien 2,Middlesex 2,5.0,-5.0
+2,66,31,dave_sherwood,brian_smith,charlie_brown,jim_reilly,CC of Darien 2,Middlesex 2,4.0,-4.0
+3,66,11,andrew_davidson,doug_traver,nick_gupta,rob_steeves,CC of Darien 2,Middlesex 2,5.0,-5.0
+4,13,66,david_eagle,justin_miller,oliver_morgan,josh_peschko,CC of Darien 2,Middlesex 2,-4.0,4.0
+1,656,371,greg_crowley,luke_crowley,chris_stevenson,guarav_sood,Woodway 2,New Canaan FC 3,2.0,-2.0
+2,622,266,sean_murdock,john_schmidt,dan_fishman,alan_sharpe,Woodway 2,New Canaan FC 3,-1.3333333333333333,1.3333333333333333
+3,12,66,dave_carlson,george_cahill,brian_lombardi,chris_cereghino,Woodway 2,New Canaan FC 3,-4.5,4.5
+4,30,66,tucker_martin,luke_schroeder,terry_fillingham,peter_reinemann,Woodway 2,New Canaan FC 3,-4.5,4.5
+1,66,12,will_jarvee,chris_shay,greg_crowley,jim_weinstock,Lake Club 2,Woodway 2,4.5,-4.5
+2,66,11,jeff_himmel,randy_howie,dave_ballard,dave_carlson,Lake Club 2,Woodway 2,5.0,-5.0
+3,66,32,jon_achenbaum,steve_finn,sean_murdock,riley_mullin,Lake Club 2,Woodway 2,3.5,-3.5
+4,66,10,mark_lester,jamie_rhind,luke_schroeder,sloan_bohlen,Lake Club 2,Woodway 2,5.5,-5.5
+1,66,32,jan_lennertz,dzuy-thanh_luong,brian_lombardi,terry_fillingham,Rowayton 2,New Canaan FC 3,3.5,-3.5
+2,76,51,sergey_chernysh,tim_widmer,charles_coristine,alan_sharpe,Rowayton 2,New Canaan FC 3,3.5,-3.5
+3,23,66,chris_dunn,alan_walker,guarav_sood,cristian_triay,Rowayton 2,New Canaan FC 3,-3.5,3.5
+4,650,276,william_pettengill,vince_pisano,neale_hanover,len_riddell,Rowayton 2,New Canaan FC 3,-1.3333333333333333,1.3333333333333333
+1,66,31,jeff_grills,will_harned,tucker_golden,matthew_tocks,Woodway 2,Roton Point 2,4.0,-4.0
+2,33,66,dave_ballard,jim_weinstock,nelson_jantzen,fred_schweizer,Woodway 2,Roton Point 2,-3.0,3.0
+3,30,66,andy_hunter,john_schmidt,joe_blazovic,kevin_gregory,Woodway 2,Roton Point 2,-4.5,4.5
+4,43,66,dave_carlson,mcbride_matt,mike_bissmeyer,jp_spatola,Woodway 2,Roton Point 2,-2.5,2.5
+1,52,66,dan_mahlstedt,michael_sheldon,aiden_bresnahan,arick_reynearson,Four Seasons 3,Roton Point 2,-2.5,2.5
+2,66,31,steve_willliams,joe_cappiello,mike_frost,george_mandler,Four Seasons 3,Roton Point 2,4.0,-4.0
+3,602,364,reed_raggio,james_pratt-heaney,robert_farinholt(retired),nelson_jantzen,Four Seasons 3,Roton Point 2,-1.6666666666666667,1.6666666666666667
+4,716,664,lance_pendelton,charlie_valenzuela,jeff_nelson,jose_zepeda,Four Seasons 3,Roton Point 2,-0.6666666666666666,0.6666666666666666
+1,13,66,john_hutchins,matt_miller,christian_brown,ken_lavine,New Canaan FC 2,CC of Darien 2,-4.0,4.0
+2,4666,6478,john_heron,brian_thackray,jared_nolen,john_butler,New Canaan FC 2,CC of Darien 2,0.0,-0.0
+3,12,66,sloan_alexander,jed_duncan,greg_macdonald,hadi_tabbaa,New Canaan FC 2,CC of Darien 2,-4.5,4.5
+4,66714,27612,brian_lombardi,dan_fishman,joseph_perry,michael_kehoe,New Canaan FC 2,CC of Darien 2,0.0,-0.0
+1,66,31,maurizio_morello,chris_shay,joseph_fucigna,john_murray,Lake Club 2,Roton Point 2,4.0,-4.0
+2,66,20,will_jarvee,mark_lester,mike_bissmeyer,joe_blazovic,Lake Club 2,Roton Point 2,5.0,-5.0
+3,66,43,steve_finn,jamie_rhind,fred_schweizer,jp_spatola,Lake Club 2,Roton Point 2,2.5,-2.5
+4,466,631,tim_dodman,brian_rondeau,jim_bradford,ely_kahn,Lake Club 2,Roton Point 2,2.0,-2.0
+1,645,167,james_shen,chul_park,dan_mahlstedt,steve_willliams,Roxbury 2,Four Seasons 3,0.3333333333333333,-0.3333333333333333
+2,76,52,kevin_fahey,rob_zabronsky,joe_cappiello,reed_raggio,Roxbury 2,Four Seasons 3,3.0,-3.0
+3,667,165,scott_muller,rick_disesa,lance_pendelton,james_pratt-heaney,Roxbury 2,Four Seasons 3,2.3333333333333335,-2.3333333333333335
+4,66,22,alain_villemure,steve_denardo,bob_vredenburgh,charlie_valenzuela,Roxbury 2,Four Seasons 3,4.0,-4.0
+1,31,66,long_ellis,carter_sullivan,john_wood,tom_moellering,Woodway 2,Roxbury 2,-4.0,4.0
+2,31,66,ted_conway,greg_crowley,chul_park,kevin_fahey,Woodway 2,Roxbury 2,-4.0,4.0
+3,22,66,jim_weinstock,dave_carlson,simon_teakle,alain_villemure,Woodway 2,Roxbury 2,-4.0,4.0
+4,32,66,dave_ballard,george_close,jose_lievano,david_gunnip,Woodway 2,Roxbury 2,-3.5,3.5
+1,66,34,tom_moellering,gillie_mccreath,hadi_tabbaa,bill_jennings,Roxbury 2,CC of Darien 2,2.5,-2.5
+2,76,53,alain_villemure,simon_teakle,tim_henn,david_eagle,Roxbury 2,CC of Darien 2,2.5,-2.5
+3,66,32,scott_muller,steve_denardo,justin_miller,joe_sarbonowski,Roxbury 2,CC of Darien 2,3.5,-3.5
+1,265,677,steve_hansen,peder_arstorp,sergey_chernysh,dzuy-thanh_luong,Middlesex 2,Rowayton 2,-2.3333333333333335,2.3333333333333335
+2,30,66,jim_reilly,brian_o'hagan,rich_bienen,geoff_sweitzer,Middlesex 2,Rowayton 2,-4.5,4.5
+3,66,23,jason_perez,lou_rawden,chris_dunn,william_pettengill,Middlesex 2,Rowayton 2,3.5,-3.5
+4,677,265,ben_adams,steve_apy,garrett_clarke,zach_harrison,Middlesex 2,Rowayton 2,2.3333333333333335,-2.3333333333333335
+1,50,76,wiks_moffat,john_murray,steve_wright,matt_d'acunto,Roton Point 2,CC of Darien 2,-4.0,4.0
+2,20,66,joe_blazovic,nelson_jantzen,hadi_tabbaa,greg_macdonald,Roton Point 2,CC of Darien 2,-5.0,5.0
+3,460,626,george_mandler,tucker_golden,doug_traver,bill_jennings,Roton Point 2,CC of Darien 2,-1.3333333333333333,1.3333333333333333
+4,66,01,william_bell,chip_duggins,joseph_perry,michael_kehoe,Roton Point 2,CC of Darien 2,5.5,-5.5
+1,463,616,dan_mahlstedt,steve_willliams,sergey_chernysh,dzuy-thanh_luong,Four Seasons 3,Rowayton 2,0.0,-0.0
+2,67,45,joe_cappiello,reed_raggio,chris_dunn,geoff_sweitzer,Four Seasons 3,Rowayton 2,2.0,-2.0
+3,66,00,james_pratt-heaney,lance_pendelton,joe_devierno,joey_devierno,Four Seasons 3,Rowayton 2,6.0,-6.0
+4,65110,4707,bob_vredenburgh,charlie_valenzuela,william_pettengill,alan_walker,Four Seasons 3,Rowayton 2,0.0,-0.0
+1,76,62,marc_robustelli,david_van,greg_crowley,peter_harned,Wilton Riding,Woodway 2,2.5,-2.5
+2,66,03,steve_batter,david_gould,sean_murdock,john_schmidt,Wilton Riding,Woodway 2,4.5,-4.5
+3,627,266,jim_alonso,matt_greene,dave_carlson,david_durkin,Wilton Riding,Woodway 2,0.3333333333333333,-0.3333333333333333
+1,30,66,brad_scholtz,peder_arstorp,will_jarvee,chris_shay,Middlesex 2,Lake Club 2,-4.5,4.5
+2,55,77,steve_apy,tim_bepler,randy_howie,jeff_himmel,Middlesex 2,Lake Club 2,-2.0,2.0
+3,01,66,jim_reilly,charlie_brown,mark_lester,dan_gimmel,Middlesex 2,Lake Club 2,-5.5,5.5
+4,21,66,ben_adams,rob_steeves,jamie_rhind,tim_dodman,Middlesex 2,Lake Club 2,-4.5,4.5
+1,626,261,kevin_clark,mark_noonan,dan_mahlstedt,steve_willliams,New Canaan FC 2,Four Seasons 3,1.6666666666666667,-1.6666666666666667
+2,15,67,jed_duncan,todd_lampert,joe_cappiello,james_pratt-heaney,New Canaan FC 2,Four Seasons 3,-3.5,3.5
+3,366,621,matt_miller,faustino_cortina,ken_maclin,bob_vredenburgh,New Canaan FC 2,Four Seasons 3,2.0,-2.0
+4,76,53,michael_lockhart,mark_defranco,lance_pendelton,joe_watson,New Canaan FC 2,Four Seasons 3,2.5,-2.5
+1,32,66,brian_o'hagan,jason_perez,joe_cappiello,james_pratt-heaney,Middlesex 2,Four Seasons 3,-3.5,3.5
+2,466,622,lou_rawden,peder_arstorp,reed_raggio,bob_thron,Middlesex 2,Four Seasons 3,2.0,-2.0
+3,366,6310,alan_eddie,robert_spanos,andrew_leary,bob_vredenburgh,Middlesex 2,Four Seasons 3,1.6666666666666667,-1.6666666666666667
+1,646,163,chris_shay,will_jarvee,tom_moellering,gillie_mccreath,Lake Club 2,Roxbury 2,2.0,-2.0
+2,66,13,maurizio_morello,randy_howie,rob_zabronsky,kevin_fahey,Lake Club 2,Roxbury 2,4.0,-4.0
+3,66,14,steve_finn,jon_achenbaum,simon_teakle,scott_muller,Lake Club 2,Roxbury 2,3.5,-3.5
+4,66,04,mark_lester,jamie_rhind,alain_villemure,jose_lievano,Lake Club 2,Roxbury 2,4.0,-4.0
+1,01,66,chris_cereghino,charles_coristine,steve_hansen,brad_scholtz,New Canaan FC 3,Middlesex 2,-5.5,5.5
+2,636,364,terry_fillingham,alan_sharpe,josh_peschko,jason_perez,New Canaan FC 3,Middlesex 2,0.6666666666666666,-0.6666666666666666
+3,263,646,michael_mcdonough,len_riddell,charlie_brown,jim_reilly,New Canaan FC 3,Middlesex 2,-1.6666666666666667,1.6666666666666667
+4,24,66,cristian_triay,michael_turpin,steve_apy,rob_steeves,New Canaan FC 3,Middlesex 2,-3.0,3.0
+1,66,31,john_wood,scott_muller,chris_cereghino,charles_coristine,Roxbury 2,New Canaan FC 3,4.0,-4.0
+2,66,11,alain_villemure,simon_teakle,guarav_sood,paul_fowler,Roxbury 2,New Canaan FC 3,5.0,-5.0
+3,66,01,gillie_mccreath,steve_denardo,jim_huetter,tom_kanter,Roxbury 2,New Canaan FC 3,5.5,-5.5
+1,21,66,jed_duncan,matt_miller,kevin_scanlan,will_jarvee,New Canaan FC 2,Lake Club 2,-4.5,4.5
+2,42,66,faustino_cortina,john_heron,jeff_himmel,randy_howie,New Canaan FC 2,Lake Club 2,-3.0,3.0
+4,50,76,dan_fishman,sloan_alexander,chris_shay,dan_gimmel,New Canaan FC 2,Lake Club 2,-4.0,4.0
+1,60,76,michael_lockhart,john_heron,marc_robustelli,richard_rosenthal,New Canaan FC 3,Wilton Riding,-3.5,3.5
+2,02,66,charles_coristine,cristian_triay,steve_batter,david_van,New Canaan FC 3,Wilton Riding,-5.0,5.0
+3,61,76,brian_lombardi,terry_fillingham,david_gould,ryan_faherty,New Canaan FC 3,Wilton Riding,-3.0,3.0
+4,66,33,dan_fishman,alan_sharpe,matt_greene,mark_rice,New Canaan FC 3,Wilton Riding,3.0,-3.0
+1,52,76,mark_noonan,richard_fortin,david_fowler,marc_robustelli,New Canaan FC 2,Wilton Riding,-3.0,3.0
+2,02,66,tim_orr,sloan_alexander,mike_ward,richard_rosenthal,New Canaan FC 2,Wilton Riding,-5.0,5.0
+3,01,66,matt_miller,john_heron,david_van,steve_batter,New Canaan FC 2,Wilton Riding,-5.5,5.5
+4,22,66,steve_mccardell,michael_lockhart,david_gould,dan_hage,New Canaan FC 2,Wilton Riding,-4.0,4.0
+1,32,66,dan_mahlstedt,paul_mellinger,david_gould,marc_robustelli,Four Seasons 3,Wilton Riding,-3.5,3.5
+2,26,67,joe_cappiello,james_pratt-heaney,david_van,david_fowler,Four Seasons 3,Wilton Riding,-2.5,2.5
+3,43,66,bob_vredenburgh,stephen_wimmers,mike_ward,ryan_faherty,Four Seasons 3,Wilton Riding,-2.5,2.5
+4,34,66,lance_pendelton,joe_watson,kurt_schneider,dave_koch,Four Seasons 3,Wilton Riding,-2.5,2.5
+1,76,62,fritz_schweitzer,chris_barton,david_fowler,richard_rosenthal,Middlesex 2,Wilton Riding,2.5,-2.5
+2,167,635,tim_bepler,brad_scholtz,marc_robustelli,david_van,Middlesex 2,Wilton Riding,0.0,-0.0
+3,10,66,todd_morgan,jim_reilly,steve_batter,mike_ward,Middlesex 2,Wilton Riding,-5.5,5.5
+4,62,76,brian_o'hagan,george_song,david_gould,ryan_faherty,Middlesex 2,Wilton Riding,-2.5,2.5
+1,6646,3774,mark_noonan,richard_fortin,gonzalo_escajadillo,ian_smith,New Canaan FC 2,Tokeneke 2,0.0,-0.0
+2,03,66,jed_duncan,todd_lampert,bill_brady,jp_peter,New Canaan FC 2,Tokeneke 2,-4.5,4.5
+3,677,264,matt_miller,brian_thackray,ed_canaday,wright_ferguson,New Canaan FC 2,Tokeneke 2,2.6666666666666665,-2.6666666666666665
+4,7913,6766,steve_mccardell,chris_stevenson,eric_gaaserud,jay_bennett,New Canaan FC 2,Tokeneke 2,0.0,-0.0
+1,53,76,rich_bienen,joe_gaudio,tom_moellering,james_shen,Rowayton 2,Roxbury 2,-2.5,2.5
+2,33,66,garrett_clarke,dzuy-thanh_luong,doug_conn,scott_muller,Rowayton 2,Roxbury 2,-3.0,3.0
+3,40,66,chris_dunn,alan_walker,alain_villemure,simon_teakle,Rowayton 2,Roxbury 2,-4.0,4.0
+4,651,476,joey_devierno,zach_harrison,steve_denardo,david_todrin,Rowayton 2,Roxbury 2,-1.6666666666666667,1.6666666666666667
+1,66,44,david_van,marc_robustelli,andrew_atha,scott_hapgood,Wilton Riding,CC of Darien 2,2.0,-2.0
+2,67,36,david_gould,michael_house,tim_henn,david_eagle,Wilton Riding,CC of Darien 2,2.0,-2.0
+3,77,55,dave_koch,kurt_schneider,michael_kehoe,joseph_perry,Wilton Riding,CC of Darien 2,2.0,-2.0
+4,14,66,jim_alonso,justin_saverine,doug_traver,steve_milunovich,Wilton Riding,CC of Darien 2,-3.5,3.5
+1,66,03,will_jarvee,kevin_scanlan,joe_cappiello,james_pratt-heaney,Lake Club 2,Four Seasons 3,4.5,-4.5
+2,66,43,randy_howie,jeff_himmel,steve_willliams,dan_mahlstedt,Lake Club 2,Four Seasons 3,2.5,-2.5
+3,66,03,chris_shay,jamie_rhind,andrew_leary,reed_raggio,Lake Club 2,Four Seasons 3,4.5,-4.5
+4,366,632,mark_lester,dan_gimmel,lance_pendelton,bob_vredenburgh,Lake Club 2,Four Seasons 3,1.3333333333333333,-1.3333333333333333
+1,66,11,john_wood,james_shen,mark_noonan,todd_lampert,Roxbury 2,New Canaan FC 2,5.0,-5.0
+2,66,11,tom_moellering,gillie_mccreath,tim_davenport,jed_duncan,Roxbury 2,New Canaan FC 2,5.0,-5.0
+3,656,474,kevin_fahey,alain_villemure,faustino_cortina,brian_thackray,Roxbury 2,New Canaan FC 2,0.6666666666666666,-0.6666666666666666
+4,635,777,steve_denardo,scott_muller,matt_miller,jim_arliss,Roxbury 2,New Canaan FC 2,-2.3333333333333335,2.3333333333333335
+1,20,66,tim_bepler,peder_arstorp,james_shen,john_wood,Middlesex 2,Roxbury 2,-5.0,5.0
+2,43,66,steve_apy,brian_o'hagan,tom_moellering,rob_zabronsky,Middlesex 2,Roxbury 2,-2.5,2.5
+3,50,76,jim_reilly,jason_perez,alain_villemure,scott_muller,Middlesex 2,Roxbury 2,-4.0,4.0
+4,31,66,rob_steeves,lou_rawden,steve_denardo,jim_glynn,Middlesex 2,Roxbury 2,-4.0,4.0
+2,12,66,mack_reid,james_pratt-heaney,ed_canaday,eric_gaaserud,Four Seasons 3,Tokeneke 2,-4.5,4.5
+4,10,66,igor_zoubarevx,charlie_valenzuela,roy_anderson,wright_ferguson,Four Seasons 3,Tokeneke 2,-5.5,5.5
+1,13,66,marc_robustelli,richard_rosenthal,jeffrey_popper,will_jarvee,Wilton Riding,Lake Club 2,-4.0,4.0
+2,42,66,david_van,steve_batter,chris_shay,maurizio_morello,Wilton Riding,Lake Club 2,-3.0,3.0
+3,6407,26110,david_gould,michael_house,jon_achenbaum,steve_finn,Wilton Riding,Lake Club 2,0.0,-0.0
+4,615,367,kevin_nugent,ryan_faherty,jamie_rhind,jeff_himmel,Wilton Riding,Lake Club 2,-1.3333333333333333,1.3333333333333333
+1,656,474,faustino_cortina,steve_mccardell,tim_davenport,tim_orr,New Canaan FC 3,New Canaan FC 2,0.6666666666666666,-0.6666666666666666
+2,21,66,dan_fishman,guarav_sood,richard_fortin,jed_duncan,New Canaan FC 3,New Canaan FC 2,-4.5,4.5
+3,363,626,chris_cereghino,brian_lombardi,todd_lampert,matt_miller,New Canaan FC 3,New Canaan FC 2,-0.6666666666666666,0.6666666666666666
+4,13,66,peter_reinemann,charles_coristine,brian_thackray,john_heron,New Canaan FC 3,New Canaan FC 2,-4.0,4.0
+1,35,67,michael_sheldon,dan_mahlstedt,dave_carlson,jeff_grills,Four Seasons 3,Woodway 2,-2.5,2.5
+2,43,66,james_pratt-heaney,joe_cappiello,sean_murdock,riley_mullin,Four Seasons 3,Woodway 2,-2.5,2.5
+3,66,30,steve_willliams,reed_raggio,matt_lauria,alex_giammarco,Four Seasons 3,Woodway 2,4.5,-4.5
+4,66,22,lance_pendelton,bob_vredenburgh,george_cahill,luke_schroeder,Four Seasons 3,Woodway 2,4.0,-4.0
+1,66,02,tom_moellering,rob_zabronsky,jim_bradford,wiks_moffat,Roxbury 2,Roton Point 2,5.0,-5.0
+2,66,34,scott_muller,alain_villemure,matthew_tocks,jason_temerowski,Roxbury 2,Roton Point 2,2.5,-2.5
+3,66,02,jim_glynn,jose_lievano,william_bell,nelson_jantzen,Roxbury 2,Roton Point 2,5.0,-5.0
+4,66,12,filip_wouters,paul_kukuruza,joe_blazovic,jeff_nelson,Roxbury 2,Roton Point 2,4.5,-4.5

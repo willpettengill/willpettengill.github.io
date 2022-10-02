@@ -50,7 +50,7 @@ def dfFromCollection(asset_contract_address, headers, test):
 	offset=0
 	pagination_flag=True
 	while pagination_flag==True:
-		url = "https://api.opensea.io/api/v1/assets?order_direction=desc&offset={1}&asset_contract_address={0}&limit=50".format(asset_contract_address, offset)
+		url = "https://api.opensea.io/api/v1/assets?order_direction=desc&include_orders=true&offset={1}&asset_contract_address={0}&limit=50".format(asset_contract_address, offset)
 		response = requests.request("GET", url, headers=headers)
 		if response.status_code != 200:
 			print(response.text)
@@ -131,7 +131,8 @@ if __name__ == '__main__':
 			print(contract_mapping.get(asset_contract_address))
 			df_, assets = dfFromCollection(asset_contract_address, headers, args.test)
 			df_ = mapLastSale(df_, tf)
-			list_of_dataframes.append(df_)        
+			list_of_dataframes.append(df_)
+			print(df_).head()        
 		df = pd.concat(list_of_dataframes)
 		ndf = df.drop_duplicates(subset=['token','contractAddress','collection'])
 		ndf['notes'] = df['contractAddress'].map(royalty_dict)

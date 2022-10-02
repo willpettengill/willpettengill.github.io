@@ -1,0 +1,179 @@
+player,points,line,match_cnt,team,avg_points,line_quality,team_quality
+adam_morton,0.5,6.0,2,Shore & Country 2 (50),0.25,2.0,11.0
+alan_sharpe,-4.833333333333334,4.5,5,New Canaan FC 3 (50),-0.9666666666666668,4.1,3.0
+alan_walker,-12.333333333333334,4.5,7,Rowayton 2 (50),-1.761904761904762,4.357142857142857,1.0
+and_leary,-0.33333333333333337,5.0,2,Four Seasons 2 (50),-0.16666666666666669,2.5,8.0
+andrew_leary,7.5,4.0,2,Four Seasons 3 (50),3.75,3.0,9.0
+arnie_hoegler,-6.166666666666667,20.0,7,Four Seasons 3 (50),-0.880952380952381,2.142857142857143,9.0
+bill_danford,-2.166666666666667,7.0,4,Lake Club 2 (50),-0.5416666666666667,3.25,7.0
+bob_eydt,3.0,1.0,1,Roton Point 2 (50),3.0,4.0,6.0
+bob_fischer,-12.833333333333334,10.0,6,Easton RC 3 (50),-2.138888888888889,3.333333333333333,4.0
+bob_kane,-3.833333333333333,5.0,4,Easton RC 3 (50),-0.9583333333333333,3.75,4.0
+bob_thron,5.333333333333333,9.333333333333334,6,Four Seasons 2 (50),0.8888888888888888,3.4444444444444446,8.0
+bob_twiss,16.0,10.5,8,Shore & Country 2 (50),2.0,3.6875,11.0
+bob_vredenburgh,-3.3333333333333335,11.333333333333334,8,Four Seasons 2 (50),-0.4166666666666667,3.583333333333333,8.0
+brian_scott,-1.5,2.0,3,Lake Club 2 (50),-0.5,4.333333333333333,7.0
+brian_skinner,11.0,7.0,4,Roton Point 2 (50),2.75,3.25,6.0
+bruce_browning,1.0,3.0,2,Four Seasons 3 (50),0.5,3.5,9.0
+bt_bowler,0.0,4.166666666666667,5,Silver Spring 2 (50),0.0,4.166666666666667,5.0
+burt_brazill,-9.666666666666666,5.0,3,Silver Spring 2 (50),-3.222222222222222,3.333333333333333,5.0
+cameron_letters,6.5,6.0,2,Shore & Country 2 (50),3.25,2.0,11.0
+carl_bailey,5.0,3.0,1,Four Seasons 2 (50),5.0,2.0,8.0
+carlos_cruz,-0.6666666666666666,1.0,1,Easton RC 3 (50),-0.6666666666666666,4.0,4.0
+carsten_hils,2.5,2.5,3,Lake Club 2 (50),0.8333333333333334,4.166666666666667,7.0
+charles_timberlake,-9.5,4.0,2,New Canaan FC 3 (50),-4.75,3.0,3.0
+charlie_sahlia,1.0,2.0,1,Roton Point 2 (50),1.0,3.0,6.0
+charlie_valenzuala,-2.166666666666666,10.0,4,Four Seasons 3 (50),-0.5416666666666665,2.5,9.0
+charlie_valenzuela,1.8333333333333335,9.0,3,Four Seasons 2 (50),0.6111111111111112,2.0,8.0
+chris_dunn,-4.0,1.0,2,Rowayton 2 (50),-2.0,4.5,1.0
+chris_keelips,-4.0,3.0,2,Rowayton 2 (50),-2.0,3.5,1.0
+chuck_cunningham,-5.5,9.5,5,Roton Point 2 (50),-1.1,3.1,6.0
+craig_johnson,2.0,3.0,1,Wilton Riding 1 (50),2.0,2.0,10.0
+dan_borgman,-9.5,9.0,3,Roton Point 2 (50),-3.1666666666666665,2.0,6.0
+dan_hage,-6.0,3.0,4,Wilton Riding 1 (50),-1.5,4.25,10.0
+dan_mahlstedt,5.0,1.0,1,Four Seasons 3 (50),5.0,4.0,9.0
+dave_koch,-2.5,1.0,1,Wilton Riding 1 (50),-2.5,4.0,10.0
+dave_mercado,-9.0,16.0,8,Easton RC 3 (50),-1.125,3.0,4.0
+david_cohen,29.0,7.0,8,Easton RC 2 (50),3.625,4.125,12.0
+david_dankenbrink,3.5,3.0,1,Easton RC 3 (50),3.5,2.0,4.0
+david_friedman,4.166666666666667,2.5,2,Lake Club 2 (50),2.0833333333333335,3.75,7.0
+david_vine,-6.0,4.0,2,Easton RC 3 (50),-3.0,3.0,4.0
+dick_laughton,-22.5,12.0,5,New Canaan FC 3 (50),-4.5,2.6,3.0
+don_moyle,-14.333333333333334,7.0,5,Lake Club 3 (50),-2.8666666666666667,3.6,2.0
+doug_johnson,-9.5,6.5,4,Lake Club 3 (50),-2.375,3.375,2.0
+eric_glerum,-11.0,4.0,3,New Canaan FC 3 (50),-3.6666666666666665,3.666666666666667,3.0
+eric_kotonski,14.0,10.0,5,Four Seasons 3 (50),2.8,3.0,9.0
+ernie_schmidt,21.333333333333332,7.5,7,Four Seasons 3 (50),3.0476190476190474,3.928571428571429,9.0
+forbes_burtt,9.0,4.333333333333333,6,Shore & Country 2 (50),1.5,4.277777777777778,11.0
+foster_mckeon,26.0,11.0,8,Easton RC 2 (50),3.25,3.625,12.0
+frank_ball,-5.0,2.0,1,Easton RC 3 (50),-5.0,3.0,4.0
+fred_lawrence,-4.666666666666666,5.0,3,Four Seasons 3 (50),-1.5555555555555554,3.333333333333333,9.0
+fred_schweizer,4.0,1.0,1,Roton Point 2 (50),4.0,4.0,6.0
+geoff_kieburtz,-8.0,3.0,2,Rowayton 2 (50),-4.0,3.5,1.0
+geoff_sweitzer,0.0,1.0,1,Rowayton 2 (50),0.0,4.0,1.0
+graham_henley,-5.0,1.0,1,Lake Club 3 (50),-5.0,4.0,2.0
+greg_bambach,2.5,5.0,2,Easton RC 2 (50),1.25,2.5,12.0
+greg_frierson,-5.5,3.5,3,Silver Spring 2 (50),-1.8333333333333333,3.833333333333333,5.0
+henry_hallinan,-7.166666666666666,4.0,2,New Canaan FC 3 (50),-3.583333333333333,3.0,3.0
+igor_zoubarev,0.16666666666666652,8.0,3,Four Seasons 3 (50),0.055555555555555504,2.3333333333333335,9.0
+james_pratt-heaney,4.166666666666667,5.333333333333333,7,Four Seasons 3 (50),0.5952380952380952,4.238095238095238,9.0
+jamie_rhind,5.5,3.0,3,Lake Club 2 (50),1.8333333333333333,4.0,7.0
+jason_brandt,0.0,3.0,1,Lake Club 3 (50),0.0,2.0,2.0
+jason_meier,-1.5,1.5,2,Silver Spring 2 (50),-0.75,4.25,5.0
+jay_dulberg,-2.0,4.0,2,Lake Club 3 (50),-1.0,3.0,2.0
+jeff_altman,2.0,3.0,1,Lake Club 2 (50),2.0,2.0,7.0
+jeff_booth,8.0,4.0,2,Shore & Country 2 (50),4.0,3.0,11.0
+jeff_carone,13.0,1.6666666666666667,3,Silver Spring 2 (50),4.333333333333333,4.444444444444445,5.0
+jeff_ford,2.5,2.333333333333333,4,Silver Spring 2 (50),0.625,4.416666666666667,5.0
+jeff_nelson,-2.5,5.0,4,Roton Point 2 (50),-0.625,3.75,6.0
+jeremy_mcwhorter,0.0,1.0,1,Easton RC 3 (50),0.0,4.0,4.0
+jim_alonso,2.5,5.0,3,Wilton Riding 1 (50),0.8333333333333334,3.333333333333333,10.0
+jim_arliss,4.0,1.0,1,New Canaan FC 3 (50),4.0,4.0,3.0
+jim_bradford,3.0,3.0,2,Roton Point 2 (50),1.5,3.5,6.0
+jim_decesare,9.666666666666668,3.0,3,Shore & Country 2 (50),3.2222222222222228,4.0,11.0
+joe_blazovic,1.5,4.5,4,Roton Point 2 (50),0.375,3.875,6.0
+joe_devierno,-26.0,7.0,7,Rowayton 2 (50),-3.7142857142857144,4.0,1.0
+joe_gold,2.0,5.0,2,Roton Point 2 (50),1.0,2.5,6.0
+joe_pastore,1.5,3.5,4,Silver Spring 2 (50),0.375,4.125,5.0
+joe_sokol,-3.0,3.0,2,Lake Club 3 (50),-1.5,3.5,2.0
+joe_sproviero,-1.0,3.0,3,Easton RC 3 (50),-0.3333333333333333,4.0,4.0
+joe_walsh,8.666666666666666,13.666666666666666,8,Four Seasons 3 (50),1.0833333333333333,3.291666666666667,9.0
+joe_watson,11.0,6.5,5,Four Seasons 3 (50),2.2,3.7,9.0
+joel_fouquart,-4.5,2.0,1,Rowayton 2 (50),-4.5,3.0,1.0
+john_burgdorfer,-8.5,5.0,3,Lake Club 3 (50),-2.8333333333333335,3.333333333333333,2.0
+john_davidson,-7.5,4.0,2,Shore & Country 2 (50),-3.75,3.0,11.0
+john_fusek,7.0,4.5,6,Lake Club 2 (50),1.1666666666666667,4.25,7.0
+john_heron,3.8333333333333335,1.5,2,New Canaan FC 3 (50),1.9166666666666667,4.25,3.0
+john_massey,-30.333333333333336,9.0,7,Rowayton 2 (50),-4.333333333333334,3.7142857142857144,1.0
+john_mcreynolds,4.5,2.0,1,Silver Spring 2 (50),4.5,3.0,5.0
+john_moulden,-13.0,6.0,4,Rowayton 2 (50),-3.25,3.5,1.0
+john_murray,10.5,2.333333333333333,4,Roton Point 2 (50),2.625,4.416666666666667,6.0
+john_phillips,-4.5,2.0,1,Rowayton 2 (50),-4.5,3.0,1.0
+jose_zepeda,1.6666666666666674,3.25,6,Roton Point 2 (50),0.2777777777777779,4.458333333333333,6.0
+keith_luke,-2.0000000000000004,6.0,5,Lake Club 3 (50),-0.4000000000000001,3.8,2.0
+keith_overland,6.5,4.0,2,Shore & Country 2 (50),3.25,3.0,11.0
+keith_rudolph,28.0,16.0,9,Easton RC 2 (50),3.111111111111111,3.2222222222222223,12.0
+ken_lempit,-2.0,4.0,4,Shore & Country 2 (50),-0.5,4.0,11.0
+ken_maclin,7.333333333333332,9.0,8,Four Seasons 3 (50),0.9166666666666665,3.875,9.0
+ken_worst,-5.5,2.0,1,Lake Club 2 (50),-5.5,3.0,7.0
+kevan_herold,-4.0,1.0,1,Rowayton 2 (50),-4.0,4.0,1.0
+kevin_jaser,-4.5,6.5,4,Roton Point 2 (50),-1.125,3.375,6.0
+kevin_nugent,4.5,3.5,3,Wilton Riding 1 (50),1.5,3.833333333333333,10.0
+kevin_sullivan,-2.5,6.333333333333334,5,Wilton Riding 1 (50),-0.5,3.7333333333333334,10.0
+kurt_schneider,9.5,3.0,2,Wilton Riding 1 (50),4.75,3.5,10.0
+kyle_bast,7.5,3.0,2,Easton RC 2 (50),3.75,3.5,12.0
+larry_warble,-4.5,3.0,1,Roton Point 2 (50),-4.5,2.0,6.0
+larry_wilner,16.666666666666668,16.0,7,Easton RC 3 (50),2.380952380952381,2.7142857142857144,4.0
+lee_l'archievesque,8.5,6.0,3,Shore & Country 2 (50),2.8333333333333335,3.0,11.0
+lee_zuckerman,-4.5,5.0,2,Roton Point 2 (50),-2.25,2.5,6.0
+mack_reid,-0.6666666666666667,6.0,2,Four Seasons 3 (50),-0.33333333333333337,2.0,9.0
+marc_foodman,-20.166666666666664,9.0,7,Lake Club 3 (50),-2.8809523809523805,3.7142857142857144,2.0
+mark_defranco,2.5,4.333333333333334,4,New Canaan FC 3 (50),0.625,3.9166666666666665,3.0
+mark_rice,14.0,4.666666666666667,5,Wilton Riding 1 (50),2.8,4.066666666666666,10.0
+matt_greene,6.5,5.5,3,Wilton Riding 1 (50),2.1666666666666665,3.166666666666667,10.0
+matt_miller,9.0,1.5,2,New Canaan FC 3 (50),4.5,4.25,3.0
+michael_house,20.5,3.666666666666667,5,Wilton Riding 1 (50),4.1,4.266666666666667,10.0
+michael_lockhart,1.833333333333333,5.0,3,New Canaan FC 3 (50),0.611111111111111,3.333333333333333,3.0
+michael_sheldon,6.166666666666667,3.0,3,Four Seasons 3 (50),2.055555555555556,4.0,9.0
+michael_solecki,-15.0,9.0,5,Lake Club 3 (50),-3.0,3.2,2.0
+michael_turpin,-5.0,1.0,1,New Canaan FC 3 (50),-5.0,4.0,3.0
+mike_boscaino,-4.0,2.0,1,Lake Club 3 (50),-4.0,3.0,2.0
+mike_innaurato,-4.5,2.0,1,New Canaan FC 3 (50),-4.5,3.0,3.0
+mike_pittaro,-6.0,7.0,3,New Canaan FC 3 (50),-2.0,2.6666666666666665,3.0
+mike_ward,0.3333333333333335,1.1666666666666667,6,Wilton Riding 1 (50),0.05555555555555558,4.805555555555555,10.0
+mitch_wein,-4.833333333333333,6.0,2,Easton RC 3 (50),-2.4166666666666665,2.0,4.0
+noah_wilker,4.5,1.0,1,Shore & Country 2 (50),4.5,4.0,11.0
+pat_begos,-7.0,2.0,2,Rowayton 2 (50),-3.5,4.0,1.0
+patrick_stevener,-7.0,5.0,2,Easton RC 3 (50),-3.5,2.5,4.0
+paul_fowler,3.0,2.0,2,New Canaan FC 3 (50),1.5,4.0,3.0
+paul_lynch,4.5,3.0,1,Lake Club 2 (50),4.5,2.0,7.0
+paul_mellinger,-5.5,2.0,2,Four Seasons 2 (50),-2.75,4.0,8.0
+paul_piasecki,5.0,12.0,4,Shore & Country 2 (50),1.25,2.0,11.0
+paul_quinsee,-5.0,3.0,3,Wilton Riding 1 (50),-1.6666666666666667,4.0,10.0
+paul_seymour,-14.0,11.0,4,Rowayton 2 (50),-3.5,2.25,1.0
+peter_mcdonough,-9.5,8.0,3,Rowayton 2 (50),-3.1666666666666665,2.3333333333333335,1.0
+peter_reinemann,-8.5,4.0,5,New Canaan FC 3 (50),-1.7,4.2,3.0
+peter_wietfeldt,-2.6666666666666665,3.0,1,Silver Spring 2 (50),-2.6666666666666665,2.0,5.0
+reed_raggio,6.166666666666667,5.666666666666667,6,Four Seasons 2 (50),1.027777777777778,4.055555555555555,8.0
+remo_tartaglia,4.0,3.0,1,Shore & Country 2 (50),4.0,2.0,11.0
+richard_wood,-2.5,2.0,1,Lake Club 3 (50),-2.5,3.0,2.0
+rick_croarkin,-10.5,6.0,3,Lake Club 3 (50),-3.5,3.0,2.0
+ridgely_cromwell,5.0,1.0,1,Easton RC 2 (50),5.0,4.0,12.0
+rob_delman,-1.3333333333333333,1.0,1,Silver Spring 2 (50),-1.3333333333333333,4.0,5.0
+rob_meyer,11.666666666666668,13.5,7,Shore & Country 2 (50),1.6666666666666667,3.071428571428571,11.0
+rob_warren,13.0,3.0,3,Easton RC 2 (50),4.333333333333333,4.0,12.0
+robert_bowtell,-12.5,12.0,4,Roton Point 2 (50),-3.125,2.0,6.0
+robert_desel,-4.0,3.0,1,Wilton Riding 1 (50),-4.0,2.0,10.0
+robert_powell,8.333333333333334,3.0,2,Roton Point 2 (50),4.166666666666667,3.5,6.0
+robert_revelli,-10.0,7.5,4,New Canaan FC 3 (50),-2.5,3.125,3.0
+sanjay_patel,-4.5,2.0,1,Silver Spring 2 (50),-4.5,3.0,5.0
+scott_johnson,-4.5,3.0,1,Rowayton 2 (50),-4.5,2.0,1.0
+sean_cahill,5.5,1.0,1,Shore & Country 2 (50),5.5,4.0,11.0
+shelly_frank,-1.4999999999999996,12.0,5,Easton RC 3 (50),-0.29999999999999993,2.6,4.0
+stephen_wimmers,11.166666666666668,11.5,7,Four Seasons 2 (50),1.5952380952380953,3.357142857142857,8.0
+steve_batter,22.5,4.333333333333333,5,Wilton Riding 1 (50),4.5,4.133333333333334,10.0
+steve_mckessy,-4.5,2.0,1,Silver Spring 2 (50),-4.5,3.0,5.0
+steve_petricone,-4.0,2.0,1,Roton Point 2 (50),-4.0,3.0,6.0
+steve_soberman,7.166666666666667,13.5,9,Easton RC 3 (50),0.7962962962962963,3.5,4.0
+steve_stanley,10.833333333333332,8.0,4,Lake Club 2 (50),2.708333333333333,3.0,7.0
+steve_weiner,-12.333333333333334,14.0,8,Easton RC 3 (50),-1.5416666666666667,3.25,4.0
+steve_white,-4.0,3.0,1,Wilton Riding 1 (50),-4.0,2.0,10.0
+steve_wimmers,3.0,2.0,1,Four Seasons 3 (50),3.0,3.0,9.0
+steven_barlow,-15.666666666666666,10.0,4,New Canaan FC 3 (50),-3.9166666666666665,2.5,3.0
+tack_simmons,-1.666666666666667,11.0,7,Lake Club 3 (50),-0.23809523809523814,3.428571428571429,2.0
+ted_granberg,-3.0,12.0,5,Easton RC 3 (50),-0.6,2.6,4.0
+thom_healy,-2.0,2.0,2,Lake Club 2 (50),-1.0,4.0,7.0
+thomas_markey,-4.5,2.0,1,New Canaan FC 3 (50),-4.5,3.0,3.0
+thomas_santacroce,-3.0,3.0,1,Lake Club 2 (50),-3.0,2.0,7.0
+tim_buono,18.833333333333332,8.0,6,Shore & Country 2 (50),3.138888888888889,3.666666666666667,11.0
+tim_dodman,6.5,4.0,2,Lake Club 2 (50),3.25,3.0,7.0
+tom_ball,-6.5,3.0,2,Roton Point 2 (50),-3.25,3.5,6.0
+tom_ferguson,-1.1666666666666665,8.0,4,Lake Club 3 (50),-0.29166666666666663,3.0,2.0
+tom_galione,-1.3333333333333333,1.0,2,Silver Spring 2 (50),-0.6666666666666666,4.5,5.0
+tom_santacroce,-7.5,3.0,2,Lake Club 3 (50),-3.75,3.5,2.0
+tom_smith,2.5,1.0,1,Silver Spring 2 (50),2.5,4.0,5.0
+vince_pisano,-12.0,3.0,3,Rowayton 2 (50),-4.0,4.0,1.0
+wiks_moffat,7.333333333333333,1.0,3,Roton Point 2 (50),2.444444444444444,4.666666666666667,6.0
+will_fornshell,1.0,6.0,2,Shore & Country 2 (50),0.5,2.0,11.0
+william_bergner,2.3333333333333335,4.0,2,Lake Club 3 (50),1.1666666666666667,3.0,2.0
+zach_horne,-5.333333333333334,11.75,9,Four Seasons 3 (50),-0.5925925925925927,3.6944444444444446,9.0
